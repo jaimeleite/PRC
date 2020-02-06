@@ -30,8 +30,8 @@
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRC">Trabalho realizado</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP5/PR">Manifesto</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP5/gestaoAlunos">Resolução do TPC</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP1">Trabalho realizado</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP1/PR">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP1/salaAula.ttl">Resolução do TPC</deliverable>
     </deliverables>
 </pr>
