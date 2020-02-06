@@ -1,0 +1,666 @@
+@prefix : <http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula> .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#frequenta
+:frequenta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :éFrequentadaPor ;
+           rdfs:domain :Aluno ;
+           rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#leciona
+:leciona rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éLecionadaPor ;
+         rdfs:domain :Professor ;
+         rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#éFrequentadaPor
+:éFrequentadaPor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#éLecionadaPor
+:éLecionadaPor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#curso
+:curso rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Aluno .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#ident
+:ident rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Pessoa .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#Aluno
+:Aluno rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#Professor
+:Professor rdf:type owl:Class ;
+           rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#UC
+:UC rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a33524
+:a33524 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a33524@alunos.uminho.pt" ;
+        :ident "A33524" ;
+        :nome "Pedro Paes" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a61032
+:a61032 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a61032@alunos.uminho.pt" ;
+        :ident "A61032" ;
+        :nome "Tiago Pereira" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a63129
+:a63129 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a63129@alunos.uminho.pt" ;
+        :ident "A63129" ;
+        :nome "José Freitas" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a67713
+:a67713 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a67713@alunos.uminho.pt" ;
+        :ident "A67713" ;
+        :nome "Manuel Moreno" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a70922
+:a70922 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a70922@alunos.uminho.pt" ;
+        :ident "A70922" ;
+        :nome "Francisco Costa" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a71385
+:a71385 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a71385@alunos.uminho.pt" ;
+        :ident "A71385" ;
+        :nome "Bruno Silva" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a71940
+:a71940 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a71940@alunos.uminho.pt" ;
+        :ident "A71940" ;
+        :nome "Eduardo Cunha" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a72187
+:a72187 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a72187@alunos.uminho.pt" ;
+        :ident "A72187" ;
+        :nome "José Lima" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a74036
+:a74036 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a74036@alunos.uminho.pt" ;
+        :ident "A74036" ;
+        :nome "Manuel Monteiro" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a74264
+:a74264 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a74264@alunos.uminho.pt" ;
+        :ident "A74264" ;
+        :nome "Rafael Silva" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a74568
+:a74568 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a74568@alunos.uminho.pt" ;
+        :ident "A74568" ;
+        :nome "Ricardo Canela" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a74658
+:a74658 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a74658@alunos.uminho.pt" ;
+        :ident "A74658" ;
+        :nome "Rui Vieira" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a75328
+:a75328 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a75328@alunos.uminho.pt" ;
+        :ident "a75328" ;
+        :nome "Tiago Baptista" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a75411
+:a75411 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a75411@alunos.uminho.pt" ;
+        :ident "A75411" ;
+        :nome "Ricardo Leal" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a75536
+:a75536 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a75536@alunos.uminho.pt" ;
+        :ident "A75536" ;
+        :nome "Eduardo Araújo" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a75569
+:a75569 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a75569@alunos.uminho.pt" ;
+        :ident "A75569" ;
+        :nome "João Leal" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a76516
+:a76516 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a76516@alunos.uminho.pt" ;
+        :ident "A76516" ;
+        :nome "João Vieira" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a77045
+:a77045 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a77045@alunos.uminho.pt" ;
+        :ident "A77045" ;
+        :nome "Ricardo Pereira" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a78764
+:a78764 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a78764@alunos.uminho.pt" ;
+        :ident "A78764" ;
+        :nome "Ricardo Neves" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a78914
+:a78914 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a78914@alunos.uminho.pt" ;
+        :ident "A78914" ;
+        :nome "Ricardo Martins" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a78997
+:a78997 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a78997@alunos.uminho.pt" ;
+        :ident "A78997" ;
+        :nome "Bruno Sousa" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a79947
+:a79947 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a79947@alunos.uminho.pt" ;
+        :ident "A79947" ;
+        :nome "Rui Costa" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a80424
+:a80424 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a80424@alunos.uminho.pt" ;
+        :ident "A80424" ;
+        :nome "José Carvalho" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a80757
+:a80757 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a80757@alunos.uminho.pt" ;
+        :ident "A80757" ;
+        :nome "Jaime Leite" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a80874
+:a80874 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a80874@alunos.uminho.pt" ;
+        :ident "A80874" ;
+        :nome "João Pimentel" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a81712
+:a81712 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a81712@alunos.uminho.pt" ;
+        :ident "A81712" ;
+        :nome "Ana Filipa Pereira" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a82324
+:a82324 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a82324@alunos.uminho.pt" ;
+        :ident "A82324" ;
+        :nome "Carlos Barbosa" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#a82617
+:a82617 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :prc ,
+                   :pri ;
+        :curso "MIEI" ;
+        :email "a82617@alunos.uminho.pt" ;
+        :ident "A82617" ;
+        :nome "Shahzod Yusupov" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#jcr
+:jcr rdf:type owl:NamedIndividual ,
+              :Pessoa ,
+              :Professor ;
+     :leciona :prc ,
+              :pri ;
+     :email "jcr@di.uminho.pt" ;
+     :ident "P001" ;
+     :nome "José Carlos Ramalho" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pg17918
+:pg17918 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :prc ,
+                    :pri ;
+         :curso "MIEI" ;
+         :email "pg17918@alunos.uminho.pt" ;
+         :ident "PG17918" ;
+         :nome "Paulo Martins" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pg33874
+:pg33874 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :prc ,
+                    :pri ;
+         :curso "MIEI" ;
+         :email "pg33874@alunos.uminho.pt" ;
+         :ident "PG33874" ;
+         :nome "João Grenhas" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pg37149
+:pg37149 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :prc ,
+                    :pri ;
+         :curso "MIEI" ;
+         :email "pg37149@alunos.uminho.pt" ;
+         :ident "PG37149" ;
+         :nome "Diego Silva" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pg38415
+:pg38415 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :prc ,
+                    :pri ;
+         :curso "MIEI" ;
+         :email "pg38415@alunos.uminho.pt" ;
+         :ident "PG38415" ;
+         :nome "Henrique Ribeiro" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pg39292
+:pg39292 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :prc ,
+                    :pri ;
+         :curso "MIEI" ;
+         :email "pg39292@alunos.uminho.pt" ;
+         :ident "PG39292" ;
+         :nome "Maria Pinto" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pg41089
+:pg41089 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :prc ,
+                    :pri ;
+         :curso "MIEI" ;
+         :email "pg41089@alunos.uminho.pt" ;
+         :ident "PG41089" ;
+         :nome "Miguel Dias" .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#prh
+:prh rdf:type owl:NamedIndividual ,
+              :Pessoa ,
+              :Professor ;
+     :leciona :gcs ;
+     :email "prh@di.uminho.pt" ;
+     :ident "P002" ;
+     :nome "Pedro Rangel Henriques" .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#prc
+:prc rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor :a33524 ,
+                      :a61032 ,
+                      :a63129 ,
+                      :a67713 ,
+                      :a70922 ,
+                      :a71385 ,
+                      :a71940 ,
+                      :a72187 ,
+                      :a74036 ,
+                      :a74264 ,
+                      :a74568 ,
+                      :a74658 ,
+                      :a75328 ,
+                      :a75411 ,
+                      :a75536 ,
+                      :a75569 ,
+                      :a76516 ,
+                      :a77045 ,
+                      :a78764 ,
+                      :a78914 ,
+                      :a78997 ,
+                      :a79947 ,
+                      :a80424 ,
+                      :a80757 ,
+                      :a80874 ,
+                      :a81712 ,
+                      :a82324 ,
+                      :a82617 ,
+                      :pg17918 ,
+                      :pg33874 ,
+                      :pg37149 ,
+                      :pg38415 ,
+                      :pg39292 ,
+                      :pg41089 ;
+     :éLecionadaPor :jcr .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#gcs
+:gcs rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor :a33524 ,
+                      :a61032 ,
+                      :a63129 ,
+                      :a67713 ,
+                      :a70922 ,
+                      :a71385 ,
+                      :a71940 ,
+                      :a72187 ,
+                      :a74036 ,
+                      :a74264 ,
+                      :a74568 ,
+                      :a74658 ,
+                      :a75328 ,
+                      :a75411 ,
+                      :a75536 ,
+                      :a75569 ,
+                      :a76516 ,
+                      :a77045 ,
+                      :a78764 ,
+                      :a78914 ,
+                      :a78997 ,
+                      :a79947 ,
+                      :a80424 ,
+                      :a80757 ,
+                      :a80874 ,
+                      :a81712 ,
+                      :a82324 ,
+                      :a82617 ,
+                      :pg17918 ,
+                      :pg33874 ,
+                      :pg37149 ,
+                      :pg38415 ,
+                      :pg39292 ,
+                      :pg41089 ;
+     :éLecionadaPor :prh .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/1/salaAula#pri
+:pri rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor :a33524 ,
+                      :a61032 ,
+                      :a63129 ,
+                      :a67713 ,
+                      :a70922 ,
+                      :a71385 ,
+                      :a71940 ,
+                      :a72187 ,
+                      :a74036 ,
+                      :a74264 ,
+                      :a74568 ,
+                      :a74658 ,
+                      :a75328 ,
+                      :a75411 ,
+                      :a75536 ,
+                      :a75569 ,
+                      :a76516 ,
+                      :a77045 ,
+                      :a78764 ,
+                      :a78914 ,
+                      :a78997 ,
+                      :a79947 ,
+                      :a80424 ,
+                      :a80757 ,
+                      :a80874 ,
+                      :a81712 ,
+                      :a82324 ,
+                      :a82617 ,
+                      :pg17918 ,
+                      :pg33874 ,
+                      :pg37149 ,
+                      :pg38415 ,
+                      :pg39292 ,
+                      :pg41089 ;
+     :éLecionadaPor :jcr .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
