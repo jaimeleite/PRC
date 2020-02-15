@@ -6,10 +6,10 @@
     <xsl:output method="text"/>
     
     <xsl:template match="/">
-        <xsl:apply-templates mode="e1"/>
+        <xsl:apply-templates mode="init"/>
     </xsl:template>
 
-    <xsl:template match="obra" mode="e1">
+    <xsl:template match="obra" mode="init">
         ###  http://www.semanticweb.org/jaime/ontologies/2020/1/tpc2#<xsl:value-of select="@id" />
         :<xsl:value-of select="@id" /> rdf:type owl:NamedIndividual ,
         :obra ;
@@ -21,10 +21,10 @@
         <xsl:for-each select="instrumentos/instrumento">
             :necessita :<xsl:value-of select="../../@id" />_<xsl:value-of select="translate(designacao,' ','')" /> ;
         </xsl:for-each> .
-        <xsl:apply-templates select="instrumentos" mode="e2" />
+        <xsl:apply-templates select="instrumentos" mode="follow" />
     </xsl:template>
     
-    <xsl:template match="instrumento" mode="e2">
+    <xsl:template match="instrumento" mode="follow">
         ###  http://www.semanticweb.org/jaime/ontologies/2020/1/tpc2#<xsl:value-of select="../../@id" />_<xsl:value-of select="translate(designacao,' ','')" />
         :<xsl:value-of select="../../@id" />_<xsl:value-of select="translate(designacao,' ','')" /> rdf:type owl:NamedIndividual ,
         :instrumento ;
