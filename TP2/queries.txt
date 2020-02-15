@@ -1,0 +1,43 @@
+#listar os nomes dos compositores por ordem alfabética
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/1/tpc2#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select ?compositor where {
+    ?id a :obra.
+    ?id :compositor ?compositor
+} order by ?compositor
+
+#listar as obras do tipo marcha de desfile
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/1/tpc2#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select ?titulo where {
+    ?id a :obra.
+    ?id :tipo "Marcha de Desfile".
+    ?id :titulo ?titulo.
+} order by ?titulo
+
+#listar o número de partituras que estão catalogadas para cada obra
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/1/tpc2#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select ?titulo (COUNT(?partitura) as ?partituras)where {
+    ?id a :obra.
+    ?id :titulo ?titulo.
+	?instrumento :éNecessitado ?id.
+    ?instrumento a :instrumento.
+    ?instrumento :path_partitura|:type_partitura|:voice_partitura ?partitura
+} group by ?titulo
+
+#listar os títulos das obras c/partitura p/bombo
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/1/tpc2#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select ?titulo ?partitura where {
+    ?id a :obra.
+    ?id :titulo ?titulo.
+	?instrumento :éNecessitado ?id.
+    ?instrumento a :instrumento.
+    ?instrumento :designacao "Bombo".
+    ?instrumento :path_partitura|:type_partitura|:voice_partitura ?partitura
+}
