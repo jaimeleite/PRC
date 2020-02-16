@@ -32,19 +32,19 @@
             </tr>
             <tr>
                <th align="left">Title: </th>
-               <td>Ontologia referente aos alunos de PLC</td>
+               <td>Ontologia referente a músicas e queries em SPARQL</td>
             </tr>
             <tr>
                <th align="left">Subtitle: </th>
-               <td>Trabalho referente ao primeiro TPC da unidade curricular de PRC</td>
+               <td>Trabalho referente ao segundo TPC da unidade curricular de PRC</td>
             </tr>
             <tr>
                <th align="left">Inicial date: </th>
-               <td>2020-03-03</td>
+               <td>2020-03-10</td>
             </tr>
             <tr>
                <th align="left">End date: </th>
-               <td>2020-03-10</td>
+               <td>2020-03-17</td>
             </tr>
          </table>
          <p>
@@ -95,35 +95,68 @@
             <span style="color:red">Abstracts</span>
          </h2>
          
-         <p>O trabalho que foi necessário efetuar para o primeiro TPC de 
-            <i>PRC</i> relaciona-se com o povoamento de uma ontologia desenvolvida na aula prática de 
-            <i>PRC</i>, no dia três de fevereiro de 2020.
+         <p>
+            O trabalho que foi necessário efetuar para o segundo TPC de 
+            <i>PRC</i> relaciona-se com a definição de uma ontologia para um arquivo de músicas, bem como
+            com o 
+            desenvolvimento de queries em 
+            <b>SPARQL</b> relativas ao arquivo de músicas. Este arquivo está definido em XML. Na definição
+            da ontologia, foi indicada a existência 
+            de duas classes principais: 
+            <i>obra</i> e 
+            <i>instrumento</i>. Nas suas relações, uma 
+            <i>obra</i> 
+            <i>necessita</i> de um 
+            <i>instrumento</i>, e este último 
+            <i>é 
+               necessitado
+            </i> por uma 
+            <i>obra</i>. Uma 
+            <i>obra</i> é caracterizada pelo 
+            <i>arranjo</i>, 
+            <i>compositor</i>, 
+            <i>inf_relacionada_video</i> (relativo ao atributo 
             
-         </p> 
-         
-         <p>A ontologia define os alunos, bem como professores, unidades curriculares e as relações
-            entre estes. Numa primeira fase, povoou-se a ontologia com as unidades curriculares
-            de 
-            <i>PRI</i>, 
-            <i>PRC</i> e 
-            <i>GCS</i>. De seguida, "registaram-se" os professores 
-            <i>José Carlos Ramalho</i> e 
-            <i>Pedro Rangel Henriques</i>. O primeiro professor mencionado leciona 
-            <i>PRI</i> e 
-            <i>PRC</i> e o segundo professor leciona 
-            <i>GCS</i>. Por fim, "registaram-se" os alunos que estão referenciados numa folha de cálculo
-            disponibilizada pelo professor 
-            <i>José Carlos Ramalho</i>. Para cada aluno, considerou-se relevante representar informações relativas ao seu
-            número de aluno, nome, email e curso. Cada aluno ficou associado a cada uma das unidades
-            curriculares apresentadas anteriormente, pelas relações 
-            <i>frequenta</i> e 
-            <i>éFrequentadaPor</i>. Para além disto, assumiu-se que o curso de todos os alunos é 
-            <i>MIEI</i>. A extração da informação da folha de cálculo foi efetuada manualmente.
+            <i>video</i> no ficheiro 
+            <i>XML</i> original), 
+            <i>tipo</i> e 
+            <i>titulo</i>. Um 
+            <i>instrumento</i> é caracterizado pela sua 
+            <i>designacao</i>, 
+            <i>path_partitura</i>,  
+            
+            <i>type_partitura</i> e 
+            <i>voice_partitura</i>.
             
          </p>
          
-         <p>Numa fase final do TPC, foi usada a ferramenta 
-            <i>GraphDB</i> para visualizar os elementos resultantes do povoamento efetuado.
+         <p> 
+            Inicialmente definiu-se, no 
+            <b>Protege</b>, as classes e suas relações, bem como os seus atributos. Posteriormente, foi criada
+            manualmente uma 
+            <i>obra</i> e um 
+            
+            <i>instrumento</i>. De seguida, foi feito o export da ontologia para um ficheiro 
+            <i>.ttl</i>(ficheiro "tpc2.ttl" que se encontra na pasta "/desenv/"). Usando um 
+            documento 
+            <i>XSL</i>(ficheiro "sheet.xsl" que se encontra na pasta "/desenv/conversao/"), foi efetuada
+            a conversão do ficheiro 
+            <i>XML</i> original para o formato 
+            
+            <i>.ttl</i>(o resultado deta conversão encontra-se no ficheiro "results.ttl" na pasta "/desenv/conversao/".
+            Esta informação foi acrescentada ao ficheiro resultante da 
+            exportação da ontologia, ou seja, ao ficheiro "tpc2.ttl" mencionado anteriormente.
+            
+            
+         </p>
+         
+         <p>
+            Para responder às queries pretendidas, utilizou-se o conhecimento aprendido nas aulas
+            práticas de 
+            <i>PRC</i> por forma a manipular e agrupar informação presente no 
+            ficheiro 
+            <i>.ttl</i> final("tpc2.ttl"). As queries estão colocadas no ficheiro "queries.txt", na pasta
+            "/desenv/".
             
          </p>
          
@@ -135,15 +168,31 @@
          </h2>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP1">Trabalho realizado</a>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP2">Trabalho desenvolvido</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP1/PR">Manifesto</a>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/arquivo-musica-digital.xml">Arquivo de músicas</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/blob/master/TP1/salaAula.ttl">Resolução do TPC</a>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/results.ttl">Ficheiro com o resultado da conversão dos valores de XML para TTL</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/sheet.xsl">Folha de estilos para converter XML em TTL</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP2/desenv/queries.txt">Queries em SPARQL</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP2/desenv/tpc2.ttl">Ficheiro TTL final</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/PR/pr.html">Manifesto</a>
          </li>
          
       </div>
