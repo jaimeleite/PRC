@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Repositórios GraphDB
+
+  .w3-display-middle
+          .w3-container.w3-charcoal(style="box-shadow: 10px 10px 18px #373737;")
+              .w3-margin.w3-padding-large
+                  form.w3-container(method='POST' action='/reg')
+                      input.w3-input.w3-section(required type='email' name='email' placeholder='Email')
+                      input.w3-input.w3-section(required type='text' name='nome' placeholder='Nome')
+                      input.w3-input.w3-section(required type='password' name='password' placeholder='Palavra-passe')
+                      .w3-center
+                          b
+                              input.w3-btn.w3-pale-gold.w3-section(type='submit' value='REGISTAR')
