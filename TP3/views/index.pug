@@ -1,15 +1,27 @@
 extends layout
 
 block content
-  h1 Repositórios GraphDB
+  h1.w3-center(style="margin-top:1cm;") Repositórios GraphDB
+  div(style="margin:2cm;")
+    div(class="column")
+      div(class="card")
+        h2.w3-center(style="margin-top:0.82cm;") Indique um repositório + query
+        div(style="margin:2.28cm;")
+          form.w3-container(method='POST' action='/')
+            input.w3-input.w3-section(required type='repositorio' name='repositorio' placeholder='Repositório')
+            input.w3-input.w3-section(required type='query' name='query' placeholder='Query')
+            .w3-center
+              input.w3-btn.w3-pale-gold.w3-section.w3-black(type='submit' value='Exec')
+    div(class="column")
+      div(class="card")
+        h2.w3-center(style="margin-top:0.82cm;") Repositórios disponíveis
+        div(style="margin:2cm;")
+          each repositorio in repositorios
+            tr
+              td
+                h3(style="color:red;")=repositorio
+  div(class="card" style="margin:2.28cm; margin-top:15cm")
+    h2.w3-center Results
 
-  .w3-display-middle
-          .w3-container.w3-charcoal(style="box-shadow: 10px 10px 18px #373737;")
-              .w3-margin.w3-padding-large
-                  form.w3-container(method='POST' action='/reg')
-                      input.w3-input.w3-section(required type='email' name='email' placeholder='Email')
-                      input.w3-input.w3-section(required type='text' name='nome' placeholder='Nome')
-                      input.w3-input.w3-section(required type='password' name='password' placeholder='Palavra-passe')
-                      .w3-center
-                          b
-                              input.w3-btn.w3-pale-gold.w3-section(type='submit' value='REGISTAR')
+    .w3-center
+      input.w3-input(type="submit" value="Limpar")
