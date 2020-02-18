@@ -3,34 +3,28 @@ extends layout
 block content
   h1.w3-center(style="margin-top:1cm;") Repositórios GraphDB
   div(style="margin:2cm;")
-    div(class="column")
-      div(class="card")
-        h2.w3-center(style="margin-top:0.82cm;") Indique um repositório + query
-        div(style="margin:2.28cm;")
-          form.w3-container(method='POST' action='/')
-            input.w3-input.w3-section(required type='repositorio' name='repositorio' placeholder='Repositório')
-            input.w3-input.w3-section(required type='query' name='query' placeholder='Query')
-            .w3-center
-              input.w3-btn.w3-pale-gold.w3-section.w3-black(type='submit' value='Exec')
-    div(class="column")
-      div(class="card")
-        h2.w3-center(style="margin-top:0.82cm;") Repositórios disponíveis
-<<<<<<< HEAD
-        div(style="margin:1.96cm;")
-=======
-        div(style="margin:2cm;")
->>>>>>> 506c662f2272bd9b6e4b5c831a00d9beef3393b5
-          each repositorio in repositorios
-            tr
-              td
-                h3(style="color:red;")=repositorio
+      div(class="column")
+        div(class="card")
+          h2.w3-center(style="margin-top:0.82cm;") Indique um repositório
+          form.w3-container(action="/" method="post")
+            .w3-container(id='lista')
+              .w3-container(id='f1')
+                input.w3-input.w3-section(required type='text' name='repositorio' placeholder='Repositório')
+            button.w3-button.w3-round.large.w3-grey(id='mais1') + Query
+            input.w3-input.w3-black(type="submit" value="Exec")
+      div(class="column")
+        div(class="card")
+          h2.w3-center(style="margin-top:0.82cm;") Repositórios disponíveis
+          div(style="margin:1.96cm;")
+            each repositorio in repositorios
+              tr
+                td
+                  h3(style="color:red;")=repositorio
+  h2.w3-center Results
   div(class="card" style="margin:2.28cm; margin-top:15cm")
-    h2.w3-center Results
-<<<<<<< HEAD
-    button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="apagaResultados()")
-      i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar   
-=======
-
-    .w3-center
-      input.w3-input(type="submit" value="Limpar")
->>>>>>> 506c662f2272bd9b6e4b5c831a00d9beef3393b5
+    each resultado in resultados
+      tr
+        td
+          h3(style="color:red;")=resultado.type
+    //button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="apagaResultados()")
+      i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar
