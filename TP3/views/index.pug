@@ -5,7 +5,7 @@ block content
   div(style="margin:2cm;")
       div(class="column")
         div(class="card")
-          h2.w3-center(style="margin-top:0.82cm;") Indique um repositório
+          h2.w3-center(style="margin-top:-0.001cm;") Indique um repositório
           form.w3-container(action="/" method="post")
             .w3-container(id='lista')
               .w3-container(id='f1')
@@ -14,17 +14,19 @@ block content
             input.w3-input.w3-black(type="submit" value="Exec")
       div(class="column")
         div(class="card")
-          h2.w3-center(style="margin-top:0.82cm;") Repositórios disponíveis
+          h2.w3-center(style="margin-top:-0.001cm;") Repositórios disponíveis
           div(style="margin:1.96cm;")
             each repositorio in repositorios
               tr
                 td
                   h3(style="color:red;")=repositorio
-  h2.w3-center Results
-  div(class="card" style="margin:2.28cm; margin-top:15cm")
-    each resultado in resultados
-      tr
-        td
-          h3(style="color:red;")=resultado.type
-    //button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="apagaResultados()")
-      i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar
+      div(class="column" style="margin-left:7.00cm; margin-top:0.5cm;")
+        h2(style="margin-left:6.8cm;") Results
+        // tr
+            td
+              h3(style="color:red;")=resultado.type
+        //button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="apagaResultados()")
+              i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar
+        div
+          textarea(id="theTextarea" rows="10" cols="70")
+            | #{resultados}

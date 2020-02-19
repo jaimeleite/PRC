@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 router.post('/', async(req, res, next) => {
   var getLink = "http://localhost:7200/repositories/" + req.body.repositorio + "?query="
 
-  var encoded = encodeURIComponent(req.body.query)
+  var encoded = encodeURIComponent(prefixes +req.body.query)
 
   let resp1 = await axios.get('http://localhost:7200/repositories')
   let nomesRepositorios = []
@@ -38,7 +38,7 @@ router.post('/', async(req, res, next) => {
         dados.data.results.bindings.forEach(element => {
           results.push(element);
         })
-        res.render('index', {repositorios: nomesRepositorios, resultados: results})
+        res.render('index', {repositorios: nomesRepositorios, resultados: JSON.stringify(results)})
         //console.log(results)
       })
       .catch(erro => console.log(erro))
