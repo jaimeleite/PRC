@@ -10,15 +10,15 @@ block content
             .w3-container(id='lista')
               .w3-container(id='f1')
                 if repositorio.length > 0
-                  textarea(required type='text' rows="10" cols="20" name='repositorio' placeholder='Repositorio')
+                  textarea(required type='text' rows="10" cols="10" name='repositorio' placeholder='Repositorio')
                     | #{repositorio}
                 else
-                  textarea(required type='text' rows="10" cols="20" name='repositorio' placeholder='Repositorio')
+                  textarea(required type='text' rows="10" cols="10" name='repositorio' placeholder='Repositorio')
                 if query.length > 0
-                  textarea(required type='text' rows="10" cols="20" name='query' placeholder='Query')
+                  textarea(required type='text' rows="10" cols="30" name='query' placeholder='Query')
                     | #{query}
                 else
-                  textarea(required type='text' rows="10" cols="20" name='query' placeholder='Query')
+                  textarea(required type='text' rows="10" cols="30" name='query' placeholder='Query')
             input.w3-input.w3-black(type="submit" value="Exec")
       div(class="column")
         div(class="card")
@@ -28,9 +28,8 @@ block content
               tr
                 td
                   h3(style="color:red;")=repositorio
-      div(class="column" style="margin-left:7.00cm; margin-top:0.5cm;")
-        h2(style="margin-left:7.0cm;") Results
-        textarea(id="theTextarea" rows="10" cols="70")
+      div.w3-center(class="column" style="margin-top:1cm; margin-left:7.5cm;")
+          h2(style="margin-left:1.5cm;") Results
+          textarea(id="theTextarea" rows="10" cols="70")
             | #{resultados}
-        button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="javascript: apagaResultados();")
-          i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar
+          button.w3-button.w3-black(style="margin-left:1.5cm;" onclick="javascript: apagaResultados();") Apagar

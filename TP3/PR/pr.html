@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <meta charset="UTF-8"></meta>
+      <title>
+         Manifesto
+         
+      </title>
+   </head>
+   <style>
+      h1{
+      font-size:48px;
+      }
+      div{
+      border-top: solid blue;
+      text-align: justify;
+      }
+      
+   </style>
+   <body>
+      <h1 style="margin-top:2cm" align="center">
+         <span style="color:red">Manifesto</span>
+      </h1>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">Meta</span>
+         </h2>
+         <table>
+            <tr>
+               <th align="left">Key_name: </th>
+               <td>TPC3-PRC-PLC</td>
+            </tr>
+            <tr>
+               <th align="left">Title: </th>
+               <td>Ontologia referente a músicas e queries em SPARQL</td>
+            </tr>
+            <tr>
+               <th align="left">Subtitle: </th>
+               <td>Trabalho referente ao segundo TPC da unidade curricular de PRC</td>
+            </tr>
+            <tr>
+               <th align="left">Inicial date: </th>
+               <td>2020-03-10</td>
+            </tr>
+            <tr>
+               <th align="left">End date: </th>
+               <td>2020-03-17</td>
+            </tr>
+         </table>
+         <p>
+            <b>
+               <span style="color:red">Supervisor</span>
+            </b>
+         </p>
+         <p align="left">
+            <b>Name: </b>José Carlos Ramalho
+         </p>
+         <p align="left">
+            <b>Email: </b>jcr@di.uminho.pt
+         </p>
+         <p align="left">
+            <b>Homepage: </b>
+            <a href="http://www4.di.uminho.pt/~jcr/">http://www4.di.uminho.pt/~jcr/</a>
+         </p>
+      </div>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">WorkTeam</span>
+         </h2>
+         <table>
+            <tr>
+               <th align="left">Number: </th>
+               <td>A80757</td>
+            </tr>
+            <tr>
+               <th align="left">Name: </th>
+               <td>Jaime Leite</td>
+            </tr>
+            <tr>
+               <th align="left">Email: </th>
+               <td>a80757@alunos.uminho.pt</td>
+            </tr>
+            <tr>
+               <th align="left">Photo: </th>
+               <td>
+                  <img width="200" height="200" src="imagens/aluno.jpg"></img>
+               </td>
+            </tr>
+         </table>
+      </div>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">Abstracts</span>
+         </h2>
+         
+         <p>
+            O trabalho que foi necessário efetuar para o segundo TPC de 
+            <i>PRC</i> relaciona-se com a definição de uma ontologia para um arquivo de músicas, bem como
+            com o 
+            desenvolvimento de queries em 
+            <b>SPARQL</b> relativas ao arquivo de músicas. Este arquivo está definido em XML. Na definição
+            da ontologia, foi indicada a existência 
+            de duas classes principais: 
+            <i>obra</i> e 
+            <i>instrumento</i>. Nas suas relações, uma 
+            <i>obra</i> 
+            <i>necessita</i> de um 
+            <i>instrumento</i>, e este último 
+            <i>é 
+               necessitado
+            </i> por uma 
+            <i>obra</i>. Uma 
+            <i>obra</i> é caracterizada pelo 
+            <i>arranjo</i>, 
+            <i>compositor</i>, 
+            <i>inf_relacionada_video</i> (relativo ao atributo 
+            
+            <i>video</i> no ficheiro 
+            <i>XML</i> original), 
+            <i>tipo</i> e 
+            <i>titulo</i>. Um 
+            <i>instrumento</i> é caracterizado pela sua 
+            <i>designacao</i>, 
+            <i>path_partitura</i>,  
+            
+            <i>type_partitura</i> e 
+            <i>voice_partitura</i>.
+            
+         </p>
+         
+         <p> 
+            Inicialmente definiu-se, no 
+            <b>Protege</b>, as classes e suas relações, bem como os seus atributos. Posteriormente, foi criada
+            manualmente uma 
+            <i>obra</i> e um 
+            
+            <i>instrumento</i>. De seguida, foi feito o export da ontologia para um ficheiro 
+            <i>.ttl</i>(ficheiro "tpc2.ttl" que se encontra na pasta "/desenv/"). Usando um 
+            documento 
+            <i>XSL</i>(ficheiro "sheet.xsl" que se encontra na pasta "/desenv/conversao/"), foi efetuada
+            a conversão do ficheiro 
+            <i>XML</i> original para o formato 
+            
+            <i>.ttl</i>(o resultado deta conversão encontra-se no ficheiro "results.ttl" na pasta "/desenv/conversao/".
+            Esta informação foi acrescentada ao ficheiro resultante da 
+            exportação da ontologia, ou seja, ao ficheiro "tpc2.ttl" mencionado anteriormente.
+            
+            
+         </p>
+         
+         <p>
+            Para responder às queries pretendidas, utilizou-se o conhecimento aprendido nas aulas
+            práticas de 
+            <i>PRC</i> por forma a manipular e agrupar informação presente no 
+            ficheiro 
+            <i>.ttl</i> final("tpc2.ttl"). As queries estão colocadas no ficheiro "queries.txt", na pasta
+            "/desenv/".
+            
+         </p>
+         
+      </div>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">Deriverables</span>
+         </h2>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP2">Trabalho desenvolvido</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/arquivo-musica-digital.xml">Arquivo de músicas</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/results.ttl">Ficheiro com o resultado da conversão dos valores de XML para TTL</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/sheet.xsl">Folha de estilos para converter XML em TTL</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP2/desenv/queries.txt">Queries em SPARQL</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP2/desenv/tpc2.ttl">Ficheiro TTL final</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP2/PR/pr.html">Manifesto</a>
+         </li>
+         
+      </div>
+      
+   </body>
+</html>
