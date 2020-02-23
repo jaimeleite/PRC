@@ -5,12 +5,20 @@ block content
   div(style="margin:2cm;")
       div(class="column")
         div(class="card")
-          h2.w3-center(style="margin-top:-0.001cm;") Indique um repositório
+          h2.w3-center(style="margin-top:-0.001cm;") Indique um repositório e uma query
           form.w3-container(action="/" method="post")
             .w3-container(id='lista')
               .w3-container(id='f1')
-                input.w3-input.w3-section(required type='text' name='repositorio' placeholder='Repositório')
-            button.w3-button.w3-round.large.w3-grey(id='mais1') + Query
+                if repositorio.length > 0
+                  textarea(required type='text' rows="10" cols="20" name='repositorio' placeholder='Repositorio')
+                    | #{repositorio}
+                else
+                  textarea(required type='text' rows="10" cols="20" name='repositorio' placeholder='Repositorio')
+                if query.length > 0
+                  textarea(required type='text' rows="10" cols="20" name='query' placeholder='Query')
+                    | #{query}
+                else
+                  textarea(required type='text' rows="10" cols="20" name='query' placeholder='Query')
             input.w3-input.w3-black(type="submit" value="Exec")
       div(class="column")
         div(class="card")
@@ -21,12 +29,8 @@ block content
                 td
                   h3(style="color:red;")=repositorio
       div(class="column" style="margin-left:7.00cm; margin-top:0.5cm;")
-        h2(style="margin-left:6.8cm;") Results
-        // tr
-            td
-              h3(style="color:red;")=resultado.type
-        //button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="apagaResultados()")
-              i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar
-        div
-          textarea(id="theTextarea" rows="10" cols="70")
+        h2(style="margin-left:7.0cm;") Results
+        textarea(id="theTextarea" rows="10" cols="70")
             | #{resultados}
+        button.w3-button.w3-charcoal.w3-right.w3-padding-small(onclick="javascript: apagaResultados();")
+          i(class="fa fa-trash" style="color:#c0b283") &nbsp; Apagar
