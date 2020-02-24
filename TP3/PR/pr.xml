@@ -5,8 +5,8 @@
         <keyname>TPC3-PRC-PLC</keyname>
         <title>Servidor em NodeJs que permite efetuar queries SPARQL</title>
         <subtitle>Trabalho referente ao terceiro TPC da unidade curricular de PRC</subtitle>
-        <bdate>2020-03-10</bdate>
-        <edate>2020-03-17</edate>
+        <bdate>2020-03-17</bdate>
+        <edate>2020-03-24</edate>
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
