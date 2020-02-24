@@ -3,7 +3,7 @@
 <pr>
     <meta>
         <keyname>TPC3-PRC-PLC</keyname>
-        <title>Servidor em NodeJs que permite efetuar queries SPARQL</title>
+        <title>Servidor em NodeJs para permitir efetuar queries SPARQL</title>
         <subtitle>Trabalho referente ao terceiro TPC da unidade curricular de PRC</subtitle>
         <bdate>2020-03-17</bdate>
         <edate>2020-03-24</edate>
