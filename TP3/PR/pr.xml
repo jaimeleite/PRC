@@ -23,32 +23,17 @@
     </workteam>
     <abstract>
         <p>
-            O trabalho que foi necessário efetuar para o segundo TPC de <i>PRC</i> relaciona-se com a definição de uma ontologia para um arquivo de músicas, bem como com o 
-            desenvolvimento de queries em <b>SPARQL</b> relativas ao arquivo de músicas. Este arquivo está definido em XML. Na definição da ontologia, foi indicada a existência 
-            de duas classes principais: <i>obra</i> e <i>instrumento</i>. Nas suas relações, uma <i>obra</i> <i>necessita</i> de um <i>instrumento</i>, e este último <i>é 
-            necessitado</i> por uma <i>obra</i>. Uma <i>obra</i> é caracterizada pelo <i>arranjo</i>, <i>compositor</i>, <i>inf_relacionada_video</i> (relativo ao atributo 
-            <i>video</i> no ficheiro <i>XML</i> original), <i>tipo</i> e <i>titulo</i>. Um <i>instrumento</i> é caracterizado pela sua <i>designacao</i>, <i>path_partitura</i>,  
-            <i>type_partitura</i> e <i>voice_partitura</i>.
-        </p>
-        <p> 
-            Inicialmente definiu-se, no <b>Protege</b>, as classes e suas relações, bem como os seus atributos. Posteriormente, foi criada manualmente uma <i>obra</i> e um 
-            <i>instrumento</i>. De seguida, foi feito o export da ontologia para um ficheiro <i>.ttl</i>(ficheiro "tpc2.ttl" que se encontra na pasta "/desenv/"). Usando um 
-            documento <i>XSL</i>(ficheiro "sheet.xsl" que se encontra na pasta "/desenv/conversao/"), foi efetuada a conversão do ficheiro <i>XML</i> original para o formato 
-            <i>.ttl</i>(o resultado deta conversão encontra-se no ficheiro "results.ttl" na pasta "/desenv/conversao/". Esta informação foi acrescentada ao ficheiro resultante da 
-            exportação da ontologia, ou seja, ao ficheiro "tpc2.ttl" mencionado anteriormente. 
-        </p>
-        <p>
-            Para responder às queries pretendidas, utilizou-se o conhecimento aprendido nas aulas práticas de <i>PRC</i> por forma a manipular e agrupar informação presente no 
-            ficheiro <i>.ttl</i> final("tpc2.ttl"). As queries estão colocadas no ficheiro "queries.txt", na pasta "/desenv/".
+            O trabalho que foi necessário efetuar para o terceiro TPC de <i>PRC</i> relaciona-se com o desenvolvimento de um servidor em NodeJs que permite ao utilizador executar 
+            uma query em SPARQL, relativa aos dados armazenados num dado repositório que terá de indicar.
+            O servidor em NodeJs, que se encontra na pasta "App", apresenta ao utilizador os repositórios que este tem disponíveis no servidor do <i>GraphDB</i>. Assim, tem à sua
+            disposição duas <i>textArea</i>, uma para indicar o nome do repositório e outra para indicar a query em <i>SPARQL</i>. Quando o utilizador carrega no botão <b>Exec</b>, 
+            é enviado um pedido ao servidor do <i>GraphDB</i> que retorna valores que são armazenados numa outra <i>textArea</i>. O conteúdo desta pode ser removido se o utilizador
+            pressionar o botão <b>Limpar</b>.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP2">Trabalho desenvolvido</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/arquivo-musica-digital.xml">Arquivo de músicas</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/results.ttl">Ficheiro com o resultado da conversão dos valores de XML para TTL</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP2/desenv/conversao/sheet.xsl">Folha de estilos para converter XML em TTL</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP2/desenv/queries.txt">Queries em SPARQL</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP2/desenv/tpc2.ttl">Ficheiro TTL final</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP2/PR/pr.html">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP3">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP3/App">Servidor NodeJs que permite executar queries em SPARQL</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP3/PR/pr.html">Manifesto</deliverable>
     </deliverables>
 </pr>
