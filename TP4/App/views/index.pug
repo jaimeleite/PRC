@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div(style="margin:2cm; border-top: solid green;")
+    .w3-container
+      h1 Listagem das obras
+      table.w3-table-all
+        tr
+          th Título
+          th Número de Partituras
+          th Identificador
+        each valor in listaObras
+          tr
+            td= valor.titulo
+            td= valor.numPartituras
+            td
+                form.form-inline(method="get" action=`/` + valor.identificador)
+                  button.w3-button.w3-green(type="submit")=valor.identificador

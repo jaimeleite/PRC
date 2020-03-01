@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(style="margin:2cm; border-top: solid green;")
+    .w3-container
+      h1=idObra
+      table.w3-table-all
+        tr
+          th Identificador da partitura
+          th Path
+          th Clave
+          th Afinação
+          th Voz
+        each valor in listaPartituras
+          tr
+            td= valor.idPartitura
+            td= valor.path
+            td= valor.clave
+            td= valor.afinacao
+            td= valor.voz
+        form.form-inline(method="get" action=`/`)
+            button.w3-button.w3-green.w3-right(type="submit") Go back
