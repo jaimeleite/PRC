@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP3/PR/pr.dtd">
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP4/PR/pr.dtd">
 <pr>
     <meta>
-        <keyname>TPC3-PRC-PLC</keyname>
-        <title>Servidor em NodeJs para permitir efetuar queries SPARQL</title>
-        <subtitle>Trabalho referente ao terceiro TPC da unidade curricular de PRC</subtitle>
-        <bdate>2020-03-17</bdate>
-        <edate>2020-03-24</edate>
+        <keyname>TPC4-PRC-PLC</keyname>
+        <title>Servidor em NodeJs para permitir visualizar obras</title>
+        <subtitle>Trabalho referente ao quarto TPC da unidade curricular de PRC</subtitle>
+        <bdate>2020-02-24</bdate>
+        <edate>2020-03-02</edate>
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
@@ -23,17 +23,15 @@
     </workteam>
     <abstract>
         <p>
-            O trabalho que foi necessário efetuar para o terceiro TPC de <i>PRC</i> relaciona-se com o desenvolvimento de um servidor em NodeJs que permite ao utilizador executar 
-            uma query em SPARQL, relativa aos dados armazenados num dado repositório que terá de indicar.
-            O servidor em NodeJs, que se encontra na pasta "App", apresenta ao utilizador os repositórios que este tem disponíveis no servidor do <i>GraphDB</i>. Assim, tem à sua
-            disposição duas <i>textArea</i>, uma para indicar o nome do repositório e outra para indicar a query em <i>SPARQL</i>. Quando o utilizador carrega no botão <b>Exec</b>, 
-            é enviado um pedido ao servidor do <i>GraphDB</i> que retorna valores que são armazenados numa outra <i>textArea</i>. O conteúdo desta pode ser removido se o utilizador
-            pressionar o botão <b>Limpar</b>.
+            O trabalho que foi necessário efetuar para o quarto TPC de <i>PRC</i> relaciona-se com o desenvolvimento de um servidor em NodeJs que permite ao utilizador visualizar 
+            as obras existentes num repositório <b>GraphDB</b>. Na página inicial do servidor, são apresentadas as obras, caracterizadas pelo título, número de partituras e pelo 
+            identificador. Cada obra pode ser vista numa página indidual, onde são descritas as suas partituras. Cada partitura é caracterizada pelo seu identificador, path, clave,
+            afinacao e voz.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP3">Trabalho desenvolvido</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP3/App">Servidor NodeJs que permite executar queries em SPARQL</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP3/PR/pr.html">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP4">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP4/App">Servidor NodeJs que permite visualizar obras</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP4/PR/pr.html">Manifesto</deliverable>
     </deliverables>
 </pr>
