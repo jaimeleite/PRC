@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP4/PR/pr.dtd">
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP5/PR/pr.dtd">
 <pr>
     <meta>
-        <keyname>TPC4-PRC-PLC</keyname>
-        <title>Servidor em NodeJs para permitir visualizar obras</title>
-        <subtitle>Trabalho referente ao quarto TPC da unidade curricular de PRC</subtitle>
-        <bdate>2020-02-24</bdate>
-        <edate>2020-03-02</edate>
+        <keyname>TPC5-PRC-PLC</keyname>
+        <title>DBPedia - queries</title>
+        <subtitle>Trabalho referente ao quinto TPC da unidade curricular de PRC</subtitle>
+        <bdate>2020-03-02</bdate>
+        <edate>2020-03-09</edate>
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
@@ -23,15 +23,15 @@
     </workteam>
     <abstract>
         <p>
-            O trabalho que foi necessário efetuar para o quarto TPC de <i>PRC</i> relaciona-se com o desenvolvimento de um servidor em NodeJs que permite ao utilizador visualizar 
-            as obras existentes num repositório <b>GraphDB</b>. Na página inicial do servidor, são apresentadas as obras, caracterizadas pelo título, número de partituras e pelo 
-            identificador. Cada obra pode ser vista numa página indidual, onde são descritas as suas partituras. Cada partitura é caracterizada pelo seu identificador, path, clave,
-            afinacao e voz.
+            O trabalho necessário desenvolver para o quinto TPC de <b>PRC</b> relaciona-se com a obtenção de informações de nadadores que estão registados na <i>DBPedia</i>. Para
+            obter estas informações, foi desenvolvida uma query em <i>SPARQL</i>(que se encontra no ficheiro <i>sparql.txt</i>). O resultado da query encontra-se no ficheiro 
+            <i>sparql.json</i>.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP4">Trabalho desenvolvido</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP4/App">Servidor NodeJs que permite visualizar obras</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP4/PR/pr.html">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5/sparql.txt">Query desenvolvida</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5/sparql.json">Resultado da query desenvolvida</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP5/PR/pr.html">Manifesto</deliverable>
     </deliverables>
 </pr>
