@@ -1,0 +1,13 @@
+//querie para o TPC5
+select distinct ?swimmer ?nome ?genero ?birPlace ?birDate ?deDate ?abs where{
+    ?swimmer a dbo:Swimmer.
+    ?swimmer dbo:birthDate ?birDate.
+    ?swimmer foaf:gender ?genero.
+    ?swimmer foaf:name ?nome.
+    
+    optional {
+        ?swimmer dbo:abstract ?abs.
+        ?swimmer dbo:birthPlace ?birPlace.
+        ?swimmer dbo:deathDate ?deDate.
+    }
+}

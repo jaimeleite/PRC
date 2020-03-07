@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP4/PR/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC4-PRC-PLC</keyname>
+        <title>Servidor em NodeJs para permitir visualizar obras</title>
+        <subtitle>Trabalho referente ao quarto TPC da unidade curricular de PRC</subtitle>
+        <bdate>2020-02-24</bdate>
+        <edate>2020-03-02</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            O trabalho que foi necessário efetuar para o quarto TPC de <i>PRC</i> relaciona-se com o desenvolvimento de um servidor em NodeJs que permite ao utilizador visualizar 
+            as obras existentes num repositório <b>GraphDB</b>. Na página inicial do servidor, são apresentadas as obras, caracterizadas pelo título, número de partituras e pelo 
+            identificador. Cada obra pode ser vista numa página indidual, onde são descritas as suas partituras. Cada partitura é caracterizada pelo seu identificador, path, clave,
+            afinacao e voz.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP4">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP4/App">Servidor NodeJs que permite visualizar obras</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP4/PR/pr.html">Manifesto</deliverable>
+    </deliverables>
+</pr>
