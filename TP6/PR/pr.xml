@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP5/PR/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC5-PRC-PLC</keyname>
+        <title>DBPedia - queries</title>
+        <subtitle>Trabalho referente ao quinto TPC da unidade curricular de PRC</subtitle>
+        <bdate>2020-03-02</bdate>
+        <edate>2020-03-09</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            O trabalho necessário desenvolver para o quinto TPC de <b>PRC</b> relaciona-se com a obtenção de informações de nadadores que estão registados na <i>DBPedia</i>. Para
+            obter estas informações, foi desenvolvida uma query em <i>SPARQL</i>(que se encontra no ficheiro <i>sparql.txt</i>). O resultado da query encontra-se no ficheiro 
+            <i>sparql.json</i>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5/sparql.txt">Query desenvolvida</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5/sparql.json">Resultado da query desenvolvida</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP5/PR/pr.html">Manifesto</deliverable>
+    </deliverables>
+</pr>
