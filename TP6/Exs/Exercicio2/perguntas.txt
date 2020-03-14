@@ -1,0 +1,23 @@
+Cria uma ontologia OWL para modelar os seguintes conceitos:
+
+- Deverão existir 3 classes: Cliente, Loja e Produto;
+- Cliente e Loja deverão ter as propriedades: nome (string) e email (string) apara além de outras que achar relevantes;
+- Produto deve ter um código que o identifique para além de outros atributos que achar relevantes;
+- Loja deve ter uma propriedade "vende" que a relaciona com Produto e Produto deve ter uma propriedade "éVendidoPor" que o relaciona com Loja;
+- Cliente deve ter uma propriedade "compra" que o relaciona com Produto e Produto deve ter uma propriedade "éCompradoPor" que o relaciona com Cliente;
+- Instâncias de Loja que vendam mais de 100 produtos devem pertencer a uma nova classe: "LojaGrande";
+- Uma instância de produto não poderá ser instância de Cliente;
+- Instâncias de Loja e Cliente devem pertencer a outra classe também designada por "CompraVenda".
+
+Quando tiveres a base da tua ontologia criada acrescenta-lhe as seguintes instâncias:
+
+- Pelo menos 5 lojas e carateriza-as. Exemplos: Continente, Mercearia do João, Talho do Bairro ...
+- Pelo menos 5 clientes;
+- Pelo menos 10 produtos e relaciona-os com as lojas onde são vendidos;
+- Relaciona os clientes com alguns dos produtos que costumam comprar.
+
+Agora, cria as seguintes queries SPARQL:
+
+- Que lojas vendem o produto A?
+- Que produtos são comprados pelo cliente X?
+- Quem são os potenciais clientes da loja Y?

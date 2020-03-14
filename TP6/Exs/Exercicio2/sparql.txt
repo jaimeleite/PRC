@@ -1,0 +1,37 @@
+1. Que lojas vendem o produto A?
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/2/ex2#>
+select distinct ?nome ?email ?localizacao where {
+    ?loja a :Loja .
+    ?loja :nome ?nome .
+    ?loja :email ?email .
+    ?loja :localizacao ?localizacao .
+    
+    ?loja :vende :Cornetto .
+}
+
+2. Que produtos são comprados pelo cliente X?
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/2/ex2#>
+select ?codigo ?marca where {
+    :Jaime :compra ?produto .
+    ?produto :codigo ?codigo .
+    ?produto :marca ?marca .
+}
+
+3. Quem são os potenciais clientes da loja Y?
+
+#assumindo que os potenciais clientes são os clientes que costumam comprar produtos na loja Y
+
+PREFIX : <http://www.semanticweb.org/jaime/ontologies/2020/2/ex2#>
+select distinct ?nome ?email ?idade where {
+    ?cliente a :Cliente .
+    ?produto a :Produto .
+    
+    ?cliente :compra ?produto .
+    :Continente :vende ?produto .
+    
+    ?cliente :nome ?nome .
+    ?cliente :email ?email .
+    ?cliente :idade ?idade .
+}
