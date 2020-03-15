@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP5/PR/pr.dtd">
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP6/PR/pr.dtd">
 <pr>
     <meta>
-        <keyname>TPC5-PRC-PLC</keyname>
-        <title>DBPedia - queries</title>
-        <subtitle>Trabalho referente ao quinto TPC da unidade curricular de PRC</subtitle>
-        <bdate>2020-03-02</bdate>
-        <edate>2020-03-09</edate>
+        <keyname>TPC6-PRC-PLC</keyname>
+        <title>Ontologias + Sparql</title>
+        <subtitle>Trabalho referente ao sexto TPC da unidade curricular de PRC</subtitle>
+        <bdate>2020-03-09</bdate>
+        <edate>2020-03-16</edate>
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
@@ -23,15 +23,37 @@
     </workteam>
     <abstract>
         <p>
-            O trabalho necessário desenvolver para o quinto TPC de <b>PRC</b> relaciona-se com a obtenção de informações de nadadores que estão registados na <i>DBPedia</i>. Para
-            obter estas informações, foi desenvolvida uma query em <i>SPARQL</i>(que se encontra no ficheiro <i>sparql.txt</i>). O resultado da query encontra-se no ficheiro 
-            <i>sparql.json</i>.
+            O trabalho necessário desenvolver para o sexto TPC de <b>PRC</b> relaciona-se com a resolução de um texto de um dos anos anteriores da unidade curricular <b>PRC</b>.
+            Neste teste, é requerida a realização de quatro exercícios.
+        </p>
+        <p>
+            O primeiro deles é a obtenção de um grafo, o qual se encontra na pasta "TP6/Exs/Ex1", nomeadamente no ficheiro que tem o nome de 
+            <i>result.png</i>. Para a obtenção deste grafo, a ontologia apresentada para este exercício foi guardada num ficheiro e este foi carregado no <b>GraphDB</b>, onde foi
+            possível visualizar as relações entre os nodos.
+        </p>
+        <p>
+            O segundo exercício relaciona-se com a criação de uma ontologia, partindo dos parâmetros indicados no enunciado para este exercício. A ontologia foi desenvolvida, tendo
+            por base os conhecimentos aprendidos nas aulas práticas de <b>PRC</b>. A ontologia encontra-se definida na pasta "TP6/Exs/Ex2", nomeadamente no ficheiro 
+            <i>ex2.ttl</i>. No exercício 2, era requerido que se desenvolvessem queries <b>SPARQL</b>. Estas queries encontram-se na diretoria "TP6/Exs/Ex2", no ficheiro 
+            <i>sparql.txt</i>.
+        </p>
+        <p>
+            O terceiro exercício consistia em responder a um conjunto de queries <b>SPARQL</b>com a informação presente na <b>DBpedia</b>. As queries encontram-se na pasta "TP6/Exs/Ex3", 
+            nomeadamente no ficheiro <i>resolucao.txt</i>.
+        </p>
+        <p>
+            O quarto exercício consistia em, partindo de uma ontologia sobre <i>Pokemons</i>, definir um conjunto de queries <b>SPARQL</b> relativas a essa mesma ontologia. A 
+            ontologia foi guardada num ficheiro, designado por <i>pokemon.rdf</i>, na diretoria "TP6/Exs/Ex4". As queries encontram-se na pasta "TP6/Exs/Ex4", nomeadamente no 
+            ficheiro <i>resolucao.txt</i>.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5">Trabalho desenvolvido</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5/sparql.txt">Query desenvolvida</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP5/sparql.json">Resultado da query desenvolvida</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP5/PR/pr.html">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs">Exercícios</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio1">Exercício 1</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio2">Exercício 2</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio3">Exercício 3</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio4">Exercício 4</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP6/PR/pr.html">Manifesto</deliverable>
     </deliverables>
 </pr>
