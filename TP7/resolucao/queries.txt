@@ -1,0 +1,34 @@
+SELECT * WHERE {
+    ?f a dbo:Film.
+    ?f foaf:name ?fname.
+    ?f dbo:abstract ?abs.
+    filter (lang(?abs)="en").
+    ?f dbo:director ?dir.
+    ?f dbo:musicComposer ?music.
+    ?f dbo:writer ?writer.
+    ?f dbp:country ?country.
+    ?f dbp:language ?lang.
+}
+
+
+SELECT distinct ?a ?aname ?abs ?bdate WHERE {
+    ?f a dbo:Film.
+    ?f dbo:starring ?a .
+    ?a foaf:name ?aname .
+    ?a dbo:abstract ?abs.
+    filter (lang(?abs)="en").
+    ?a dbo:birthDate ?bdate.
+   
+}
+
+SELECT distinct ?m ?mname ?abs ?wife WHERE {
+    ?f a dbo:Film.
+    ?f foaf:name ?fname.
+    ?f dbo:musicComposer ?m.
+    ?m foaf:name ?mname .
+    ?m dbo:abstract ?abs.
+    filter( lang(?abs)="en").
+    optional{
+      ?m dbo:spouse ?wife .
+  }
+}

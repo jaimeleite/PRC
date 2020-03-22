@@ -1,0 +1,708 @@
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Syria
+:Syria rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Circumpolar_peoples
+:Circumpolar_peoples rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Egypt
+:Egypt rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#New_Zealand
+:New_Zealand rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#United_States
+:United_States rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Afghanistan
+:Afghanistan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Albania
+:Albania rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Algeria
+:Algeria rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Ancient_Egypt
+:Ancient_Egypt rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Andorra
+:Andorra rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Angola
+:Angola rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Anguilla
+:Anguilla rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Antigua_and_Barbuda
+:Antigua_and_Barbuda rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Aruba
+:Aruba rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Azerbaijan
+:Azerbaijan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bangladesh
+:Bangladesh rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Barbados
+:Barbados rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Belarus
+:Belarus rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Belgium
+:Belgium rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Belize
+:Belize rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Benin
+:Benin rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bermuda
+:Bermuda rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bolivia
+:Bolivia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bosnia_and_Herzegovina
+:Bosnia_and_Herzegovina rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Brazil
+:Brazil rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#British_Empire
+:British_Empire rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#British_Virgin_Islands
+:British_Virgin_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Brunei
+:Brunei rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bulgaria
+:Bulgaria rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Burkina_Faso
+:Burkina_Faso rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cameroon
+:Cameroon rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cayman_Islands
+:Cayman_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Central_African_Republic
+:Central_African_Republic rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Chad
+:Chad rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Chile
+:Chile rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#China
+:China rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Colombia
+:Colombia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Comoros
+:Comoros rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cook_Islands
+:Cook_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Costa_Rica
+:Costa_Rica rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Croatia
+:Croatia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cyprus
+:Cyprus rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Czech_Republic
+:Czech_Republic rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Dominican_Republic
+:Dominican_Republic rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Ecuador
+:Ecuador rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#El_Salvador
+:El_Salvador rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Equatorial_Guinea
+:Equatorial_Guinea rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#European_Union
+:European_Union rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Federated_States_of_Micronesia
+:Federated_States_of_Micronesia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Fiji
+:Fiji rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Finland
+:Finland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Gabon
+:Gabon rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Germany
+:Germany rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Ghana
+:Ghana rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Greece
+:Greece rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Greenland
+:Greenland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Guam
+:Guam rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Guernsey
+:Guernsey rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Guinea
+:Guinea rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Guinea-Bissau
+:Guinea-Bissau rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Haiti
+:Haiti rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Holy_See
+:Holy_See rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Honduras
+:Honduras rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Hong_Kong
+:Hong_Kong rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Hungary
+:Hungary rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Iceland
+:Iceland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#India
+:India rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Indonesia
+:Indonesia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Iran
+:Iran rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Isle_of_Man
+:Isle_of_Man rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Italy
+:Italy rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Jamaica
+:Jamaica rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Japan
+:Japan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Jersey
+:Jersey rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kazakhstan
+:Kazakhstan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kiribati
+:Kiribati rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kosovo
+:Kosovo rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Laos
+:Laos rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Latvia
+:Latvia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Lebanon
+:Lebanon rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Lesotho
+:Lesotho rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Liberia
+:Liberia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Libya
+:Libya rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Lithuania
+:Lithuania rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Luxembourg
+:Luxembourg rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Macau
+:Macau rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Madagascar
+:Madagascar rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Malawi
+:Malawi rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Maldives
+:Maldives rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Mali
+:Mali rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Malta
+:Malta rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Marshall_Islands
+:Marshall_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Mauritius
+:Mauritius rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Moldova
+:Moldova rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Monaco
+:Monaco rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Mongolia
+:Mongolia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Montenegro
+:Montenegro rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Montserrat
+:Montserrat rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Morocco
+:Morocco rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Mozambique
+:Mozambique rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Myanmar
+:Myanmar rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Namibia
+:Namibia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Nauru
+:Nauru rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Netherlands
+:Netherlands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#New_Caledonia
+:New_Caledonia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Nicaragua
+:Nicaragua rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Niger
+:Niger rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Nigeria
+:Nigeria rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#North_Korea
+:North_Korea rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Northern_Mariana_Islands
+:Northern_Mariana_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Norway
+:Norway rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Oman
+:Oman rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Pakistan
+:Pakistan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Palau
+:Palau rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Panama
+:Panama rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Papua_New_Guinea
+:Papua_New_Guinea rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Paraguay
+:Paraguay rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Philippines
+:Philippines rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Poland
+:Poland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Portugal
+:Portugal rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Puerto_Rico
+:Puerto_Rico rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Republic_of_Ireland
+:Republic_of_Ireland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Romania
+:Romania rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Russia
+:Russia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Rwanda
+:Rwanda rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Saint_Kitts_and_Nevis
+:Saint_Kitts_and_Nevis rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Saint_Lucia
+:Saint_Lucia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Saint_Vincent_and_the_Grenadines
+:Saint_Vincent_and_the_Grenadines rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Samoa
+:Samoa rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#San_Marino
+:San_Marino rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Senegal
+:Senegal rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Seychelles
+:Seychelles rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Sierra_Leone
+:Sierra_Leone rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Singapore
+:Singapore rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Slovakia
+:Slovakia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Slovenia
+:Slovenia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Somalia
+:Somalia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#South_Korea
+:South_Korea rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Spain
+:Spain rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Sri_Lanka
+:Sri_Lanka rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Sudan
+:Sudan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Suriname
+:Suriname rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Swaziland
+:Swaziland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Switzerland
+:Switzerland rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Taiwan
+:Taiwan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#The_Bahamas
+:The_Bahamas rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Abkhazia
+:Abkhazia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Curaçao
+:Curaçao rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Democratic_Republic_of_the_Congo
+:Democratic_Republic_of_the_Congo rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Denmark
+:Denmark rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Georgia_country
+:Georgia_country rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Ivory_Coast
+:Ivory_Coast rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Serbia
+:Serbia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Tajikistan
+:Tajikistan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Thailand
+:Thailand rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#The_Gambia
+:The_Gambia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Togo
+:Togo rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Tonga
+:Tonga rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Tunisia
+:Tunisia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Tuvalu
+:Tuvalu rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Ukraine
+:Ukraine rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#United_Kingdom
+:United_Kingdom rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#United_States_Virgin_Islands
+:United_States_Virgin_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Uruguay
+:Uruguay rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Uzbekistan
+:Uzbekistan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Vanuatu
+:Vanuatu rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Vatican_City
+:Vatican_City rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Venezuela
+:Venezuela rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Zambia
+:Zambia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Zimbabwe
+:Zimbabwe rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cambodia
+:Cambodia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Ethiopia
+:Ethiopia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Iraqi_Kurdistan
+:Iraqi_Kurdistan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kenya
+:Kenya rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kyrgyzstan
+:Kyrgyzstan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Nepal
+:Nepal rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Northern_Cyprus
+:Northern_Cyprus rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Solomon_Islands
+:Solomon_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Turkmenistan
+:Turkmenistan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Vietnam
+:Vietnam rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Golden_Age_of_Mexican_cinema
+:Golden_Age_of_Mexican_cinema rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Palestinian_territories
+:Palestinian_territories rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Tanzania
+:Tanzania rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Tokelau
+:Tokelau rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Turks_and_Caicos_Islands
+:Turks_and_Caicos_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#United_Arab_Emirates
+:United_Arab_Emirates rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Argentina
+:Argentina rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Burundi
+:Burundi rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Canada
+:Canada rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cherokee_Nation
+:Cherokee_Nation rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cuba
+:Cuba rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Estonia
+:Estonia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Falkland_Islands
+:Falkland_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#France
+:France rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Gibraltar
+:Gibraltar rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Grenada
+:Grenada rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Guatemala
+:Guatemala rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Guyana
+:Guyana rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Israel
+:Israel rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kuwait
+:Kuwait rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Mauritania
+:Mauritania rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Mexico
+:Mexico rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#South_Sudan
+:South_Sudan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Nagorno-Karabakh
+:Nagorno-Karabakh rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Cape_Verde
+:Cape_Verde rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#East_Timor
+:East_Timor rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#American_Samoa
+:American_Samoa rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Armenia
+:Armenia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Australia
+:Australia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Austria
+:Austria rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bahrain
+:Bahrain rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Basque_Country_greater_region
+:Basque_Country_greater_region rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Bhutan
+:Bhutan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Dominica
+:Dominica rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Eritrea
+:Eritrea rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Iraq
+:Iraq rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Jordan
+:Jordan rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Kingdom_of_the_Netherlands
+:Kingdom_of_the_Netherlands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Malaysia
+:Malaysia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Peru
+:Peru rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Qatar
+:Qatar rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Republic_of_Macedonia
+:Republic_of_Macedonia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Republic_of_the_Congo
+:Republic_of_the_Congo rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Saudi_Arabia
+:Saudi_Arabia rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#South_Africa
+:South_Africa rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#State_of_Palestine
+:State_of_Palestine rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Sweden
+:Sweden rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#São_Tomé_and_Príncipe
+:São_Tomé_and_Príncipe rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Trinidad_and_Tobago
+:Trinidad_and_Tobago rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Turkey
+:Turkey rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Transnistria
+:Transnistria rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Yemen
+:Yemen rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Minnesota_Chippewa_Tribe
+:Minnesota_Chippewa_Tribe rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Québécois_people
+:Québécois_people rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Faroe_Islands
+:Faroe_Islands rdf:type owl:NamedIndividual ,
+       :País .
+###  http://www.semanticweb.org/jaime/ontologies/2020/2/aula7#Portuguese_Empire
+:Portuguese_Empire rdf:type owl:NamedIndividual ,
+       :País .
