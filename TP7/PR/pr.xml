@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP6/PR/pr.dtd">
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP7/PR/pr.dtd">
 <pr>
     <meta>
-        <keyname>TPC6-PRC-PLC</keyname>
+        <keyname>TPC7-PRC-PLC</keyname>
         <title>Ontologias + Sparql</title>
-        <subtitle>Trabalho referente ao sexto TPC da unidade curricular de PRC</subtitle>
-        <bdate>2020-03-09</bdate>
-        <edate>2020-03-16</edate>
+        <subtitle>Povoamento de uma ontologia</subtitle>
+        <bdate>2020-03-16</bdate>
+        <edate>2020-03-23</edate>
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
@@ -23,37 +23,36 @@
     </workteam>
     <abstract>
         <p>
-            O trabalho necessário desenvolver para o sexto TPC de <b>PRC</b> relaciona-se com a resolução de um texto de um dos anos anteriores da unidade curricular <b>PRC</b>.
-            Neste teste, é requerida a realização de quatro exercícios.
+            O trabalho necessário desenvolver para o sétimo TPC de <b>PRC</b> relaciona-se com o povoamento de uma ontologia definida na aula prática de dia 16 de março de 2020.
         </p>
         <p>
-            O primeiro deles é a obtenção de um grafo, o qual se encontra na pasta "TP6/Exs/Exercicio1", nomeadamente no ficheiro que tem o nome de 
-            <i>result.png</i>. Para a obtenção deste grafo, a ontologia apresentada para este exercício foi guardada num ficheiro e este foi carregado no <b>GraphDB</b>, onde foi
-            possível visualizar as relações entre os nodos.
+            Para tal, o professor indicou-nos querys para extrair informação de modo a povoar a ontologia. Foram usadas estas querys, bem como outras definidas pelo aluno, por forma
+            a ter informação ainda mais completa para povoar a ontologia. 
         </p>
         <p>
-            O segundo exercício relaciona-se com a criação de uma ontologia, partindo dos parâmetros indicados no enunciado para este exercício. A ontologia foi desenvolvida, tendo
-            por base os conhecimentos aprendidos nas aulas práticas de <b>PRC</b>. A ontologia encontra-se definida na pasta "TP6/Exs/Exercicio2", nomeadamente no ficheiro 
-            <i>ex2.ttl</i>. No exercício 2, era requerido que se desenvolvessem queries <b>SPARQL</b>. Estas queries encontram-se na diretoria "TP6/Exs/Exercicio2", no ficheiro 
-            <i>sparql.txt</i>.
+            O resultado de se terem feito as querys à <b>DBpedia</b> encontram-se nos ficheiros <b>JSON</b>, que se estão na diretoria "resolucao/informacao". A cada um destes 
+            ficheiros foi aplicado um programa <b>Python</b>, por forma a converter a informação do formato <b>JSON</b> para <b>TTL</b>. Os programas encontram-se na diretoria 
+            "resolucao/conversao". O resultado de cada uma destas conversões encontra-se na diretoria "resolucao/resultadoConversao". Cada um destes resultados foi adicionado à 
+            ontologia definida na aula prática do dia 16 de março de 2020, ou seja, ao ficheiro "aula7.ttl", dando origem à ontologia final, que se encontra no ficheiro 
+            "ontologia.ttl".
+            Cada um dos resultados referidos anteriormente é exemplificado da seguinte forma: ao ficheiro "atores.json" que se encontra na diretoria "resolucao/informacao" foi 
+            aplicado o programa <b>python</b> "conversorAtores.py, que se encontra na diretoria "resolucao/conversao", com o uso do comando "python conversorAtores.py > atores.ttl".
+            O conteúdo do ficheiro "atores.ttl" foi adicionado à ontologia  definida na aula prática. O mesmo processo se aplicou para escritores, realizadores e países. Ao ficheiro
+            <b>JSON</b> que contem os filmes(ficheiro "filmes.json" que se encontra na diretoria "resolucao/informacao") foram geradas, para além dos filmes, as línguas referentes a
+            cada país. Esta informação encontra-se no ficheiro "filmesELinguas.ttl", na diretoria "resolucao/resultadoConversao" 
         </p>
         <p>
-            O terceiro exercício consistia em responder a um conjunto de queries <b>SPARQL</b>com a informação presente na <b>DBpedia</b>. As queries encontram-se na pasta "TP6/Exs/Exercicio3", 
-            nomeadamente no ficheiro <i>resolucao.txt</i>.
-        </p>
-        <p>
-            O quarto exercício consistia em, partindo de uma ontologia sobre <i>Pokemons</i>, definir um conjunto de queries <b>SPARQL</b> relativas a essa mesma ontologia. A 
-            ontologia foi guardada num ficheiro, designado por <i>pokemon.rdf</i>, na diretoria "TP6/Exs/Exercicio4". As queries encontram-se na pasta "TP6/Exs/Exercicio4", nomeadamente no 
-            ficheiro <i>resolucao.txt</i>.
+            Importante referir que os ficheiros <b>JSON</b> que resultaram das querys efetuadas à <b>DBpedia</b> sofreram alterações no seu conteúdo, para facilitar o trabalho que 
+            era necessário fazer pelos programas <b>python</b>.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6">Trabalho desenvolvido</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs">Exercícios</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio1">Exercício 1</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio2">Exercício 2</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio3">Exercício 3</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP6/Exs/Exercicio4">Exercício 4</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP6/PR/pr.html">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao">Resolução do TPC7</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/conversao">Programas python para converter JSON em TTL</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/informacao">Ficheiros JSON com informação extraída da DBpedia</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/resultadoConversao">Ficheiros TTL resultantes da aplicação dos programas python</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/ontologia.ttl">Ontologia final</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP7/PR/pr.html">Manifesto</deliverable>
     </deliverables>
 </pr>
