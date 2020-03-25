@@ -30,3 +30,21 @@ Atores.getLista = async function(req){
     } 
 }
 
+Atores.getAtor = async function(idAtor){
+    var query = `select ?nome ?sexo ?cultura where {
+        c:${idAtor} a c:Ator .
+    	c:${idAtor} c:nome ?nome .
+    	c:${idAtor} c:sexo ?sexo .
+    	c:${idAtor} c:atuou ?cultura .
+    } ` 
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return response.data
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+

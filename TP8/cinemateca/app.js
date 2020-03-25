@@ -4,6 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var filmesRouter = require('./routes/filmes');
 var paisesRouter = require('./routes/paises');
 var linguasRouter = require('./routes/linguas');
 var generosRouter = require('./routes/generos');
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/filmes', filmesRouter);
 app.use('/paises', paisesRouter);
 app.use('/linguas', linguasRouter);
 app.use('/generos', generosRouter);

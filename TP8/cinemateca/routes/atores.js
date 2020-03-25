@@ -18,4 +18,37 @@ router.get('/', function(req, res, next) {
     .catch(e => res.status(500).send(`Erro na listagem de filmes: ${e}`))
 });
 
+router.get('/:id', function(req, res, next) {
+  i = 0
+  idAtor = req.params.id
+
+  nomeAtor = ""
+  sexoAtor = ""
+  pecasCultura = []
+  ator = {}
+
+  Atores.getAtor(idAtor)
+    .then(dados => {
+        dados.results.bindings.forEach(element => {
+          if(i == 0){
+            nomeAtor = element.nome.value
+            sexoAtor = element.sexo.value
+          }
+          pecaCultura = String(element.cultura.value).split("http://www.di.uminho.pt/prc2020/2020/2/cinema#")[1]
+          if(!pecasCultura.includes(pecaCultura)){
+            pecasCultura.push(pecaCultura)
+          }
+        })
+
+        ator = {
+          ator: idAtor,
+          nomeAtor: nomeAtor,
+          sexoAtor: sexoAtor,
+          pecasCultura: pecasCultura
+        }
+        res.jsonp(ator)
+      })
+    .catch(e => res.status(500).send(`Erro na listagem de filmes: ${e}`))
+});
+
 module.exports = router;
