@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP7/PR/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC7-PRC-PLC</keyname>
+        <title>Ontologias + Sparql</title>
+        <subtitle>Povoamento de uma ontologia</subtitle>
+        <bdate>2020-03-16</bdate>
+        <edate>2020-03-23</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            O trabalho necessário desenvolver para o sétimo TPC de <b>PRC</b> relaciona-se com o povoamento de uma ontologia definida na aula prática de dia 16 de março de 2020.
+        </p>
+        <p>
+            Para tal, o professor indicou-nos querys para extrair informação de modo a povoar a ontologia. Foram usadas estas querys, bem como outras definidas pelo aluno, por forma
+            a ter informação ainda mais completa para povoar a ontologia. 
+        </p>
+        <p>
+            O resultado de se terem feito as querys à <b>DBpedia</b> encontram-se nos ficheiros <b>JSON</b>, que se estão na diretoria "resolucao/informacao". A cada um destes 
+            ficheiros foi aplicado um programa <b>Python</b>, por forma a converter a informação do formato <b>JSON</b> para <b>TTL</b>. Os programas encontram-se na diretoria 
+            "resolucao/conversao". O resultado de cada uma destas conversões encontra-se na diretoria "resolucao/resultadoConversao". Cada um destes resultados foi adicionado à 
+            ontologia definida na aula prática do dia 16 de março de 2020, ou seja, ao ficheiro "aula7.ttl", dando origem à ontologia final, que se encontra no ficheiro 
+            "ontologia.ttl".
+            Cada um dos resultados referidos anteriormente é exemplificado da seguinte forma: ao ficheiro "atores.json" que se encontra na diretoria "resolucao/informacao" foi 
+            aplicado o programa <b>python</b> "conversorAtores.py, que se encontra na diretoria "resolucao/conversao", com o uso do comando "python conversorAtores.py > atores.ttl".
+            O conteúdo do ficheiro "atores.ttl" foi adicionado à ontologia  definida na aula prática. O mesmo processo se aplicou para escritores, realizadores e países. Ao ficheiro
+            <b>JSON</b> que contem os filmes(ficheiro "filmes.json" que se encontra na diretoria "resolucao/informacao") foram geradas, para além dos filmes, as línguas referentes a
+            cada país. Esta informação encontra-se no ficheiro "filmesELinguas.ttl", na diretoria "resolucao/resultadoConversao" 
+        </p>
+        <p>
+            Importante referir que os ficheiros <b>JSON</b> que resultaram das querys efetuadas à <b>DBpedia</b> sofreram alterações no seu conteúdo, para facilitar o trabalho que 
+            era necessário fazer pelos programas <b>python</b>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao">Resolução do TPC7</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/conversao">Programas python para converter JSON em TTL</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/informacao">Ficheiros JSON com informação extraída da DBpedia</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/resultadoConversao">Ficheiros TTL resultantes da aplicação dos programas python</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/ontologia.ttl">Ontologia final</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP7/PR/pr.html">Manifesto</deliverable>
+    </deliverables>
+</pr>
