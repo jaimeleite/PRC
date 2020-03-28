@@ -28,23 +28,23 @@
          <table>
             <tr>
                <th align="left">Key_name: </th>
-               <td>TPC7-PRC-PLC</td>
+               <td>TPC8-PRC-PLC</td>
             </tr>
             <tr>
                <th align="left">Title: </th>
-               <td>Ontologias + Sparql</td>
+               <td>Definição de rotas e obtenção de resultados partindo do GraphDB</td>
             </tr>
             <tr>
                <th align="left">Subtitle: </th>
-               <td>Povoamento de uma ontologia</td>
+               <td>Rotas e queries Sparql</td>
             </tr>
             <tr>
                <th align="left">Inicial date: </th>
-               <td>2020-03-16</td>
+               <td>2020-03-23</td>
             </tr>
             <tr>
                <th align="left">End date: </th>
-               <td>2020-03-23</td>
+               <td>2020-03-30</td>
             </tr>
          </table>
          <p>
@@ -96,55 +96,54 @@
          </h2>
          
          <p>
-            O trabalho necessário desenvolver para o sétimo TPC de 
-            <b>PRC</b> relaciona-se com o povoamento de uma ontologia definida na aula prática de dia 16
-            de março de 2020.
+            O trabalho necessário desenvolver para o oitavo TPC de 
+            <b>PRC</b> relaciona-se com a definição de um conjunto de rotas para ser possível obter informação
+            presente num 
+            repositório 
+            <b>GraphDB</b>, sobre cinema.
             
          </p>
          
          <p>
-            Para tal, o professor indicou-nos querys para extrair informação de modo a povoar
-            a ontologia. Foram usadas estas querys, bem como outras definidas pelo aluno, por
-            forma
-            a ter informação ainda mais completa para povoar a ontologia. 
+            De seguida, apresentam-se as rotas que foram tratadas: "/filmes", sendo possível visualizar
+            a listagem dos filmes presentes no repositório; "/filmes/:id", 
+            sendo indicadas as informações relativas a um filme específico; "/atores", sendo apresentados
+            os atores registados no repositório; "/atores/:id", em que 
+            são apresentadas informações para um ator específico; "/personagens", sendo indicada
+            a lista com todas as personagens; "personagens/:id", em que é 
+            apresentada informação sobre uma personagem específica; "/paises", sendo apresentados
+            todos os países; "/linguas", fazendo aparecer todas as línguas 
+            existentes no repositório; "/generos", sendo possível visualizar os géneros que estão
+            presentes no repositório.
             
          </p>
          
          <p>
-            O resultado de se terem feito as querys à 
-            <b>DBpedia</b> encontram-se nos ficheiros 
-            <b>JSON</b>, que se estão na diretoria "resolucao/informacao". A cada um destes 
-            ficheiros foi aplicado um programa 
-            <b>Python</b>, por forma a converter a informação do formato 
-            <b>JSON</b> para 
-            <b>TTL</b>. Os programas encontram-se na diretoria 
-            "resolucao/conversao". O resultado de cada uma destas conversões encontra-se na diretoria
-            "resolucao/resultadoConversao". Cada um destes resultados foi adicionado à 
-            ontologia definida na aula prática do dia 16 de março de 2020, ou seja, ao ficheiro
-            "aula7.ttl", dando origem à ontologia final, que se encontra no ficheiro 
-            "ontologia.ttl".
-            Cada um dos resultados referidos anteriormente é exemplificado da seguinte forma:
-            ao ficheiro "atores.json" que se encontra na diretoria "resolucao/informacao" foi
-            
-            aplicado o programa 
-            <b>python</b> "conversorAtores.py, que se encontra na diretoria "resolucao/conversao", com o uso
-            do comando "python conversorAtores.py &gt; atores.ttl".
-            O conteúdo do ficheiro "atores.ttl" foi adicionado à ontologia  definida na aula prática.
-            O mesmo processo se aplicou para escritores, realizadores e países. Ao ficheiro
-            
-            <b>JSON</b> que contem os filmes(ficheiro "filmes.json" que se encontra na diretoria "resolucao/informacao")
-            foram geradas, para além dos filmes, as línguas referentes a
-            cada país. Esta informação encontra-se no ficheiro "filmesELinguas.ttl", na diretoria
-            "resolucao/resultadoConversao" 
+            Importante referir que foram definidos seis ficheiros de 
+            <i>route</i>, para além do 
+            <i>index.js</i> que é criado automaticamente aquando da criação da aplicação. 
+            Consequentemente, foram criados seis ficheiros, que se encontram na pasta 
+            <i>controllers</i>, onde estão presentes as queries que são necessárias efetuar para cada rota.
             
          </p>
          
          <p>
-            Importante referir que os ficheiros 
-            <b>JSON</b> que resultaram das querys efetuadas à 
-            <b>DBpedia</b> sofreram alterações no seu conteúdo, para facilitar o trabalho que 
-            era necessário fazer pelos programas 
-            <b>python</b>.
+            O processo a efetuar para as rotas "/filmes" e "/filmes/:id" encontra-se no ficheiro
+            
+            <i>filmes.js</i>, na pasta 
+            <i>routes</i>. Ainda nesta pasta, estão 
+            presentes os ficheiros: 
+            <i>atores.js</i>, onde se tratam as rotas "/atores" e "/atores/:id"; 
+            <i>generos.js</i>, onde é tratada a rota "/generos"; 
+            <i>linguas.js</i>, 
+            onde é tratada a rota "/linguas"; 
+            <i>paises.js</i>, sendo possível tratar a rota "/paises"; 
+            <i>personagens.js</i>, onde são tratas as rotas "/personagens" e 
+            "/personagens/:id". Na pasta 
+            <i>controllers</i>, os ficheiros que têm nome igual aos que se encontram na pasta 
+            <i>routes</i> contêm as queries necessárias para 
+            devolver a informação para as rotas contidas nos ficheiros da pasta 
+            <i>routes</i>.
             
          </p>
          
@@ -156,31 +155,23 @@
          </h2>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP7">Trabalho desenvolvido</a>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP8">Trabalho desenvolvido</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao">Resolução do TPC7</a>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP8/cinemateca">Resolução do TPC8</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/conversao">Programas python para converter JSON em TTL</a>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP8/cinemateca/routes">Ficheiros para tratamento de rotas específicas</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/informacao">Ficheiros JSON com informação extraída da DBpedia</a>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP8/cinemateca/controllers">Ficheiros com queries Sparql associadas a determinadas rotas</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/resultadoConversao">Ficheiros TTL resultantes da aplicação dos programas python</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRC/tree/master/TP7/resolucao/ontologia.ttl">Ontologia final</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRC/blob/master/TP7/PR/pr.html">Manifesto</a>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP8/PR/pr.html">Manifesto</a>
          </li>
          
       </div>
