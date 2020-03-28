@@ -38,6 +38,7 @@ router.get('/:id', function(req, res, next) {
           if(!pecasCultura.includes(pecaCultura)){
             pecasCultura.push(pecaCultura)
           }
+          i += 1
         })
 
         ator = {

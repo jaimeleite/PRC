@@ -29,3 +29,20 @@ Personagens.getLista = async function(req){
     } 
 }
 
+Personagens.getPersonagem = async function(idPersonagem){
+    var query = `select ?nome ?pecaCultura ?interprete where {
+        c:${idPersonagem} a c:Personagem .
+    	c:${idPersonagem} c:nome ?nome .
+    	c:${idPersonagem} c:éPersonagemDe ?pecaCultura .
+    	c:${idPersonagem} c:éRepresentadoPor ?interprete .
+    } ` 
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return response.data
+    }
+    catch(e){
+        throw(e)
+    } 
+}
