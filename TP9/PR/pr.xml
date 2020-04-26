@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP9/PR/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC9-PRC-PLC</keyname>
+        <title>Definição de rotas para a API e desenvolvimento de interface para percorrer uma ontologia sobre cinema</title>
+        <subtitle>Rotas e queries Sparql</subtitle>
+        <bdate>2020-04-20</bdate>
+        <edate>2020-04-27</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            O trabalho necessário desenvolver para o nono TPC de <b>PRC</b> relaciona-se com a definição de um conjunto de rotas num servidor de API de dados, bem como a 
+            continuação do desenvolviemto de uma interface que permita visualizar a informação contida num repositório <i>GraphDB</i>, sobre cinema.
+        </p>
+        <p>
+            De seguida, apresentam-se as rotas que foram tratadas no servidor de API de dados: "/atores", sendo possível visualizar a listagem dos atores presentes no repositório;
+            "/atores/:idAtor", sendo indicadas as informações relativas a um ator específico; "/personagens", sendo apresentadas todas as personagens registadas no repositório;
+            "/personagens/:idPersonagem", sendo apresentada os dados relativos a uma personagem em específico.
+        </p>
+        <p>
+            Importante referir que, neste servidor, as rotas mencionadas anteriormente foram definidas no ficheiro "index.js", contido na pasta "routes". As queries <i>SPARQL</i>
+            necessárias efetuar para se obter a informação do <i>GraphDB</i> relativa às rotas dos atores encontram-se no ficheiro "atores.js", na pasta "controllers". Nesta pasta
+            encontram-se no ficheiro "filmes.js", as queries necessárias para obter do <i>GraphDB</i> informação relativa às personagens.
+        </p>
+        <p>
+            No servidor de interface, é possível navegar entre filmes, atores, personagens, sendo apresentada os respetivos atributos para cada um destes. 
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/">Resolução do TPC9</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/cinemateca/routes">Ficheiro para tratamento de rotas específicas</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/cinemateca/controllers">Ficheiros com queries Sparql associadas a determinadas rotas</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP9/PR/pr.html">Manifesto</deliverable>
+    </deliverables>
+</pr>

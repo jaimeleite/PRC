@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <meta charset="UTF-8"></meta>
+      <title>
+         Manifesto
+         
+      </title>
+   </head>
+   <style>
+      h1{
+      font-size:48px;
+      }
+      div{
+      border-top: solid blue;
+      text-align: justify;
+      }
+      
+   </style>
+   <body>
+      <h1 style="margin-top:2cm" align="center">
+         <span style="color:red">Manifesto</span>
+      </h1>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">Meta</span>
+         </h2>
+         <table>
+            <tr>
+               <th align="left">Key_name: </th>
+               <td>TPC9-PRC-PLC</td>
+            </tr>
+            <tr>
+               <th align="left">Title: </th>
+               <td>Definição de rotas para a API e desenvolvimento de interface para percorrer uma ontologia
+                  sobre cinema
+               </td>
+            </tr>
+            <tr>
+               <th align="left">Subtitle: </th>
+               <td>Rotas e queries Sparql</td>
+            </tr>
+            <tr>
+               <th align="left">Inicial date: </th>
+               <td>2020-04-20</td>
+            </tr>
+            <tr>
+               <th align="left">End date: </th>
+               <td>2020-04-27</td>
+            </tr>
+         </table>
+         <p>
+            <b>
+               <span style="color:red">Supervisor</span>
+            </b>
+         </p>
+         <p align="left">
+            <b>Name: </b>José Carlos Ramalho
+         </p>
+         <p align="left">
+            <b>Email: </b>jcr@di.uminho.pt
+         </p>
+         <p align="left">
+            <b>Homepage: </b>
+            <a href="http://www4.di.uminho.pt/~jcr/">http://www4.di.uminho.pt/~jcr/</a>
+         </p>
+      </div>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">WorkTeam</span>
+         </h2>
+         <table>
+            <tr>
+               <th align="left">Number: </th>
+               <td>A80757</td>
+            </tr>
+            <tr>
+               <th align="left">Name: </th>
+               <td>Jaime Leite</td>
+            </tr>
+            <tr>
+               <th align="left">Email: </th>
+               <td>a80757@alunos.uminho.pt</td>
+            </tr>
+            <tr>
+               <th align="left">Photo: </th>
+               <td>
+                  <img width="200" height="200" src="imagens/aluno.jpg"></img>
+               </td>
+            </tr>
+         </table>
+      </div>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">Abstracts</span>
+         </h2>
+         
+         <p>
+            O trabalho necessário desenvolver para o nono TPC de 
+            <b>PRC</b> relaciona-se com a definição de um conjunto de rotas num servidor de API de dados,
+            bem como a 
+            continuação do desenvolviemto de uma interface que permita visualizar a informação
+            contida num repositório 
+            <i>GraphDB</i>, sobre cinema.
+            
+         </p>
+         
+         <p>
+            De seguida, apresentam-se as rotas que foram tratadas no servidor de API de dados:
+            "/atores", sendo possível visualizar a listagem dos atores presentes no repositório;
+            "/atores/:idAtor", sendo indicadas as informações relativas a um ator específico;
+            "/personagens", sendo apresentadas todas as personagens registadas no repositório;
+            "/personagens/:idPersonagem", sendo apresentada os dados relativos a uma personagem
+            em específico.
+            
+         </p>
+         
+         <p>
+            Importante referir que, neste servidor, as rotas mencionadas anteriormente foram definidas
+            no ficheiro "index.js", contido na pasta "routes". As queries 
+            <i>SPARQL</i>
+            necessárias efetuar para se obter a informação do 
+            <i>GraphDB</i> relativa às rotas dos atores encontram-se no ficheiro "atores.js", na pasta "controllers".
+            Nesta pasta
+            encontram-se no ficheiro "filmes.js", as queries necessárias para obter do 
+            <i>GraphDB</i> informação relativa às personagens.
+            
+         </p>
+         
+         <p>
+            No servidor de interface, é possível navegar entre filmes, atores, personagens, sendo
+            apresentada os respetivos atributos para cada um destes. 
+            
+         </p>
+         
+      </div>
+      
+      <div style="margin:2cm">
+         <h2>
+            <span style="color:red">Deriverables</span>
+         </h2>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP9">Trabalho desenvolvido</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/">Resolução do TPC9</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/cinemateca/routes">Ficheiro para tratamento de rotas específicas</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/cinemateca/controllers">Ficheiros com queries Sparql associadas a determinadas rotas</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRC/blob/master/TP9/PR/pr.html">Manifesto</a>
+         </li>
+         
+      </div>
+      
+   </body>
+</html>
