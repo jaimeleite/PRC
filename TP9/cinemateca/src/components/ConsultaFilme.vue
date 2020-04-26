@@ -138,7 +138,7 @@ import axios from 'axios'
 const lhost = require("@/config/global").host;
 
 export default {
-  name: 'Consulta Filme',
+  name: 'ConsultaFilme',
   props: ['id'], 
   data: () => ({
     footer_props: {

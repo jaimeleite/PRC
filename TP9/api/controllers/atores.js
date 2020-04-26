@@ -48,18 +48,80 @@ Atores.getLista = async function(){
     } 
 }
 
-Atores.getAtor = async function(idAtor){
-    var query = `select distinct ?anome ?idAtor ?sexo where {
-		c:${idAtor} a c:Ator .
-    	c:${idAtor} c:nome ?anome .
-        bind(strafter(str(c:${idAtor}), 'cinema#') as ?idAtor) .
-    	c:${idAtor} c:sexo ?sexo .
+Atores.getFilmes = async function(idAtor){
+    var query = `select ?idFilme ?tituloFilme where{
+        c:${idAtor} a c:Ator .
+        bind(strafter(str(?f), 'cinema#') as ?idFilme) .
+        c:${idAtor} c:atuou ?f .
+        ?f c:título ?tituloFilme .
+    }  ` 
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    }
+}
+
+Atores.getPersonagens = async function(idAtor){
+    var query = `select ?idP ?personag where{
+        c:${idAtor} a c:Ator .
+        bind(strafter(str(?p), 'cinema#') as ?idP) .
+        c:${idAtor} c:representa ?p .
+        ?p c:nome ?personag .
     } ` 
     var encoded = encodeURIComponent(prefixes + query)
 
     try{
         var response = await axios.get(getLink + encoded)
         return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    }
+}
+
+async function getAtomica(idAtor){
+    var query = `select ?anome ?idAtor ?sexo where{
+        c:${idAtor} a c:Ator .
+        bind(strafter(str(c:${idAtor}), 'cinema#') as ?idAtor) .
+        optional{ 
+            c:${idAtor} c:nome ?anome .
+        }
+        optional {
+            c:${idAtor} c:sexo ?sexo . 
+        }
+    }  ` 
+    var encoded = encodeURIComponent(prefixes + query)
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+Atores.getAtor = async function(idAtor){
+    try{
+        //console.log("Estou dentro da função do ator")
+
+        var atomica = await getAtomica(idAtor)
+        var filmesAtor = await Atores.getFilmes(idAtor)
+        var personagensAtor = await Atores.getPersonagens(idAtor)
+
+        var ator = {
+            infoAtor : atomica[0],
+            filmesAtor: filmesAtor,
+            personagensAtor : personagensAtor
+        }
+
+        console.log("Ator:", ator)
+
+        return ator
     }
     catch(e){
         throw(e)

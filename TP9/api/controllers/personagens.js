@@ -33,7 +33,9 @@ var getLink = "http://localhost:7200/repositories/aula9" + "?query="
 Personagens.getLista = async function(){
     var query = `select ?idPersonagem ?pnome where {
         ?personagem a c:Personagem .
-        ?personagem c:nome ?pnome .
+        optional {
+            ?personagem c:nome ?pnome .
+        }
     	bind(strafter(str(?personagem), 'cinema#') as ?idPersonagem) .
     } `
 
@@ -48,17 +50,77 @@ Personagens.getLista = async function(){
     } 
 }
 
-Personagens.getPersonagem = async function(idPersonagem){
-    var query = `select ?pNome ?idPersonagem where {
+Personagens.getFilmes = async function(idPersonagem){
+    var query = `select distinct ?idFilme ?tituloFilme where{
         c:${idPersonagem} a c:Personagem .
-        c:${idPersonagem} c:nome ?pNome .
-        bind(strafter(str(c:${idPersonagem}), 'cinema#') as ?idPersonagem) .
+        bind(strafter(str(?f), 'cinema#') as ?idFilme) .
+        ?f c:temPersonagem c:${idPersonagem} .
+        optional {
+            ?f c:título ?tituloFilme .
+        }
+    }  ` 
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    }
+}
+
+Personagens.getAtores = async function(idPersonagem){
+    var query = `select ?idAtor ?nomeAtor where{
+        ?a a c:Ator .
+        bind(strafter(str(?a), 'cinema#') as ?idAtor) .
+        ?a c:representa c:${idPersonagem} .
+        optional {
+            ?a c:nome ?nomeAtor .
+        }
     } ` 
     var encoded = encodeURIComponent(prefixes + query)
 
     try{
         var response = await axios.get(getLink + encoded)
         return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    }
+}
+
+
+async function getAtomica(idPersonagem){
+    var query = `select ?nomeP ?idP where{
+        c:${idPersonagem} a c:Personagem .
+        bind(strafter(str(c:${idPersonagem}), 'cinema#') as ?idP) .
+        optional{
+            c:${idPersonagem} c:nome ?nomeP .
+        }
+    } ` 
+    var encoded = encodeURIComponent(prefixes + query)
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+Personagens.getPersonagem = async function(idPersonagem){
+    try{
+        var atomica = await getAtomica(idPersonagem)
+        var filmesPersonagem = await Personagens.getFilmes(idPersonagem)
+        var atoresPersonagem = await Personagens.getAtores(idPersonagem)
+
+        var personagem = {
+            infoPersonagem : atomica[0],
+            filmesPersonagem: filmesPersonagem,
+            atoresPersonagem : atoresPersonagem
+        }
+        return personagem
     }
     catch(e){
         throw(e)

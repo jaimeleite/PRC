@@ -4,28 +4,62 @@
     </div>
     <v-card class="ma-4" v-else>
         <v-card-title class="indigo darken-4 white--text" dark>
-            <span class="headline">Personagem "{{ personagem.pNome }}" ({{personagem.idPersonagem}})</span>
+            <span class="headline">Personagem "{{ personagem.infoPersonagem.nomeP }}" ({{personagem.infoPersonagem.idP}})</span>
         </v-card-title>
 
         <v-card-text>
-            <v-container>
-              <v-row>
-                  <v-col cols="2">
-                  <div class="info-label">Id</div>
-                  </v-col>
-                  <v-col>
-                  <div class="info-content">{{ personagem.idPersonagem }}</div>
-                  </v-col>
-              </v-row>
-              <v-row>
-                  <v-col cols="2">
-                  <div class="info-label">Nome</div>
-                  </v-col>
-                  <v-col>
-                  <div class="info-content">{{ personagem.pNome }}</div>
-                  </v-col>
-              </v-row>
-            </v-container>
+          <v-container>ersonagem
+            <v-row>
+                <v-col cols="2">
+                <div class="info-label">Id</div>
+                </v-col>
+                <v-col>
+                <div class="info-content">{{ personagem.infoPersonagem.idP }}</div>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col cols="2">
+                <div class="info-label">Nome</div>
+                </v-col>
+                <v-col>
+                <div class="info-content">{{ personagem.infoPersonagem.nomeP }}</div>
+                </v-col>
+            </v-row>
+            <v-row v-if="personagem.filmesPersonagem && personagem.filmesPersonagem.length > 0">
+                <v-col cols="2">
+                <div class="info-label">Filmes</div>
+                </v-col>
+                <v-col>
+                    <div class="info-content">
+                        <ul>
+                            <li 
+                                v-for="filme in personagem.filmesPersonagem"
+                                :key="filme.idFilme"
+                            >
+                                <a @click="consultaFilme(filme)">{{ filme.tituloFilme }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </v-col>
+            </v-row>
+            <v-row v-if="personagem.atoresPersonagem && personagem.atoresPersonagem.length > 0">
+                <v-col cols="2">
+                <div class="info-label">Atores</div>
+                </v-col>
+                <v-col>
+                    <div class="info-content">
+                        <ul>
+                            <li 
+                                v-for="ator in personagem.atoresPersonagem"
+                                :key="ator.idAtor"
+                            >
+                                <a @click="consultaAtor(ator)">{{ ator.nomeAtor }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </v-col>
+            </v-row>
+          </v-container>
         </v-card-text>
 
         <v-card-actions>
@@ -57,10 +91,7 @@ export default {
     try {
       this.idPersonagem = this.$route.params.idPersonagem
       let response = await axios.get(lhost + "/personagens/" + this.idPersonagem);
-      this.personagem = {
-          idPersonagem: response.data[0].idPersonagem,
-          pNome: response.data[0].pNome,
-      }
+      this.personagem = response.data
 
       this.loaded = true;
     } 
@@ -70,7 +101,12 @@ export default {
   },
 
   methods: {
-    
+    consultaFilme(filme){
+      this.$router.push("/filmes/" + filme.idFilme);
+    },
+    consultaAtor(ator){
+      this.$router.push({ path: "/atores/" + ator.idAtor});
+    }
   }
 }
 
