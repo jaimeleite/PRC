@@ -43,8 +43,8 @@
     <deliverables>
         <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9">Trabalho desenvolvido</deliverable>
         <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/">Resolução do TPC9</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/cinemateca/routes">Ficheiro para tratamento de rotas específicas</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/cinemateca/controllers">Ficheiros com queries Sparql associadas a determinadas rotas</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/api/routes">Ficheiro para tratamento de rotas específicas</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/api/controllers">Ficheiros com queries Sparql associadas a determinadas rotas</deliverable>
         <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP9/PR/pr.html">Manifesto</deliverable>
     </deliverables>
 </pr>
