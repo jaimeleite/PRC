@@ -24,7 +24,7 @@
     <abstract>
         <p>
             O trabalho necessário desenvolver para o nono TPC de <b>PRC</b> relaciona-se com a definição de um conjunto de rotas num servidor de API de dados, bem como a 
-            continuação do desenvolviemto de uma interface que permita visualizar a informação contida num repositório <i>GraphDB</i>, sobre cinema.
+            continuação do desenvolvimento de uma interface que permita visualizar a informação contida num repositório <i>GraphDB</i>, sobre cinema.
         </p>
         <p>
             De seguida, apresentam-se as rotas que foram tratadas no servidor de API de dados: "/atores", sendo possível obter a listagem dos atores presentes no repositório;
@@ -33,8 +33,8 @@
         </p>
         <p>
             Importante referir que, neste servidor, as rotas mencionadas anteriormente foram definidas no ficheiro "index.js", contido na pasta "routes". As queries <i>SPARQL</i>
-            necessárias efetuar para se obter a informação do <i>GraphDB</i> relativa às rotas dos atores encontram-se no ficheiro "atores.js", na pasta "controllers". Nesta pasta
-            encontram-se também, no ficheiro "filmes.js", as queries necessárias para obter do <i>GraphDB</i> informação relativa às personagens.
+            necessárias efetuar para se obter a informação do <i>GraphDB</i> relativa aos atores encontram-se no ficheiro "atores.js", na pasta "controllers". Nesta pasta
+            encontram-se também, no ficheiro "personagens.js", as queries necessárias para obter do <i>GraphDB</i> informação relativa às personagens.
         </p>
         <p>
             No servidor de interface, é possível navegar entre filmes, atores, personagens, sendo apresentados os respetivos atributos para cada um destes. 
