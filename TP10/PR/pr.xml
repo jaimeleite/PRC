@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/home/jaime/Desktop/PRC/TP10/PR/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC10-PRC-PLC</keyname>
+        <title>SPARQL - Genealogia</title>
+        <subtitle>Queries SPARQL numa ontologia sobre genealogia</subtitle>
+        <bdate>2020-04-27</bdate>
+        <edate>2020-05-04</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            O trabalho necessário desenvolver para o décimo TPC de <b>PRC</b> relaciona-se com a definição de queries <i>SPARQL</i> para obter de uma ontologia armazenada num 
+            repositório <i>GraphDB</i> informação acerca de: ancestrais, descendentes, sogros, cunhados, tios e primos. No ficheiro "queries.txt", na pasta "resolucao", 
+            encontram-se definidas queries para obtenção da informação referida anteriormente, bem como queries <i>construct</i> para se formarem as relações de "hasAncestor",
+            "hasDescendent", "hasParentInLaw", "hasSiblingInLaw", "hasUncleAunt" e de "hasCousin".
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP10">Trabalho desenvolvido</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP9/resolucao/">Resolução do TPC10</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/tree/master/TP10/resolucao/queries.txt">Ficheiro com queries SPARQL</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRC/blob/master/TP10/PR/pr.html">Manifesto</deliverable>
+    </deliverables>
+</pr>

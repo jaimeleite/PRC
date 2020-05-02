@@ -1,0 +1,115 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+
+Ancestrais
+    -> selecionar os ancestrais dos indivíduos
+        select ?p ?anc where { 
+            ?p :hasParent+ ?anc .
+        }
+    -> construir a relação de "hasAncestor" entre os indivíduos
+        construct {
+            ?anc :hasAncestor ?p .    
+        } where {
+            ?p :hasParent+ ?anc .
+        }
+
+
+Descendentes
+    -> selecionar os descendentes dos indivíduos
+        select ?anc ?desc where { 
+           ?anc :hasChild+ ?desc .
+        }
+
+    -> construir a relação "hasDescendent" entre os indivíduos
+        construct {
+            ?anc :hasDescendent ?desc .    
+        } where {
+            ?anc :hasChild+ ?desc .
+        }
+
+Sogros
+    -> selecionar os sogros dos indivíduos
+        select ?p1 ?sogro where {
+            ?p1 a :Person .
+            ?p2 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p2 :hasChild ?filho .
+            ?p2 :hasParent ?sogro .
+            filter(?p1 != ?p2) .
+        }
+
+    -> construir a relação "hasParentInLaw" entre os indivíduos
+        construct {
+            ?sogro :hasParentInLaw ?p1 .    
+        } where {
+            ?p1 a :Person .
+            ?p2 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p2 :hasChild ?filho .
+            ?p2 :hasParent ?sogro .
+            filter(?p1 != ?p2) .
+        }
+
+
+Cunhados
+    -> selecionar os cunhados dos indivíduos
+        select ?p1 ?cunhado where {
+            ?p1 a :Person .
+            ?p2 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p2 :hasChild ?filho .
+            ?p2 :hasSibling ?cunhado .
+            filter(?p1 != ?p2) .
+        }
+
+    -> construir a relação "hasSiblingInLaw" entre os indivíduos
+        construct {
+            ?p1 :hasSiblingInLaw ?cunhado .    
+        } where {
+            ?p1 a :Person .
+            ?p2 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p2 :hasChild ?filho .
+            ?p2 :hasSibling ?cunhado .
+            filter(?p1 != ?p2) .
+        }
+
+Tios
+    -> selecionar os tios dos indivíduos
+        select ?p1 ?tio where {
+            ?p1 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p1 :hasSibling ?tio .
+        }
+
+    -> contruir a relação de "hasUncleAunt" entre os indivíduos
+        construct {
+            ?filho :hasUncleAunt ?tio .    
+        } where {
+            ?p1 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p1 :hasSibling ?tio .
+        }
+
+Primos
+    -> encontrar os primos dos indivíduos
+        select ?p1 ?primo where {
+            ?p1 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p1 :hasSibling ?tio .
+            ?tio :hasChild ?primo .
+        }
+
+    -> construir a relação "hasCousin" entre os indivíduos
+        construct {
+            ?filho :hasCousin ?primo .    
+        } where {
+            ?p1 a :Person .
+            ?p1 :hasChild ?filho .
+            ?p1 :hasSibling ?tio .
+            ?tio :hasChild ?primo .
+        }
