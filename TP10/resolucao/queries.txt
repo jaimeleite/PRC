@@ -44,7 +44,7 @@ Sogros
 
     -> construir a relação "hasParentInLaw" entre os indivíduos
         construct {
-            ?sogro :hasParentInLaw ?p1 .    
+            ?p1 :hasParentInLaw ?sogro .    
         } where {
             ?p1 a :Person .
             ?p2 a :Person .
@@ -80,7 +80,7 @@ Cunhados
 
 Tios
     -> selecionar os tios dos indivíduos
-        select ?p1 ?tio where {
+        select ?filho ?tio where {
             ?p1 a :Person .
             ?p1 :hasChild ?filho .
             ?p1 :hasSibling ?tio .
@@ -97,7 +97,7 @@ Tios
 
 Primos
     -> encontrar os primos dos indivíduos
-        select ?p1 ?primo where {
+        select ?filho ?primo where {
             ?p1 a :Person .
             ?p1 :hasChild ?filho .
             ?p1 :hasSibling ?tio .
