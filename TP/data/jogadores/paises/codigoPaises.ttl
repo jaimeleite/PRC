@@ -1,0 +1,599 @@
+@prefix : <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#perdedorEm
+:perdedorEm rdf:type owl:ObjectProperty ;
+            owl:inverseOf :temPerdedor ;
+            rdfs:domain :Jogador ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temElemento
+:temElemento rdf:type owl:ObjectProperty ;
+             owl:inverseOf :éElementoDe ;
+             rdfs:domain :Equipa ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temFase
+:temFase rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éFaseDe ;
+         rdfs:domain :Torneio ;
+         rdfs:range :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPartida
+:temPartida rdf:type owl:ObjectProperty ;
+            owl:inverseOf :éPartidaDe ;
+            rdfs:domain :Fase ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPerdedor
+:temPerdedor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temVencedor
+:temVencedor rdf:type owl:ObjectProperty ;
+             owl:inverseOf :vencedorEm ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#vencedorEm
+:vencedorEm rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éElementoDe
+:éElementoDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éFaseDe
+:éFaseDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éPartidaDe
+:éPartidaDe rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ano
+:ano rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dataNascimento
+:dataNascimento rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dificuldade
+:dificuldade rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#duracao
+:duracao rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#localNascimento
+:localNascimento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#melhorMão
+:melhorMão rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#resultado
+:resultado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#superfície
+:superfície rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Torneio .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger
+:Challenger rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Equipa
+:Equipa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Fase
+:Fase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final
+:Final rdf:type owl:Class ;
+       rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound
+:FirstRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ForthRound
+:ForthRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Grandslam
+:Grandslam rdf:type owl:Class ;
+           rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Jogador
+:Jogador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Partida
+:Partida rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal
+:Quarterfinal rdf:type owl:Class ;
+              rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#SecondRound
+:SecondRound rdf:type owl:Class ;
+             rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal
+:Semifinal rdf:type owl:Class ;
+           rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Small
+:Small rdf:type owl:Class ;
+       rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Teams
+:Teams rdf:type owl:Class ;
+       rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ThirdRound
+:ThirdRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Torneio
+:Torneio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#World_Tour
+:World_Tour rdf:type owl:Class ;
+            rdfs:subClassOf :Torneio .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+:Estados_Unidos_da_América :codigo "USA" .
+
+:Equador :codigo "ECU" .
+
+:Austrália :codigo "AUS" .
+
+:Itália :codigo "ITA" .
+
+:África_do_Sul :codigo "RSA" .
+
+:Dinamarca :codigo "DEN" .
+
+:Hungria :codigo "HUN" .
+
+:Chile :codigo "CHI" .
+
+:Polônia :codigo "POL" .
+
+:Peru :codigo "PER", "TUR" .
+
+:Índia :codigo "IND" .
+
+:Suécia :codigo "SWE" .
+
+:Espanha :codigo "ESP" .
+
+:Suíça :codigo "SUI" .
+
+:Alemanha :codigo "GER" .
+
+:Romênia :codigo "ROU" .
+
+:Croácia :codigo "CRO" .
+
+:Japão :codigo "JPN" .
+
+:Czechia :codigo "CZE" .
+
+:Rússia :codigo "RUS" .
+
+:Reino_Unido :codigo "GBR" .
+
+:Brasil :codigo "BRA" .
+
+:França :codigo "FRA" .
+
+:Zimbábue :codigo "ZIM" .
+
+:Sérvia :codigo "SRB" .
+
+:Países_Baixos :codigo "NED" .
+
+:Canadá :codigo "CAN" .
+
+:Grécia :codigo "GRE" .
+
+:México :codigo "MEX" .
+
+:Jamaica :codigo "JAM" .
+
+:Colômbia :codigo "COL" .
+
+:Argentina :codigo "ARG" .
+
+:Bélgica :codigo "BEL" .
+
+:Nova_Zelândia :codigo "NZL" .
+
+:Venezuela :codigo "VEN" .
+
+:Egito :codigo "EGY" .
+
+:Bolívia :codigo "BOL" .
+
+:Áustria :codigo "AUT" .
+
+:Paquistão :codigo "KUW", "PAK" .
+
+:Jugoslávia :codigo "YUG" .
+
+:Nigéria :codigo "NGR" .
+
+:Porto_Rico :codigo "PUR" .
+
+:Paraguai :codigo "PAR" .
+
+:Irlanda :codigo "IRL" .
+
+:Irão :codigo "IRI" .
+
+:Finlândia :codigo "FIN" .
+
+:Uruguai :codigo "URU" .
+
+:Israel :codigo "ISR" .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Coreia_(República_da)> :codigo
+    "KOR" .
+
+:Costa_Rica :codigo "CRC" .
+
+:Marrocos :codigo "MAR" .
+
+:Haiti :codigo "HAI" .
+
+:Letônia :codigo "LAT" .
+
+:Indonésia :codigo "INA" .
+
+:Senegal :codigo "SEN" .
+
+:Luxemburgo :codigo "LUX" .
+
+:Bahamas :codigo "BAH" .
+
+:Eslováquia :codigo "SVK" .
+
+:Ucrânia :codigo "UKR" .
+
+:Filipinas :codigo "PHI" .
+
+:Hong_Kong :codigo "HKG" .
+
+:Cuba :codigo "CUB" .
+
+:Bulgária :codigo "BUL" .
+
+:Noruega :codigo "NOR" .
+
+:Malásia :codigo "MAS" .
+
+:Quênia :codigo "KEN" .
+
+:Portugal :codigo "POR" .
+
+:Geórgia :codigo "GEO" .
+
+:Tailândia :codigo "THA" .
+
+:Andorra :codigo "AND" .
+
+:China :codigo "CHN" .
+
+:Costa_do_Marfim :codigo "CIV" .
+
+:República_da_Macedônia_do_Norte :codigo "MKD" .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Taipé_Chinesa,_República_da_China>
+  :codigo "TPE" .
+
+:Antilhas_Holandesas :codigo "AHO" .
+
+:El_Salvador :codigo "ESA" .
+
+:Guatemala :codigo "GUA" .
+
+:Mónaco :codigo "MON" .
+
+:Gana :codigo "GHA" .
+
+:Eslovênia :codigo "SLO" .
+
+:Estônia :codigo "EST" .
+
+:Trindade_e_Tobago :codigo "TRI" .
+
+:Argélia :codigo "ALG" .
+
+:República_Dominicana :codigo "DOM" .
+
+:Bielorrússia :codigo "BLR" .
+
+:Usbequistão :codigo "UZB" .
+
+:República_Centro-Africana :codigo "CAF" .
+
+:Armênia :codigo "ARM" .
+
+:Catar :codigo "QAT" .
+
+:Bósnia_e_Herzegovina :codigo "BIH" .
+
+:Líbano :codigo "LIB" .
+
+:Lituânia :codigo "LTU" .
+
+:Moldávia :codigo "MDA" .
+
+:Benin :codigo "BEN" .
+
+:Maurícia :codigo "MRI" .
+
+:Tunísia :codigo "TUN" .
+
+:Azerbaijão :codigo "AZE" .
+
+:Cazaquistão :codigo "KAZ" .
+
+:Islândia :codigo "ISL" .
+
+:Emirados_Árabes_Unidos :codigo "UAE" .
+
+:Montenegro :codigo "MNE" .
+
+:Serra_Leoa :codigo "SLE" .
+
+:Vietname :codigo "VIE" .
+
+:Chipre :codigo "CYP" .
+
+:Togo :codigo "TOG" .
+
+:Sri_Lanka :codigo "SRI" .
+
+:Barbados :codigo "BAR" .
+
+:Ilhas_Salomão :codigo "SOL" .
+
+:Aruba :codigo "ARU" .
+
+:Tajiquistão :codigo "TJK" .
+
+:Namíbia :codigo "NAM" .
+
+:Madagáscar :codigo "MAD" .
+
+:República_Árabe_da_Síria :codigo "SYR" .
+
+:Malta :codigo "MLT" .
+
+:Camboja :codigo "CAM" .
+
+:Uganda :codigo "UGA" .
+
+:Quirguistão :codigo "KGZ" .
+
+:Líbia :codigo "LBA" .
+
+:Burkina_Faso :codigo "BUR" .
+
+:Zâmbia :codigo "ZAM" .
+
+:Bermudas :codigo "BER" .
+
+:Mali :codigo "MLI" .
+
+:Singapura :codigo "SIN" .
+
+:Omã :codigo "OMA" .
+
+:Vanuatu :codigo "VAN" .
+
+:Arábia_Saudita :codigo "KSA" .
+
+:Barém :codigo "BRN" .
+
+:Guam :codigo "GUM" .
+
+:Papua_Nova_Guiné :codigo "PNG" .
+
+:Fiji :codigo "FIJ" .
+
+:Samoa :codigo "POC", "SAM" .
+
+:Ilhas_Cook :codigo "COK" .
+
+:Ilhas_Marshall :codigo "MHL" .
+
+:Brunei_Darussalam :codigo "BRU" .
+
+:San_Marino :codigo "SMR" .
+
+:Caribe :codigo "ECA" .
+
+:Bangladesh :codigo "BAN" .
+
+:Iraque :codigo "IRQ" .
+
+:Caraíbas :codigo "CAR" .
+
+:Congo :codigo "CGO" .
+
+:Camarões :codigo "CMR" .
+
+:Rodésia :codigo "RHO" .
+
+:Jordânia :codigo "JOR" .
+
+:Panamá :codigo "PAN" .
+
+:Burundi :codigo "BDI" .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Ilhas_Virgens_(EUA)> :codigo
+    "ISV" .
+
+:Checoslováquia :codigo "TCH" .
+
+:Havai :codigo "HAW" .
+
+:Tanzânia :codigo "TAN" .
+
+:Honduras :codigo "HON" .
+
+:Botswana :codigo "BOT" .
+
+:Ilhas_Cayman :codigo "CAY" .
+
+:República_Democrática_do_Congo :codigo "COD" .
+
+:São_Vicente_e_Granadinas :codigo "VIN" .
+
+:Ruanda :codigo "RWA" .
+
+:Turquemenistão :codigo "TKM" .
+
+:África_do_Sul :codigo "SUD" .
+
+:Santa_Lúcia :codigo "LCA" .
+
+:Nicarágua :codigo "NCA" .
+
+:Gabão :codigo "GAB" .
+
+:Ilhas_Marianas_do_Norte :codigo "NMI" .
+
+:República_Democrática_Popular_do_Laos :codigo "LAO" .
+
+:Angola :codigo "ANG" .
+
+:Lesoto :codigo "LES" .
+
+:Mianmar :codigo "MYA" .
+
+:Suriname :codigo "SUR" .
+
+:Guadalupe :codigo "GUD" .
+
+:Moçambique :codigo "MOZ" .
+
+:Seychelles :codigo "SEY" .
+
+:Nova_Caledônia :codigo "CAL" .
+
+:Reunião :codigo "REU" .
+
+:Granada :codigo "GRN" .
+
+:Liechtenstein :codigo "LIE" .
+
+:Eswatini :codigo "SWZ" .
+
+:Albânia :codigo "ALB" .
+
+:Belize :codigo "BIZ" .
+
+:Libéria :codigo "LBR" .
+
+:Antilhas_Holandesas :codigo "ANT" .
+
+:Samoa_Americana :codigo "ASA" .
+
+:Etiópia :codigo "ETH" .
+
+:Mongólia :codigo "MGL" .
+
+:Cabo_Verde :codigo "CPV" .
+
+:Palau :codigo "PLW" .
+
+:Nepal :codigo "NEP" .
+
+:Ilhas_Turcas_e_Caicos :codigo "TKS" .
+
+:Iémen :codigo "YEM" .
+
+:Mauritánia :codigo "MTN" .
+
+:Cingapura :codigo "SGP" .
+
+:Eritreia :codigo "ERI" .
+
+:Afeganistão :codigo "AFG" .
+
+:Curaçao :codigo "CUW" .

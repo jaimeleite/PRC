@@ -1,0 +1,595 @@
+@prefix : <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#perdedorEm
+:perdedorEm rdf:type owl:ObjectProperty ;
+            owl:inverseOf :temPerdedor ;
+            rdfs:domain :Jogador ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temElemento
+:temElemento rdf:type owl:ObjectProperty ;
+             owl:inverseOf :éElementoDe ;
+             rdfs:domain :Equipa ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temFase
+:temFase rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éFaseDe ;
+         rdfs:domain :Torneio ;
+         rdfs:range :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPartida
+:temPartida rdf:type owl:ObjectProperty ;
+            owl:inverseOf :éPartidaDe ;
+            rdfs:domain :Fase ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPerdedor
+:temPerdedor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temVencedor
+:temVencedor rdf:type owl:ObjectProperty ;
+             owl:inverseOf :vencedorEm ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#vencedorEm
+:vencedorEm rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éElementoDe
+:éElementoDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éFaseDe
+:éFaseDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éPartidaDe
+:éPartidaDe rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ano
+:ano rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dataNascimento
+:dataNascimento rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dificuldade
+:dificuldade rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#duracao
+:duracao rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#localNascimento
+:localNascimento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#melhorMão
+:melhorMão rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#resultado
+:resultado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#superfície
+:superfície rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Torneio .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger
+:Challenger rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Equipa
+:Equipa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Fase
+:Fase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final
+:Final rdf:type owl:Class ;
+       rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound
+:FirstRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ForthRound
+:ForthRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Grandslam
+:Grandslam rdf:type owl:Class ;
+           rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Jogador
+:Jogador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Partida
+:Partida rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal
+:Quarterfinal rdf:type owl:Class ;
+              rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#SecondRound
+:SecondRound rdf:type owl:Class ;
+             rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal
+:Semifinal rdf:type owl:Class ;
+           rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Small
+:Small rdf:type owl:Class ;
+       rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Teams
+:Teams rdf:type owl:Class ;
+       rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ThirdRound
+:ThirdRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Torneio
+:Torneio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#World_Tour
+:World_Tour rdf:type owl:Class ;
+            rdfs:subClassOf :Torneio .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+:Estados_Unidos_da_América a :Pais, owl:NamedIndividual .
+
+:Equador a :Pais, owl:NamedIndividual .
+
+:Austrália a :Pais, owl:NamedIndividual .
+
+:Itália a :Pais, owl:NamedIndividual .
+
+:África_do_Sul a :Pais, owl:NamedIndividual .
+
+:Dinamarca a :Pais, owl:NamedIndividual .
+
+:Hungria a :Pais, owl:NamedIndividual .
+
+:Chile a :Pais, owl:NamedIndividual .
+
+:Polônia a :Pais, owl:NamedIndividual .
+
+:Peru a :Pais, owl:NamedIndividual .
+
+:Índia a :Pais, owl:NamedIndividual .
+
+:Suécia a :Pais, owl:NamedIndividual .
+
+:Espanha a :Pais, owl:NamedIndividual .
+
+:Suíça a :Pais, owl:NamedIndividual .
+
+:Alemanha a :Pais, owl:NamedIndividual .
+
+:Romênia a :Pais, owl:NamedIndividual .
+
+:Croácia a :Pais, owl:NamedIndividual .
+
+:Japão a :Pais, owl:NamedIndividual .
+
+:Czechia a :Pais, owl:NamedIndividual .
+
+:Rússia a :Pais, owl:NamedIndividual .
+
+:Reino_Unido a :Pais, owl:NamedIndividual .
+
+:Brasil a :Pais, owl:NamedIndividual .
+
+:França a :Pais, owl:NamedIndividual .
+
+:Zimbábue a :Pais, owl:NamedIndividual .
+
+:Sérvia a :Pais, owl:NamedIndividual .
+
+:Países_Baixos a :Pais, owl:NamedIndividual .
+
+:Canadá a :Pais, owl:NamedIndividual .
+
+:Grécia a :Pais, owl:NamedIndividual .
+
+:México a :Pais, owl:NamedIndividual .
+
+:Jamaica a :Pais, owl:NamedIndividual .
+
+:Colômbia a :Pais, owl:NamedIndividual .
+
+:Argentina a :Pais, owl:NamedIndividual .
+
+:Bélgica a :Pais, owl:NamedIndividual .
+
+:Nova_Zelândia a :Pais, owl:NamedIndividual .
+
+:Venezuela a :Pais, owl:NamedIndividual .
+
+:Egito a :Pais, owl:NamedIndividual .
+
+:Bolívia a :Pais, owl:NamedIndividual .
+
+:Áustria a :Pais, owl:NamedIndividual .
+
+:Paquistão a :Pais, owl:NamedIndividual .
+
+:Jugoslávia a :Pais, owl:NamedIndividual .
+
+:Nigéria a :Pais, owl:NamedIndividual .
+
+:Porto_Rico a :Pais, owl:NamedIndividual .
+
+:Paraguai a :Pais, owl:NamedIndividual .
+
+:Irlanda a :Pais, owl:NamedIndividual .
+
+:Irão a :Pais, owl:NamedIndividual .
+
+:Finlândia a :Pais, owl:NamedIndividual .
+
+:Uruguai a :Pais, owl:NamedIndividual .
+
+:Israel a :Pais, owl:NamedIndividual .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Coreia_(República_da)> a
+    :Pais, owl:NamedIndividual .
+
+:Costa_Rica a :Pais, owl:NamedIndividual .
+
+:Marrocos a :Pais, owl:NamedIndividual .
+
+:Haiti a :Pais, owl:NamedIndividual .
+
+:Letônia a :Pais, owl:NamedIndividual .
+
+:Indonésia a :Pais, owl:NamedIndividual .
+
+:Senegal a :Pais, owl:NamedIndividual .
+
+:Luxemburgo a :Pais, owl:NamedIndividual .
+
+:Bahamas a :Pais, owl:NamedIndividual .
+
+:Eslováquia a :Pais, owl:NamedIndividual .
+
+:Ucrânia a :Pais, owl:NamedIndividual .
+
+:Filipinas a :Pais, owl:NamedIndividual .
+
+:Hong_Kong a :Pais, owl:NamedIndividual .
+
+:Cuba a :Pais, owl:NamedIndividual .
+
+:Bulgária a :Pais, owl:NamedIndividual .
+
+:Noruega a :Pais, owl:NamedIndividual .
+
+:Malásia a :Pais, owl:NamedIndividual .
+
+:Quênia a :Pais, owl:NamedIndividual .
+
+:Portugal a :Pais, owl:NamedIndividual .
+
+:Geórgia a :Pais, owl:NamedIndividual .
+
+:Tailândia a :Pais, owl:NamedIndividual .
+
+:Andorra a :Pais, owl:NamedIndividual .
+
+:China a :Pais, owl:NamedIndividual .
+
+:Costa_do_Marfim a :Pais, owl:NamedIndividual .
+
+:República_da_Macedônia_do_Norte a :Pais, owl:NamedIndividual .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Taipé_Chinesa,_República_da_China>
+  a :Pais, owl:NamedIndividual .
+
+:Antilhas_Holandesas a :Pais, owl:NamedIndividual .
+
+:El_Salvador a :Pais, owl:NamedIndividual .
+
+:Guatemala a :Pais, owl:NamedIndividual .
+
+:Mónaco a :Pais, owl:NamedIndividual .
+
+:Gana a :Pais, owl:NamedIndividual .
+
+:Eslovênia a :Pais, owl:NamedIndividual .
+
+:Estônia a :Pais, owl:NamedIndividual .
+
+:Trindade_e_Tobago a :Pais, owl:NamedIndividual .
+
+:Argélia a :Pais, owl:NamedIndividual .
+
+:República_Dominicana a :Pais, owl:NamedIndividual .
+
+:Bielorrússia a :Pais, owl:NamedIndividual .
+
+:Usbequistão a :Pais, owl:NamedIndividual .
+
+:República_Centro-Africana a :Pais, owl:NamedIndividual .
+
+:Armênia a :Pais, owl:NamedIndividual .
+
+:Catar a :Pais, owl:NamedIndividual .
+
+:Bósnia_e_Herzegovina a :Pais, owl:NamedIndividual .
+
+:Líbano a :Pais, owl:NamedIndividual .
+
+:Lituânia a :Pais, owl:NamedIndividual .
+
+:Moldávia a :Pais, owl:NamedIndividual .
+
+:Benin a :Pais, owl:NamedIndividual .
+
+:Maurícia a :Pais, owl:NamedIndividual .
+
+:Tunísia a :Pais, owl:NamedIndividual .
+
+:Azerbaijão a :Pais, owl:NamedIndividual .
+
+:Cazaquistão a :Pais, owl:NamedIndividual .
+
+:Islândia a :Pais, owl:NamedIndividual .
+
+:Emirados_Árabes_Unidos a :Pais, owl:NamedIndividual .
+
+:Montenegro a :Pais, owl:NamedIndividual .
+
+:Serra_Leoa a :Pais, owl:NamedIndividual .
+
+:Vietname a :Pais, owl:NamedIndividual .
+
+:Chipre a :Pais, owl:NamedIndividual .
+
+:Togo a :Pais, owl:NamedIndividual .
+
+:Sri_Lanka a :Pais, owl:NamedIndividual .
+
+:Barbados a :Pais, owl:NamedIndividual .
+
+:Ilhas_Salomão a :Pais, owl:NamedIndividual .
+
+:Aruba a :Pais, owl:NamedIndividual .
+
+:Tajiquistão a :Pais, owl:NamedIndividual .
+
+:Namíbia a :Pais, owl:NamedIndividual .
+
+:Madagáscar a :Pais, owl:NamedIndividual .
+
+:República_Árabe_da_Síria a :Pais, owl:NamedIndividual .
+
+:Malta a :Pais, owl:NamedIndividual .
+
+:Camboja a :Pais, owl:NamedIndividual .
+
+:Uganda a :Pais, owl:NamedIndividual .
+
+:Quirguistão a :Pais, owl:NamedIndividual .
+
+:Líbia a :Pais, owl:NamedIndividual .
+
+:Burkina_Faso a :Pais, owl:NamedIndividual .
+
+:Zâmbia a :Pais, owl:NamedIndividual .
+
+:Bermudas a :Pais, owl:NamedIndividual .
+
+:Mali a :Pais, owl:NamedIndividual .
+
+:Singapura a :Pais, owl:NamedIndividual .
+
+:Omã a :Pais, owl:NamedIndividual .
+
+:Vanuatu a :Pais, owl:NamedIndividual .
+
+:Arábia_Saudita a :Pais, owl:NamedIndividual .
+
+:Barém a :Pais, owl:NamedIndividual .
+
+:Guam a :Pais, owl:NamedIndividual .
+
+:Papua_Nova_Guiné a :Pais, owl:NamedIndividual .
+
+:Fiji a :Pais, owl:NamedIndividual .
+
+:Samoa a :Pais, owl:NamedIndividual .
+
+:Ilhas_Cook a :Pais, owl:NamedIndividual .
+
+:Ilhas_Marshall a :Pais, owl:NamedIndividual .
+
+:Brunei_Darussalam a :Pais, owl:NamedIndividual .
+
+:San_Marino a :Pais, owl:NamedIndividual .
+
+:Caribe a :Pais, owl:NamedIndividual .
+
+:Bangladesh a :Pais, owl:NamedIndividual .
+
+:Iraque a :Pais, owl:NamedIndividual .
+
+:Caraíbas a :Pais, owl:NamedIndividual .
+
+:Congo a :Pais, owl:NamedIndividual .
+
+:Camarões a :Pais, owl:NamedIndividual .
+
+:Rodésia a :Pais, owl:NamedIndividual .
+
+:Jordânia a :Pais, owl:NamedIndividual .
+
+:Panamá a :Pais, owl:NamedIndividual .
+
+:Burundi a :Pais, owl:NamedIndividual .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Ilhas_Virgens_(EUA)> a :Pais,
+    owl:NamedIndividual .
+
+:Checoslováquia a :Pais, owl:NamedIndividual .
+
+:Havai a :Pais, owl:NamedIndividual .
+
+:Tanzânia a :Pais, owl:NamedIndividual .
+
+:Honduras a :Pais, owl:NamedIndividual .
+
+:Botswana a :Pais, owl:NamedIndividual .
+
+:Ilhas_Cayman a :Pais, owl:NamedIndividual .
+
+:República_Democrática_do_Congo a :Pais, owl:NamedIndividual .
+
+:São_Vicente_e_Granadinas a :Pais, owl:NamedIndividual .
+
+:Ruanda a :Pais, owl:NamedIndividual .
+
+:Turquemenistão a :Pais, owl:NamedIndividual .
+
+:Santa_Lúcia a :Pais, owl:NamedIndividual .
+
+:Nicarágua a :Pais, owl:NamedIndividual .
+
+:Gabão a :Pais, owl:NamedIndividual .
+
+:Ilhas_Marianas_do_Norte a :Pais, owl:NamedIndividual .
+
+:República_Democrática_Popular_do_Laos a :Pais, owl:NamedIndividual .
+
+:Angola a :Pais, owl:NamedIndividual .
+
+:Lesoto a :Pais, owl:NamedIndividual .
+
+:Mianmar a :Pais, owl:NamedIndividual .
+
+:Suriname a :Pais, owl:NamedIndividual .
+
+:Guadalupe a :Pais, owl:NamedIndividual .
+
+:Moçambique a :Pais, owl:NamedIndividual .
+
+:Seychelles a :Pais, owl:NamedIndividual .
+
+:Nova_Caledônia a :Pais, owl:NamedIndividual .
+
+:Reunião a :Pais, owl:NamedIndividual .
+
+:Granada a :Pais, owl:NamedIndividual .
+
+:Liechtenstein a :Pais, owl:NamedIndividual .
+
+:Eswatini a :Pais, owl:NamedIndividual .
+
+:Albânia a :Pais, owl:NamedIndividual .
+
+:Belize a :Pais, owl:NamedIndividual .
+
+:Libéria a :Pais, owl:NamedIndividual .
+
+:Samoa_Americana a :Pais, owl:NamedIndividual .
+
+:Etiópia a :Pais, owl:NamedIndividual .
+
+:Mongólia a :Pais, owl:NamedIndividual .
+
+:Cabo_Verde a :Pais, owl:NamedIndividual .
+
+:Palau a :Pais, owl:NamedIndividual .
+
+:Nepal a :Pais, owl:NamedIndividual .
+
+:Ilhas_Turcas_e_Caicos a :Pais, owl:NamedIndividual .
+
+:Iémen a :Pais, owl:NamedIndividual .
+
+:Mauritánia a :Pais, owl:NamedIndividual .
+
+:Cingapura a :Pais, owl:NamedIndividual .
+
+:Eritreia a :Pais, owl:NamedIndividual .
+
+:Afeganistão a :Pais, owl:NamedIndividual .
+
+:Curaçao a :Pais, owl:NamedIndividual .

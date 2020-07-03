@@ -1,0 +1,250 @@
+NomePais,Codigo
+Afeganistão,AFG
+Albânia,ALB
+Argélia,DZA
+Samoa Americana,ASM
+Andorra,AND
+Angola,AGO
+Anguilla,AIA
+Antártica,ATA
+Antígua e Barbuda,ATG
+Argentina,ARG
+Armênia,ARM
+Aruba,ABW
+Austrália,AUS
+Áustria,AUT
+Azerbaijão,AZE
+Bahamas,BHS
+Barém,BHR
+Bangladesh,BGD
+Barbados,BRB
+Bielorrússia,BLR
+Bélgica,BEL
+Belize,BLZ
+Benin,BEN
+Bermudas,BMU
+Butão,BTN
+Bolívia,BOL
+"Bonaire, Santo Eustáquio e Saba",BES
+Bósnia e Herzegovina,BIH
+Botsuana,BWA
+Ilha Bouvet,BVT
+Brasil,BRA
+Território Britânico do Oceano Índico,IOT
+Brunei Darussalam,BRN
+Bulgária,BGR
+Burkina Faso,BFA
+Burundi,BDI
+Cabo Verde,CPV
+Camboja,KHM
+Camarões,CMR
+Canadá,CAN
+Ilhas Cayman,CYM
+República Centro-Africana,CAF
+Chade,TCD
+Chile,CHL
+China,CHN
+Ilha do Natal,CXR
+Ilhas Cocos,CCK
+Colômbia,COL
+Comores,COM
+República Democrática do Congo,COD
+Congo,COG
+Ilhas Cook,COK
+Costa Rica,CRI
+Croácia,HRV
+Cuba,CUB
+Curaçao,CUW
+Chipre,CYP
+Czechia,CZE
+Costa do Marfim,CIV
+Dinamarca,DNK
+Djibuti,DJI
+Dominica,DMA
+República Dominicana,DOM
+Equador,ECU
+Egito,EGY
+El Salvador,SLV
+Guiné Equatorial,GNQ
+Eritreia,ERI
+Estônia,EST
+Eswatini,SWZ
+Etiópia,ETH
+Ilhas Malvinas,FLK
+Ilhas Faroé,FRO
+Fiji,FJI
+Finlândia,FIN
+França,FRA
+Guiana Francesa,GUF
+Polinésia Francesa,PYF
+Territórios Franceses do Sul,ATF
+Gabão,GAB
+Gâmbia,GMB
+Geórgia,GEO
+Alemanha,DEU
+Gana,GHA
+Gibraltar,GIB
+Grécia,GRC
+Gronelândia,GRL
+Granada,GRD
+Guadalupe,GLP
+Guam,GUM
+Guatemala,GTM
+Guernsey,GGY
+Guiné,GIN
+Guiné-Bissau,GNB
+Guiana,GUY
+Haiti,HTI
+Ilha Heard e Ilhas McDonald,HMD
+Santa Sé,VAT
+Honduras,HND
+Hong Kong,HKG
+Hungria,HUN
+Islândia,ISL
+Índia,IND
+Indonésia,IDN
+Irão,IRN
+Iraque,IRQ
+Irlanda,IRL
+Ilha de Man,IMN
+Israel,ISR
+Itália,ITA
+Jamaica,JAM
+Japão,JPN
+Jersey,JEY
+Jordânia,JOR
+Cazaquistão,KAZ
+Quênia,KEN
+Kiribati,KIR
+Coreia (República Popular Democrática da),PRK
+Coreia (República da),KOR
+Kuwait,KWT
+Quirguistão,KGZ
+República Democrática Popular do Laos,LAO
+Letônia,LVA
+Líbano,LBN
+Lesoto,LSO
+Libéria,LBR
+Líbia,LBY
+Liechtenstein,LIE
+Lituânia,LTU
+Luxemburgo,LUX
+Macau,MAC
+Madagáscar,MDG
+Malawi,MWI
+Malásia,MYS
+Maldivas,MDV
+Mali,MLI
+Malta,MLT
+Ilhas Marshall,MHL
+Martinica,MTQ
+Mauritânia,MRT
+Maurícia,MUS
+Mayotte,MYT
+México,MEX
+Micronésia (Estados Federados da),FSM
+Moldávia,MDA
+Mônaco,MCO
+Mongólia,MNG
+Montenegro,MNE
+Montserrat,MSR
+Marrocos,MAR
+Moçambique,MOZ
+Myanmar,MMR
+Namíbia,NAM
+Nauru,NRU
+Nepal,NPL
+Países Baixos,NLD
+Nova Caledônia,NCL
+Nova Zelândia,NZL
+Nicarágua,NIC
+Níger,NER
+Nigéria,NGA
+Niue,NIU
+Ilha Norfolk,NFK
+Ilhas Marianas do Norte,MNP
+Noruega,NOR
+Omã,OMN
+Paquistão,PAK
+Palau,PLW
+"Palestina, Estado de",PSE
+Panamá,PAN
+Papua Nova Guiné,PNG
+Paraguai,PRY
+Peru,PER
+Filipinas,PHL
+Pitcairn,PCN
+Polônia,POL
+Portugal,PRT
+Porto Rico,PRI
+Catar,QAT
+República da Macedônia do Norte,MKD
+Romênia,ROU
+Federação Russa,RUS
+Ruanda,RWA
+Reunião,REU
+São Bartolomeu,BLM
+"Santa Helena, Ascensão e Tristão da Cunha",SHN
+São Cristóvão e Nevis,KNA
+Santa Lúcia,LCA
+São Martinho (parte francesa),MAF
+São Pedro e Miquelon,SPM
+São Vicente e Granadinas,VCT
+Samoa,WSM
+San Marino,SMR
+São Tomé e Príncipe,STP
+Arábia Saudita,SAU
+Senegal,SEN
+Sérvia,SRB
+Seychelles,SYC
+Serra Leoa,SLE
+Cingapura,SGP
+São Martinho (parte holandesa),SXM
+Eslováquia,SVK
+Eslovênia,SVN
+Ilhas Salomão,SLB
+Somália,SOM
+África do Sul,ZAF
+Ilhas Geórgia do Sul e Sandwich do Sul,SGS
+Sudão do Sul,SSD
+Espanha,ESP
+Sri Lanka,LKA
+Sudão,SDN
+Suriname,SUR
+Svalbard e Jan Mayen,SJM
+Suécia,SWE
+Suíça,CHE
+República Árabe da Síria,SYR
+"Taiwan, província da China)",TWN
+Tajiquistão,TJK
+"Tanzânia, República Unida da",TZA
+Tailândia,THA
+Timor-Leste,TLS
+Ir,TGO
+Tokelau,TKL
+Tonga,TON
+Trindade e Tobago,TTO
+Tunísia,TUN
+Peru,TUR
+Turquemenistão,TKM
+Ilhas Turcas e Caicos,TCA
+Tuvalu,TUV
+Uganda,UGA
+Ucrânia,UKR
+Emirados Árabes Unidos,ARE
+Reino Unido,GBR
+Ilhas Menores Distantes dos Estados Unidos,UMI
+Estados Unidos da América,USA
+Uruguai,URY
+Usbequistão,UZB
+Vanuatu,VUT
+Venezuela,VEN
+Vietname,VNM
+Ilhas Virgens Britânicas,VGB
+Ilhas Virgens (EUA),VIR
+Wallis e Futuna,WLF
+Saara Ocidental,ESH
+Iémen,YEM
+Zâmbia,ZMB
+Zimbábue,ZWE
+Ilhas Aland,ALA

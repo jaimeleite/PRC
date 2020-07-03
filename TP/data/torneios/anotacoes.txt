@@ -1,0 +1,72 @@
+ID -> M020 passa para 339
+Nome -> Brisbane
+Superficie -> Hard
+Dificuldade -> A
+
+ID -> M001 passa para 338
+Nome -> Sydney
+Superficie -> Hard
+Dificuldade -> A
+
+ID -> M004 passa para 807
+Nome -> Acapulco
+Superficie -> Hard
+Dificuldade -> A
+
+ID -> M006 passa para 404
+Nome -> Indian Wells Masters
+Superficie -> Hard
+Dificuldade -> M
+
+ID -> M007 passa para 403
+Nome -> Miami Masters
+Superficie -> Hard
+Dificuldade -> M
+
+ID -> M021 passa para 1536
+Nome -> Madrid Masters
+Superficie -> Clay
+Dificuldade -> M
+
+ID -> M009 passa para 416
+Nome -> Rome Masters
+Superficie -> Clay
+Dificuldade -> M
+
+ID -> M010 passa para 440
+Nome -> 's-Hertogenbosch
+Superficie -> Grass
+Dificuldade -> A
+
+ID -> M035 passa a 418
+Nome -> Washington
+Superficie -> Hard
+Dificuldade -> A
+
+ID -> M024 passa a 422
+Nome -> Cincinnati Masters
+Superficie -> Hard
+Dificuldade -> M
+
+ID -> M015 passa a 747
+Nome -> Beijing
+Superficie -> Hard
+Dificuldade -> A
+
+ID -> M016 passa a 741
+Nome -> Eastbourne
+Superficie -> Grass
+Dificuldade -> A
+
+ID -> M014 passa a 438
+Nome -> Moscow
+Superficie -> Hard
+Dificuldade -> A
+
+ID -> M052 passa a 6932
+Nome -> Rio de Janeiro
+Superficie -> Clay
+Dificuldade -> A
+
+
+ignorar o 0 no número

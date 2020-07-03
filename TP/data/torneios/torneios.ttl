@@ -1,0 +1,4081 @@
+@prefix : <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#perdedorEm
+:perdedorEm rdf:type owl:ObjectProperty ;
+            owl:inverseOf :temPerdedor ;
+            rdfs:domain :Jogador ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temFase
+:temFase rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éFaseDe ;
+         rdfs:domain :Torneio ;
+         rdfs:range :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPartida
+:temPartida rdf:type owl:ObjectProperty ;
+            owl:inverseOf :éPartidaDe ;
+            rdfs:domain :Fase ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPerdedor
+:temPerdedor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temVencedor
+:temVencedor rdf:type owl:ObjectProperty ;
+             owl:inverseOf :vencedorEm ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#vencedorEm
+:vencedorEm rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éFaseDe
+:éFaseDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éPartidaDe
+:éPartidaDe rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ano
+:ano rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dataNascimento
+:dataNascimento rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dificuldade
+:dificuldade rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#duracao
+:duracao rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#localNascimento
+:localNascimento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#melhorMão
+:melhorMão rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#resultado
+:resultado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#superfície
+:superfície rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Torneio .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger
+:Challenger rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Fase
+:Fase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final
+:Final rdf:type owl:Class ;
+       rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound
+:FirstRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ForthRound
+:ForthRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Grandslam
+:Grandslam rdf:type owl:Class ;
+           rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Jogador
+:Jogador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Partida
+:Partida rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal
+:Quarterfinal rdf:type owl:Class ;
+              rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#SecondRound
+:SecondRound rdf:type owl:Class ;
+             rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal
+:Semifinal rdf:type owl:Class ;
+           rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Small
+:Small rdf:type owl:Class ;
+       rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Teams
+:Teams rdf:type owl:Class ;
+       rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ThirdRound
+:ThirdRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Torneio
+:Torneio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#World_Tour
+:World_Tour rdf:type owl:Class ;
+            rdfs:subClassOf :Torneio .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_8888
+:torneio_8888 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Atp Cup" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_451
+:torneio_451 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Doha" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_M056
+:torneio_M056 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Adelaide" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_301
+:torneio_301 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Auckland" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_580
+:torneio_580 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :Grandslam ;
+            :dificuldade "G" ;
+            :nome "Australian Open" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9158
+:torneio_9158 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cordoba" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_375
+:torneio_375 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Montpellier" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_891
+:torneio_891 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Pune" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_506
+:torneio_506 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Buenos Aires" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_424
+:torneio_424 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New York" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_407
+:torneio_407 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rotterdam" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_499
+:torneio_499 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Delray Beach" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_496
+:torneio_496 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Marseille" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6932
+:torneio_6932 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rio De Janeiro" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_807
+:torneio_807 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Acapulco" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_495
+:torneio_495 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dubai" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_8996
+:torneio_8996 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Santiago" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_339
+:torneio_339 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Brisbane" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_338
+:torneio_338 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sydney" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7434
+:torneio_7434 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sofia" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_533
+:torneio_533 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sao Paulo" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_404
+:torneio_404 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Indian Wells Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_403
+:torneio_403 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Miami Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_717
+:torneio_717 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Houston" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_360
+:torneio_360 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Marrakech" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_410
+:torneio_410 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Monte Carlo Masters" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_425
+:torneio_425 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Barcelona" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7648
+:torneio_7648 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Budapest" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7290
+:torneio_7290 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Estoril" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_308
+:torneio_308 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Munich" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1536
+:torneio_1536 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Madrid Masters" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_416
+:torneio_416 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Rome Masters" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_322
+:torneio_322 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Geneva" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7694
+:torneio_7694 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Lyon" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_520
+:torneio_520 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :Grandslam ;
+            :dificuldade "G" ;
+            :nome "Roland Garros" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_440
+:torneio_440 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "'s-Hertogenbosch" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_321
+:torneio_321 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Stuttgart" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_500
+:torneio_500 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Halle" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_311
+:torneio_311 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Queen's Club" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7650
+:torneio_7650 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Antalya" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_741
+:torneio_741 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Eastbourne" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_540
+:torneio_540 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :Grandslam ;
+            :dificuldade "G" ;
+            :nome "Wimbledon" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_316
+:torneio_316 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bastad" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_315
+:torneio_315 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Newport" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_439
+:torneio_439 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Umag" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6116
+:torneio_6116 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Atlanta" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_314
+:torneio_314 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Gstaad" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_414
+:torneio_414 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hamburg" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_319
+:torneio_319 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kitzbuhel" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7480
+:torneio_7480 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Cabos" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_418
+:torneio_418 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Washington" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_421
+:torneio_421 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Canada Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_422
+:torneio_422 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Cincinnati Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6242
+:torneio_6242 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Winston-Salem" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_560
+:torneio_560 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :Grandslam ;
+            :dificuldade "G" ;
+            :nome "US Open" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_341
+:torneio_341 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Metz" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_568
+:torneio_568 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "St. Petersburg" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7581
+:torneio_7581 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Chengdu" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9164
+:torneio_9164 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Zhuhai" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_747
+:torneio_747 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Beijing" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_329
+:torneio_329 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tokyo" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_5014
+:torneio_5014 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Shanghai Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7485
+:torneio_7485 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Antwerp" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_438
+:torneio_438 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Moscow" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_429
+:torneio_429 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Stockholm" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_328
+:torneio_328 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Basel" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_337
+:torneio_337 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Vienna" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_352
+:torneio_352 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Paris Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7161
+:torneio_7161 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Quito" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7163
+:torneio_7163 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Istanbul" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6967
+:torneio_6967 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Shenzhen" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_402
+:torneio_402 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Memphis" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_773
+:torneio_773 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bucharest" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6120
+:torneio_6120 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Nice" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_O16
+:torneio_O16 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rio Olympics" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2276
+:torneio_2276 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Zagreb" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6718
+:torneio_6718 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bogota" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6003
+:torneio_6003 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kuala Lumpur" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_573
+:torneio_573 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Valencia" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_505
+:torneio_505 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Vina del Mar" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_468
+:torneio_468 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Estoril" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6710
+:torneio_6710 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dusseldorf" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1720
+:torneio_1720 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bangkok" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_5053
+:torneio_5053 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Belgrade" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_615
+:torneio_615 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dusseldorf" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_423
+:torneio_423 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Angeles" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_96
+:torneio_96 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "London Olympics" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_5012
+:torneio_5012 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Johannesburg" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3348
+:torneio_3348 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New Haven" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_306
+:torneio_306 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kitzbuhel" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_419
+:torneio_419 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Indianapolis" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_317
+:torneio_317 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Amersfoort" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_433
+:torneio_433 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Las Vegas" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_475
+:torneio_475 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Warsaw" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3465
+:torneio_3465 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Mumbai" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_325
+:torneio_325 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Palermo" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_408
+:torneio_408 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Milan" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_890
+:torneio_890 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Ho Chi Minh City" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_441
+:torneio_441 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Long Island" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_481
+:torneio_481 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Copenhagen" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_336
+:torneio_336 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hong Kong" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_73
+:torneio_73 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tashkent" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_357
+:torneio_357 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Stuttgart Masters" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_359
+:torneio_359 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bogota" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_409
+:torneio_409 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Atlanta" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_327
+:torneio_327 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Toulouse" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_620
+:torneio_620 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Brighton" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_379
+:torneio_379 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Prague" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_473
+:torneio_473 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Merano" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_80
+:torneio_80 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Boston" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_604
+:torneio_604 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Grand Slam Cup" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_326
+:torneio_326 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Singapore" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_430
+:torneio_430 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Antwerp" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_401
+:torneio_401 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Philadelphia" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_312
+:torneio_312 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bologna" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_420
+:torneio_420 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New Haven" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_348
+:torneio_348 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Ostrava" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_494
+:torneio_494 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Jakarta" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_436
+:torneio_436 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bermuda" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_434
+:torneio_434 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Seoul" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_310
+:torneio_310 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Oporto" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_330
+:torneio_330 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tel Aviv" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_426
+:torneio_426 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Johannesburg" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_305
+:torneio_305 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Nice" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_323
+:torneio_323 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bordeaux" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_428
+:torneio_428 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tokyo Indoor" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_544
+:torneio_544 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Montevideo" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_517
+:torneio_517 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Oahu" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_497
+:torneio_497 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Zaragoza" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_498
+:torneio_498 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Osaka" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_309
+:torneio_309 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Madrid" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_224
+:torneio_224 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Schenectady" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_367
+:torneio_367 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Athens" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_427
+:torneio_427 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sydney Indoor" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_450
+:torneio_450 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kuala Lumpur-1" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_240
+:torneio_240 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sao Paulo" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_354
+:torneio_354 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Wellington" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_201
+:torneio_201 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Maceio" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_406
+:torneio_406 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Brussels" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_456
+:torneio_456 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Singapore" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_92
+:torneio_92 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Barcelona Olympics" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_457
+:torneio_457 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Taipei" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_237
+:torneio_237 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Guaruja" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_215
+:torneio_215 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Buzios" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_411
+:torneio_411 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Chicago" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_463
+:torneio_463 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Brasilia" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_302
+:torneio_302 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Toronto Indoor" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_366
+:torneio_366 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "San Remo" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_304
+:torneio_304 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Nancy" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_610
+:torneio_610 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dallas WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_415
+:torneio_415 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Forest Hills" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_313
+:torneio_313 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bristol" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_417
+:torneio_417 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Boston" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_318
+:torneio_318 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Livingston" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_605
+:torneio_605 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Masters ;
+            :dificuldade "M" ;
+            :nome "Masters" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_435
+:torneio_435 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rye Brook" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_88
+:torneio_88 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Seoul Olympics" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_303
+:torneio_303 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Buenos Aires" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_437
+:torneio_437 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Detroit" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_708
+:torneio_708 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "La Quinta" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_727
+:torneio_727 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Fort Myers" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_412
+:torneio_412 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Atlanta" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_332
+:torneio_332 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cologne" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_405
+:torneio_405 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Houston" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_307
+:torneio_307 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Marbella" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_413
+:torneio_413 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Las Vegas" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_320
+:torneio_320 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cleveland" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_331
+:torneio_331 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Melbourne Indoor" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_340
+:torneio_340 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Melbourne" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_802
+:torneio_802 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Richmond WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_718
+:torneio_718 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Boca West" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_820
+:torneio_820 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Houston WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_431
+:torneio_431 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Luxembourg" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_342
+:torneio_342 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Aix-En-Provence" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_705
+:torneio_705 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "North Conway" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_84
+:torneio_84 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Angeles Olympics" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_343
+:torneio_343 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Columbus" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_324
+:torneio_324 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Honolulu" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_333
+:torneio_333 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Taipei" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_335
+:torneio_335 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Treviso" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_805
+:torneio_805 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Detroit WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_344
+:torneio_344 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Caracas" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_204
+:torneio_204 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Vina Del Mar" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_803
+:torneio_803 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Delray Beach WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_345
+:torneio_345 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Monterrey" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_804
+:torneio_804 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Munich WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_723
+:torneio_723 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Lisbon" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_724
+:torneio_724 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hilton Head WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_347
+:torneio_347 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bournemouth" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_346
+:torneio_346 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tampa" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_702
+:torneio_702 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Venice" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_707
+:torneio_707 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "South Orange" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_349
+:torneio_349 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Stowe" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_388
+:torneio_388 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dallas" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_703
+:torneio_703 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Ferrara" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_726
+:torneio_726 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bahia" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_393
+:torneio_393 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Adelaide-2" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_389
+:torneio_389 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Denver" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_206
+:torneio_206 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cairo" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_808
+:torneio_808 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Genova WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_351
+:torneio_351 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Linz" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_809
+:torneio_809 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Strasbourg WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_810
+:torneio_810 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Zurich WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_811
+:torneio_811 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Zell Am See WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_812
+:torneio_812 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cap D'Adge WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_813
+:torneio_813 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "La Costa WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_814
+:torneio_814 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Angeles-2 WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_815
+:torneio_815 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Amsterdam WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_816
+:torneio_816 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Baltimore WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_353
+:torneio_353 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Quito" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_704
+:torneio_704 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Ancona" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_334
+:torneio_334 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bangkok" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_817
+:torneio_817 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dortmund WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_818
+:torneio_818 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Chicago-2 WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_819
+:torneio_819 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hartford WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_358
+:torneio_358 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "San Juan" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_392
+:torneio_392 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Mar Del Plata" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1725
+:torneio_1725 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Pepsi Grand Slam" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_294
+:torneio_294 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Mexico City" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_356
+:torneio_356 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Napa" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_254
+:torneio_254 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Johannesburg" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_273
+:torneio_273 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Brussels" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_362
+:torneio_362 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Manila" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_361
+:torneio_361 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Santiago" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_364
+:torneio_364 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sofia" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_713
+:torneio_713 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hobart" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_243
+:torneio_243 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Perth" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_712
+:torneio_712 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Birmingham" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_709
+:torneio_709 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sarasota" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_355
+:torneio_355 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "WCT Invitational" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_205
+:torneio_205 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Lagos" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_710
+:torneio_710 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Washington-2" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_714
+:torneio_714 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "San Jose" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_716
+:torneio_716 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dayton" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_715
+:torneio_715 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New Orleans" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_711
+:torneio_711 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tulsa" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_275
+:torneio_275 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sao Paulo" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_583
+:torneio_583 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Manchester" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_720
+:torneio_720 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Surbiton" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_208
+:torneio_208 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Vienna" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_376
+:torneio_376 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Republic Of China" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3934
+:torneio_3934 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "WCT Challenge Cup" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_277
+:torneio_277 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Berlin" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1727
+:torneio_1727 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Louisville" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1728
+:torneio_1728 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Lafayette" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1729
+:torneio_1729 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bombay" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6880
+:torneio_6880 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dorado Beach" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_660
+:torneio_660 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Little Rock" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9205
+:torneio_9205 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New Haven" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1506
+:torneio_1506 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Birmingham WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_682
+:torneio_682 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Springfield" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_652
+:torneio_652 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "St. Louis WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_681
+:torneio_681 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Miami" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_683
+:torneio_683 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Las Vegas" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_280
+:torneio_280 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Guadalajara" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_725
+:torneio_725 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Birmingham" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_663
+:torneio_663 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Louisville" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_295
+:torneio_295 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Mexico City" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_264
+:torneio_264 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tokyo Outdoor" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_680
+:torneio_680 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Calcutta" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7302
+:torneio_7302 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Paris" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2019
+:torneio_2019 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Ocean City" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_729
+:torneio_729 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Palm Springs" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_657
+:torneio_657 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hampton" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2008
+:torneio_2008 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Helsinki" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_262
+:torneio_262 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "London WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_656
+:torneio_656 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Jackson" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2009
+:torneio_2009 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Murcia" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_722
+:torneio_722 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Buenos Aires" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_674
+:torneio_674 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Virginia Beach" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_661
+:torneio_661 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dusseldorf" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2020
+:torneio_2020 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Laguna Niguel" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2059
+:torneio_2059 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tournament of Champions WCT" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2006
+:torneio_2006 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Angeles" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2010
+:torneio_2010 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Paris" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2011
+:torneio_2011 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tehran" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2012
+:torneio_2012 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Oviedo" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2013
+:torneio_2013 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Adelaide" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_581
+:torneio_581 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :Grandslam ;
+            :dificuldade "G" ;
+            :nome "Australian Open-2" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_350
+:torneio_350 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Nottingham" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3933
+:torneio_3933 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Las Vegas" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_7308
+:torneio_7308 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Adelaide" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_662
+:torneio_662 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Columbus WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_664
+:torneio_664 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Indianapolis WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_650
+:torneio_650 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Birmingham" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_267
+:torneio_267 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Barcelona WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3935
+:torneio_3935 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "WCT Challenge Cup" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_665
+:torneio_665 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rome WCT" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_653
+:torneio_653 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Fort Worth WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_651
+:torneio_651 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Khartoum" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_658
+:torneio_658 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Nuremberg" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_659
+:torneio_659 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Valencia" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_278
+:torneio_278 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Barcelona" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_655
+:torneio_655 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Palma" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_666
+:torneio_666 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Stockholm - WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_654
+:torneio_654 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sacramento" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2014
+:torneio_2014 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bermuda" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2015
+:torneio_2015 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Madrid" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2016
+:torneio_2016 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "London" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2017
+:torneio_2017 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bangalore" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2028
+:torneio_2028 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Aviles" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2021
+:torneio_2021 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bahamas" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2022
+:torneio_2022 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Roanoke" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1603
+:torneio_1603 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "St. Petersburg WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1602
+:torneio_1602 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "San Antonio WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2023
+:torneio_2023 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Fairfield" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2024
+:torneio_2024 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Shreveport" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2025
+:torneio_2025 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New York" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2026
+:torneio_2026 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Madrid" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2027
+:torneio_2027 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Istanbul" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2040
+:torneio_2040 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Washington" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9207
+:torneio_9207 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Algiers" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9208
+:torneio_9208 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "San Juan" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9209
+:torneio_9209 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dusseldorf" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2036
+:torneio_2036 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Omaha" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2018
+:torneio_2018 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hempstead WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2037
+:torneio_2037 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Paramus" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2038
+:torneio_2038 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Calgary" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2039
+:torneio_2039 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Salt Lake City" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_1537
+:torneio_1537 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tempe" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2034
+:torneio_2034 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Palm Desert WCT" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2035
+:torneio_2035 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New Orleans WCT" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2029
+:torneio_2029 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Dublin" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_706
+:torneio_706 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bretton Woods" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2030
+:torneio_2030 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Merion" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2031
+:torneio_2031 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cedar Grove" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2032
+:torneio_2032 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Christchurch" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2033
+:torneio_2033 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Oslo" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2041
+:torneio_2041 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Adelaide" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6836
+:torneio_6836 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Lakeway" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9037
+:torneio_9037 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tokyo" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9212
+:torneio_9212 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sydney Outdoor" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9213
+:torneio_9213 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Acapulco" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2061
+:torneio_2061 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Des Moines" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2048
+:torneio_2048 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Vancouver WCT" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_508
+:torneio_508 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Gothenberg WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2049
+:torneio_2049 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Eastbourne" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2050
+:torneio_2050 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Newport" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2051
+:torneio_2051 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tanglewood" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2042
+:torneio_2042 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Aptos" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2043
+:torneio_2043 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Seattle" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2044
+:torneio_2044 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Quebec" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2045
+:torneio_2045 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New Delhi" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2046
+:torneio_2046 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Djkarta" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6945
+:torneio_6945 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Charleston" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9204
+:torneio_9204 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kingston" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9214
+:torneio_9214 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Columbia" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9238
+:torneio_9238 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kansas City" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2060
+:torneio_2060 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sydney N.S.W." ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2064
+:torneio_2064 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "London Indoor" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2062
+:torneio_2062 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Kansas City" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2057
+:torneio_2057 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Angeles" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2052
+:torneio_2052 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Montreal WCT" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2053
+:torneio_2053 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Alamo WCT" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2054
+:torneio_2054 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Essen WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2056
+:torneio_2056 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rome WCT" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2047
+:torneio_2047 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Jacksonville" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2066
+:torneio_2066 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Macon" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6832
+:torneio_6832 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Midland" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9036
+:torneio_9036 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Rotterdam" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9206
+:torneio_9206 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New York" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9215
+:torneio_9215 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Cleveland" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9216
+:torneio_9216 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hong Kong" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2058
+:torneio_2058 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "New York" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2065
+:torneio_2065 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Catania" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_260
+:torneio_260 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Durban" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3936
+:torneio_3936 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Melbourne" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6834
+:torneio_6834 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Senigallia" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9237
+:torneio_9237 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Pensacola" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_9240
+:torneio_9240 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Berlin" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2063
+:torneio_2063 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Casablanca WCT" ;
+            :superfície "" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_2067
+:torneio_2067 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Phoenix" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3941
+:torneio_3941 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Sydney" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6811
+:torneio_6811 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Los Angeles" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6812
+:torneio_6812 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Wembley" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6816
+:torneio_6816 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Chorpus Christi" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6817
+:torneio_6817 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "San Juan" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6818
+:torneio_6818 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "St. Petersburg" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6830
+:torneio_6830 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Hoylake" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6831
+:torneio_6831 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Leicester" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_6833
+:torneio_6833 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Tucson" ;
+            :superfície "Hard" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_8025
+:torneio_8025 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Manchester" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3938
+:torneio_3938 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bournemouth" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3939
+:torneio_3939 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Caracas" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3940
+:torneio_3940 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Barranquilla" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3942
+:torneio_3942 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bristol" ;
+            :superfície "Grass" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3943
+:torneio_3943 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Boston" ;
+            :superfície "Carpet" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_3944
+:torneio_3944 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "Bastad" ;
+            :superfície "Clay" .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#torneio_561
+:torneio_561 rdf:type owl:NamedIndividual ,
+                    :Torneio ,
+                    :World_Tour ,
+                    :Small ;
+            :dificuldade "A" ;
+            :nome "U.S. National Chps." ;
+            :superfície "Grass" .
+
+

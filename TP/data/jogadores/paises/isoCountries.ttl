@@ -1,0 +1,1657 @@
+@prefix : <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#perdedorEm
+:perdedorEm rdf:type owl:ObjectProperty ;
+            owl:inverseOf :temPerdedor ;
+            rdfs:domain :Jogador ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temElemento
+:temElemento rdf:type owl:ObjectProperty ;
+             owl:inverseOf :éElementoDe ;
+             rdfs:domain :Equipa ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temFase
+:temFase rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éFaseDe ;
+         rdfs:domain :Torneio ;
+         rdfs:range :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPartida
+:temPartida rdf:type owl:ObjectProperty ;
+            owl:inverseOf :éPartidaDe ;
+            rdfs:domain :Fase ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPerdedor
+:temPerdedor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temVencedor
+:temVencedor rdf:type owl:ObjectProperty ;
+             owl:inverseOf :vencedorEm ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#vencedorEm
+:vencedorEm rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éElementoDe
+:éElementoDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éFaseDe
+:éFaseDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éPartidaDe
+:éPartidaDe rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ano
+:ano rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dataNascimento
+:dataNascimento rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dificuldade
+:dificuldade rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#duracao
+:duracao rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#localNascimento
+:localNascimento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#melhorMão
+:melhorMão rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#resultado
+:resultado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#superfície
+:superfície rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Torneio .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger
+:Challenger rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Equipa
+:Equipa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Fase
+:Fase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final
+:Final rdf:type owl:Class ;
+       rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound
+:FirstRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ForthRound
+:ForthRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Grandslam
+:Grandslam rdf:type owl:Class ;
+           rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Jogador
+:Jogador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Partida
+:Partida rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal
+:Quarterfinal rdf:type owl:Class ;
+              rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#SecondRound
+:SecondRound rdf:type owl:Class ;
+             rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal
+:Semifinal rdf:type owl:Class ;
+           rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Small
+:Small rdf:type owl:Class ;
+       rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Teams
+:Teams rdf:type owl:Class ;
+       rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ThirdRound
+:ThirdRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Torneio
+:Torneio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#World_Tour
+:World_Tour rdf:type owl:Class ;
+            rdfs:subClassOf :Torneio .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+
+:GER-2019 :isoCode "DE" .
+
+:GER-2018 :isoCode "DE" .
+
+:GER-2017 :isoCode "DE" .
+
+:GER-2016 :isoCode "DE" .
+
+:GER-2015 :isoCode "DE" .
+
+:GER-2014 :isoCode "DE" .
+
+:GER-2013 :isoCode "DE" .
+
+:GER-2012 :isoCode "DE" .
+
+:GER-2011 :isoCode "DE" .
+
+:GER-2010 :isoCode "DE" .
+
+:GER-2009 :isoCode "DE" .
+
+:GER-2008 :isoCode "DE" .
+
+:GER-2007 :isoCode "DE" .
+
+:GER-2006 :isoCode "DE" .
+
+:GER-2003 :isoCode "DE" .
+
+:GER-2002 :isoCode "DE" .
+
+:GER-2001 :isoCode "DE" .
+
+:GER-2000 :isoCode "DE" .
+
+:GER-1999 :isoCode "DE" .
+
+:GER-1998 :isoCode "DE" .
+
+:GER-1997 :isoCode "DE" .
+
+:GER-1996 :isoCode "DE" .
+
+:GER-1995 :isoCode "DE" .
+
+:GER-1994 :isoCode "DE" .
+
+:GER-1993 :isoCode "DE" .
+
+:GER-1992 :isoCode "DE" .
+
+:GER-1991 :isoCode "DE" .
+
+:GER-1990 :isoCode "DE" .
+
+:GER-1989 :isoCode "DE" .
+
+:GER-1988 :isoCode "DE" .
+
+:GER-1987 :isoCode "DE" .
+
+:GER-1986 :isoCode "DE" .
+
+:GER-1985 :isoCode "DE" .
+
+:GER-1984 :isoCode "DE" .
+
+:GER-1982 :isoCode "DE" .
+
+:GER-1981 :isoCode "DE" .
+
+:GER-1970 :isoCode "DE" .
+
+:ARG-2019 :isoCode "AR" .
+
+:ARG-2017 :isoCode "AR" .
+
+:ARG-2016 :isoCode "AR" .
+
+:ARG-2015 :isoCode "AR" .
+
+:ARG-2014 :isoCode "AR" .
+
+:ARG-2013 :isoCode "AR" .
+
+:ARG-2012 :isoCode "AR" .
+
+:ARG-2011 :isoCode "AR" .
+
+:ARG-2010 :isoCode "AR" .
+
+:ARG-2009 :isoCode "AR" .
+
+:ARG-2008 :isoCode "AR" .
+
+:ARG-2007 :isoCode "AR" .
+
+:ARG-2006 :isoCode "AR" .
+
+:ARG-2005 :isoCode "AR" .
+
+:ARG-2004 :isoCode "AR" .
+
+:ARG-2003 :isoCode "AR" .
+
+:ARG-2002 :isoCode "AR" .
+
+:ARG-1992 :isoCode "AR" .
+
+:ARG-1991 :isoCode "AR" .
+
+:ARG-1990 :isoCode "AR" .
+
+:ARG-1987 :isoCode "AR" .
+
+:ARG-1985 :isoCode "AR" .
+
+:ARG-1984 :isoCode "AR" .
+
+:ARG-1983 :isoCode "AR" .
+
+:ARG-1982 :isoCode "AR" .
+
+:ARG-1981 :isoCode "AR" .
+
+:ARG-1980 :isoCode "AR" .
+
+:AUS-2019 :isoCode "AU" .
+
+:AUS-2018 :isoCode "AU" .
+
+:AUS-2017 :isoCode "AU" .
+
+:AUS-2016 :isoCode "AU" .
+
+:AUS-2015 :isoCode "AU" .
+
+:AUS-2014 :isoCode "AU" .
+
+:AUS-2007 :isoCode "AU" .
+
+:AUS-2006 :isoCode "AU" .
+
+:AUS-2005 :isoCode "AU" .
+
+:AUS-2004 :isoCode "AU" .
+
+:AUS-2003 :isoCode "AU" .
+
+:AUS-2002 :isoCode "AU" .
+
+:AUS-2001 :isoCode "AU" .
+
+:AUS-2000 :isoCode "AU" .
+
+:AUS-1999 :isoCode "AU" .
+
+:AUS-1998 :isoCode "AU" .
+
+:AUS-1997 :isoCode "AU" .
+
+:AUS-1995 :isoCode "AU" .
+
+:AUS-1994 :isoCode "AU" .
+
+:AUS-1993 :isoCode "AU" .
+
+:AUS-1992 :isoCode "AU" .
+
+:AUS-1991 :isoCode "AU" .
+
+:AUS-1990 :isoCode "AU" .
+
+:AUS-1989 :isoCode "AU" .
+
+:AUS-1988 :isoCode "AU" .
+
+:AUS-1987 :isoCode "AU" .
+
+:AUS-1986 :isoCode "AU" .
+
+:AUS-1985 :isoCode "AU" .
+
+:AUS-1984 :isoCode "AU" .
+
+:AUS-1983 :isoCode "AU" .
+
+:AUS-1982 :isoCode "AU" .
+
+:AUS-1981 :isoCode "AU" .
+
+:AUS-1980 :isoCode "AU" .
+
+:AUS-1979 :isoCode "AU" .
+
+:AUS-1978 :isoCode "AU" .
+
+:AUS-1976 :isoCode "AU" .
+
+:AUS-1974 :isoCode "AU" .
+
+:AUS-1972 :isoCode "AU" .
+
+:AUS-1970 :isoCode "AU" .
+
+:AUS-1968 :isoCode "AU" .
+
+:AUS-1977 :isoCode "AU" .
+
+:AUS-1973 :isoCode "AU" .
+
+:BLR-2007 :isoCode "BY" .
+
+:BLR-2006 :isoCode "BY" .
+
+:BLR-2005 :isoCode "BY" .
+
+:BLR-2004 :isoCode "BY" .
+
+:BRA-2015 :isoCode "BR" .
+
+:BRA-2013 :isoCode "BR" .
+
+:BRA-2003 :isoCode "BR" .
+
+:BRA-2002 :isoCode "BR" .
+
+:BRA-2001 :isoCode "BR" .
+
+:BRA-2000 :isoCode "BR" .
+
+:BRA-1999 :isoCode "BR" .
+
+:BRA-1998 :isoCode "BR" .
+
+:BRA-1997 :isoCode "BR" .
+
+:BRA-1993 :isoCode "BR" .
+
+:BRA-1992 :isoCode "BR" .
+
+:BRA-1988 :isoCode "BR" .
+
+:BRA-1981 :isoCode "BR" .
+
+:BEL-2018 :isoCode "BE" .
+
+:BEL-2017 :isoCode "BE" .
+
+:BEL-2016 :isoCode "BE" .
+
+:BEL-2015 :isoCode "BE" .
+
+:BEL-2014 :isoCode "BE" .
+
+:BEL-2013 :isoCode "BE" .
+
+:BEL-2011 :isoCode "BE" .
+
+:BEL-2010 :isoCode "BE" .
+
+:BEL-2008 :isoCode "BE" .
+
+:BEL-2007 :isoCode "BE" .
+
+:BEL-2003 :isoCode "BE" .
+
+:BEL-2001 :isoCode "BE" .
+
+:BEL-2000 :isoCode "BE" .
+
+:BEL-1999 :isoCode "BE" .
+
+:BEL-1998 :isoCode "BE" .
+
+:BEL-1996 :isoCode "BE" .
+
+:BEL-1995 :isoCode "BE" .
+
+:BEL-1994 :isoCode "BE" .
+
+:BEL-1992 :isoCode "BE" .
+
+:BEL-1991 :isoCode "BE" .
+
+:BEL-1985 :isoCode "BE" .
+
+:BEL-1984 :isoCode "BE" .
+
+:CAN-2019 :isoCode "CA" .
+
+:CAN-2018 :isoCode "CA" .
+
+:CAN-2017 :isoCode "CA" .
+
+:CAN-2016 :isoCode "CA" .
+
+:CAN-2015 :isoCode "CA" .
+
+:CAN-2014 :isoCode "CA" .
+
+:CAN-2013 :isoCode "CA" .
+
+:CAN-2012 :isoCode "CA" .
+
+:CAN-2004 :isoCode "CA" .
+
+:CAN-1992 :isoCode "CA" .
+
+:CAN-1991 :isoCode "CA" .
+
+:KAZ-2018 :isoCode "KZ" .
+
+:KAZ-2016 :isoCode "KZ" .
+
+:KAZ-2015 :isoCode "KZ" .
+
+:KAZ-2014 :isoCode "KZ" .
+
+:KAZ-2013 :isoCode "KZ" .
+
+:KAZ-2012 :isoCode "KZ" .
+
+:KAZ-2011 :isoCode "KZ" .
+
+:CHI-2011 :isoCode "CL" .
+
+:CHI-2010 :isoCode "CL" .
+
+:CHI-2009 :isoCode "CL" .
+
+:CHI-2007 :isoCode "CL" .
+
+:CHI-2006 :isoCode "CL" .
+
+:CHI-2005 :isoCode "CL" .
+
+:CHI-1985 :isoCode "CL" .
+
+:CHI-1983 :isoCode "CL" .
+
+:CHI-1982 :isoCode "CL" .
+
+:CHI-1976 :isoCode "CL" .
+
+:CRO-2018 :isoCode "HR" .
+
+:CRO-2017 :isoCode "HR" .
+
+:CRO-2016 :isoCode "HR" .
+
+:CRO-2015 :isoCode "HR" .
+
+:CRO-2013 :isoCode "HR" .
+
+:CRO-2012 :isoCode "HR" .
+
+:CRO-2011 :isoCode "HR" .
+
+:CRO-2010 :isoCode "HR" .
+
+:CRO-2009 :isoCode "HR" .
+
+:CRO-2007 :isoCode "HR" .
+
+:CRO-2006 :isoCode "HR" .
+
+:CRO-2005 :isoCode "HR" .
+
+:CRO-2004 :isoCode "HR" .
+
+:CRO-2003 :isoCode "HR" .
+
+:CRO-2002 :isoCode "HR" .
+
+:CRO-1995 :isoCode "HR" .
+
+:CRO-1991 :isoCode "HR" .
+
+:CRO-1990 :isoCode "HR" .
+
+:CRO-1989 :isoCode "HR" .
+
+:CRO-1988 :isoCode "HR" .
+
+:CRO-1987 :isoCode "HR" .
+
+:CRO-1986 :isoCode "HR" .
+
+:CRO-1985 :isoCode "HR" .
+
+:CRO-1984 :isoCode "HR" .
+
+:CUB-1993 :isoCode "CU" .
+
+:DEN-1996 :isoCode "DK" .
+
+:DEN-1995 :isoCode "DK" .
+
+:DEN-1994 :isoCode "DK" .
+
+:DEN-1993 :isoCode "DK" .
+
+:DEN-1989 :isoCode "DK" .
+
+:DEN-1988 :isoCode "DK" .
+
+:DEN-1986 :isoCode "DK" .
+
+:DEN-1984 :isoCode "DK" .
+
+:DEN-1983 :isoCode "DK" .
+
+:ECU-2010 :isoCode "EC" .
+
+:ECU-2001 :isoCode "EC" .
+
+:ECU-1986 :isoCode "EC" .
+
+:ECU-1985 :isoCode "EC" .
+
+:ECU-1984 :isoCode "EC" .
+
+:SVK-2006 :isoCode "SK" .
+
+:SVK-2005 :isoCode "SK" .
+
+:SVK-2002 :isoCode "SK" .
+
+:SVK-2001 :isoCode "SK" .
+
+:SVK-2000 :isoCode "SK" .
+
+:SVK-1999 :isoCode "SK" .
+
+:SVK-1998 :isoCode "SK" .
+
+:SVK-1985 :isoCode "SK" .
+
+:ESP-2019 :isoCode "ES" .
+
+:ESP-2018 :isoCode "ES" .
+
+:ESP-2017 :isoCode "ES" .
+
+:ESP-2014 :isoCode "ES" .
+
+:ESP-2013 :isoCode "ES" .
+
+:ESP-2012 :isoCode "ES" .
+
+:ESP-2011 :isoCode "ES" .
+
+:ESP-2010 :isoCode "ES" .
+
+:ESP-2009 :isoCode "ES" .
+
+:ESP-2008 :isoCode "ES" .
+
+:ESP-2007 :isoCode "ES" .
+
+:ESP-2006 :isoCode "ES" .
+
+:ESP-2005 :isoCode "ES" .
+
+:ESP-2004 :isoCode "ES" .
+
+:ESP-2003 :isoCode "ES" .
+
+:ESP-2002 :isoCode "ES" .
+
+:ESP-2001 :isoCode "ES" .
+
+:ESP-2000 :isoCode "ES" .
+
+:ESP-1999 :isoCode "ES" .
+
+:ESP-1998 :isoCode "ES" .
+
+:ESP-1997 :isoCode "ES" .
+
+:ESP-1995 :isoCode "ES" .
+
+:ESP-1994 :isoCode "ES" .
+
+:ESP-1993 :isoCode "ES" .
+
+:ESP-1992 :isoCode "ES" .
+
+:ESP-1991 :isoCode "ES" .
+
+:ESP-1990 :isoCode "ES" .
+
+:ESP-1989 :isoCode "ES" .
+
+:ESP-1988 :isoCode "ES" .
+
+:ESP-1987 :isoCode "ES" .
+
+:ESP-1986 :isoCode "ES" .
+
+:ESP-1985 :isoCode "ES" .
+
+:ESP-1982 :isoCode "ES" .
+
+:PHI-1986 :isoCode "PH" .
+
+:PHI-1985 :isoCode "PH" .
+
+:PHI-1983 :isoCode "PH" .
+
+:PHI-1982 :isoCode "PH" .
+
+:PHI-1970 :isoCode "PH" .
+
+:PHI-1969 :isoCode "PH" .
+
+:PHI-1968 :isoCode "PH" .
+
+:FRA-2018 :isoCode "FR" .
+
+:FRA-2017 :isoCode "FR" .
+
+:FRA-2016 :isoCode "FR" .
+
+:FRA-2015 :isoCode "FR" .
+
+:FRA-2014 :isoCode "FR" .
+
+:FRA-2013 :isoCode "FR" .
+
+:FRA-2012 :isoCode "FR" .
+
+:FRA-2011 :isoCode "FR" .
+
+:FRA-2010 :isoCode "FR" .
+
+:FRA-2009 :isoCode "FR" .
+
+:FRA-2008 :isoCode "FR" .
+
+:FRA-2007 :isoCode "FR" .
+
+:FRA-2006 :isoCode "FR" .
+
+:FRA-2005 :isoCode "FR" .
+
+:FRA-2004 :isoCode "FR" .
+
+:FRA-2003 :isoCode "FR" .
+
+:FRA-2002 :isoCode "FR" .
+
+:FRA-2001 :isoCode "FR" .
+
+:FRA-2000 :isoCode "FR" .
+
+:FRA-1999 :isoCode "FR" .
+
+:FRA-1997 :isoCode "FR" .
+
+:FRA-1996 :isoCode "FR" .
+
+:FRA-1995 :isoCode "FR" .
+
+:FRA-1994 :isoCode "FR" .
+
+:FRA-1993 :isoCode "FR" .
+
+:FRA-1992 :isoCode "FR" .
+
+:FRA-1991 :isoCode "FR" .
+
+:FRA-1990 :isoCode "FR" .
+
+:FRA-1989 :isoCode "FR" .
+
+:FRA-1988 :isoCode "FR" .
+
+:FRA-1987 :isoCode "FR" .
+
+:FRA-1985 :isoCode "FR" .
+
+:FRA-1984 :isoCode "FR" .
+
+:FRA-1983 :isoCode "FR" .
+
+:FRA-1982 :isoCode "FR" .
+
+:FRA-1981 :isoCode "FR" .
+
+:HUN-2018 :isoCode "HU" .
+
+:HUN-1996 :isoCode "HU" .
+
+:HUN-1994 :isoCode "HU" .
+
+:INA-1989 :isoCode "ID" .
+
+:INA-1986 :isoCode "ID" .
+
+:INA-1984 :isoCode "ID" .
+
+:INA-1983 :isoCode "ID" .
+
+:INA-1977 :isoCode "ID" .
+
+:INA-1975 :isoCode "ID" .
+
+:INA-1968 :isoCode "ID" .
+
+:INA-1981 :isoCode "ID" .
+
+:INA-1976 :isoCode "ID" .
+
+:ISR-2013 :isoCode "IL" .
+
+:ISR-2010 :isoCode "IL" .
+
+:ISR-2009 :isoCode "IL" .
+
+:ISR-2008 :isoCode "IL" .
+
+:ISR-1994 :isoCode "IL" .
+
+:ISR-1991 :isoCode "IL" .
+
+:ISR-1990 :isoCode "IL" .
+
+:ISR-1989 :isoCode "IL" .
+
+:ISR-1988 :isoCode "IL" .
+
+:ISR-1987 :isoCode "IL" .
+
+:ITA-2018 :isoCode "IT" .
+
+:ITA-2017 :isoCode "IT" .
+
+:ITA-2016 :isoCode "IT" .
+
+:ITA-2015 :isoCode "IT" .
+
+:ITA-2014 :isoCode "IT" .
+
+:ITA-2013 :isoCode "IT" .
+
+:ITA-2012 :isoCode "IT" .
+
+:ITA-2000 :isoCode "IT" .
+
+:ITA-1999 :isoCode "IT" .
+
+:ITA-1998 :isoCode "IT" .
+
+:ITA-1997 :isoCode "IT" .
+
+:ITA-1996 :isoCode "IT" .
+
+:ITA-1995 :isoCode "IT" .
+
+:ITA-1994 :isoCode "IT" .
+
+:ITA-1993 :isoCode "IT" .
+
+:ITA-1992 :isoCode "IT" .
+
+:ITA-1991 :isoCode "IT" .
+
+:ITA-1990 :isoCode "IT" .
+
+:ITA-1989 :isoCode "IT" .
+
+:ITA-1988 :isoCode "IT" .
+
+:ITA-1987 :isoCode "IT" .
+
+:ITA-1986 :isoCode "IT" .
+
+:ITA-1985 :isoCode "IT" .
+
+:ITA-1984 :isoCode "IT" .
+
+:ITA-1983 :isoCode "IT" .
+
+:ITA-1982 :isoCode "IT" .
+
+:ITA-1981 :isoCode "IT" .
+
+:ITA-1980 :isoCode "IT" .
+
+:ITA-1979 :isoCode "IT" .
+
+:ITA-1977 :isoCode "IT" .
+
+:ITA-1976 :isoCode "IT" .
+
+:JPN-2018 :isoCode "JP" .
+
+:JPN-2017 :isoCode "JP" .
+
+:JPN-2016 :isoCode "JP" .
+
+:JPN-2015 :isoCode "JP" .
+
+:JPN-2014 :isoCode "JP" .
+
+:JPN-2012 :isoCode "JP" .
+
+:JPN-1985 :isoCode "JP" .
+
+:JPN-1981 :isoCode "JP" .
+
+:JPN-1972 :isoCode "JP" .
+
+:JPN-1970 :isoCode "JP" .
+
+:MAR-2004 :isoCode "MA" .
+
+:MAR-2002 :isoCode "MA" .
+
+:MAR-2001 :isoCode "MA" .
+
+:MEX-1997 :isoCode "MX" .
+
+:MEX-1996 :isoCode "MX" .
+
+:MEX-1991 :isoCode "MX" .
+
+:MEX-1990 :isoCode "MX" .
+
+:MEX-1989 :isoCode "MX" .
+
+:MEX-1988 :isoCode "MX" .
+
+:MEX-1987 :isoCode "MX" .
+
+:MEX-1986 :isoCode "MX" .
+
+:MEX-1982 :isoCode "MX" .
+
+:MEX-1981 :isoCode "MX" .
+
+:MEX-1979 :isoCode "MX" .
+
+:NZL-1991 :isoCode "NZ" .
+
+:NZL-1990 :isoCode "NZ" .
+
+:NZL-1988 :isoCode "NZ" .
+
+:NZL-1986 :isoCode "NZ" .
+
+:NZL-1984 :isoCode "NZ" .
+
+:NZL-1983 :isoCode "NZ" .
+
+:NZL-1982 :isoCode "NZ" .
+
+:NZL-1981 :isoCode "NZ" .
+
+:NZL-1985 :isoCode "NZ" .
+
+:NZL-1977 :isoCode "NZ" .
+
+:PAK-1986 :isoCode "PK" .
+
+:PAK-1985 :isoCode "PK" .
+
+:PAK-1981 :isoCode "PK" .
+
+:PAK-1975 :isoCode "PK" .
+
+:PAK-1974 :isoCode "PK" .
+
+:PAK-1984 :isoCode "PK" .
+
+:PAR-1989 :isoCode "PY" .
+
+:PAR-1988 :isoCode "PY" .
+
+:PAR-1987 :isoCode "PY" .
+
+:PAR-1986 :isoCode "PY" .
+
+:PAR-1985 :isoCode "PY" .
+
+:PAR-1984 :isoCode "PY" .
+
+:PAR-1983 :isoCode "PY" .
+
+:PER-2008 :isoCode "PE" .
+
+:GBR-2019 :isoCode "GB" .
+
+:GBR-2018 :isoCode "GB" .
+
+:GBR-2017 :isoCode "GB" .
+
+:GBR-2016 :isoCode "GB" .
+
+:GBR-2015 :isoCode "GB" .
+
+:GBR-2014 :isoCode "GB" .
+
+:GBR-2008 :isoCode "GB" .
+
+:GBR-2003 :isoCode "GB" .
+
+:GBR-2002 :isoCode "GB" .
+
+:GBR-2000 :isoCode "GB" .
+
+:GBR-1999 :isoCode "GB" .
+
+:GBR-1992 :isoCode "GB" .
+
+:GBR-1987 :isoCode "GB" .
+
+:GBR-1986 :isoCode "GB" .
+
+:GBR-1984 :isoCode "GB" .
+
+:GBR-1983 :isoCode "GB" .
+
+:GBR-1982 :isoCode "GB" .
+
+:GBR-1981 :isoCode "GB" .
+
+:GBR-1978 :isoCode "GB" .
+
+:RUS-2019 :isoCode "RU" .
+
+:RUS-2017 :isoCode "RU" .
+
+:RUS-2012 :isoCode "RU" .
+
+:RUS-2011 :isoCode "RU" .
+
+:RUS-2010 :isoCode "RU" .
+
+:RUS-2009 :isoCode "RU" .
+
+:RUS-2008 :isoCode "RU" .
+
+:RUS-2007 :isoCode "RU" .
+
+:RUS-2006 :isoCode "RU" .
+
+:RUS-2005 :isoCode "RU" .
+
+:RUS-2004 :isoCode "RU" .
+
+:RUS-2003 :isoCode "RU" .
+
+:RUS-2002 :isoCode "RU" .
+
+:RUS-2001 :isoCode "RU" .
+
+:RUS-2000 :isoCode "RU" .
+
+:RUS-1999 :isoCode "RU" .
+
+:RUS-1998 :isoCode "RU" .
+
+:RUS-1997 :isoCode "RU" .
+
+:RUS-1996 :isoCode "RU" .
+
+:RUS-1995 :isoCode "RU" .
+
+:RUS-1994 :isoCode "RU" .
+
+:RUS-1993 :isoCode "RU" .
+
+:RUS-1989 :isoCode "RU" .
+
+:RUS-1986 :isoCode "RU" .
+
+:RUS-1985 :isoCode "RU" .
+
+:RUS-1983 :isoCode "RU" .
+
+:RUS-1982 :isoCode "RU" .
+
+:RUS-1974 :isoCode "RU" .
+
+:SRI-1983 :isoCode "LK" .
+
+:SRI-1972 :isoCode "LK" .
+
+:SRI-1971 :isoCode "LK" .
+
+:SRI-1970 :isoCode "LK" .
+
+:SRI-1969 :isoCode "LK" .
+
+:SRI-1968 :isoCode "LK" .
+
+:SWE-2012 :isoCode "SE" .
+
+:SWE-2011 :isoCode "SE" .
+
+:SWE-2010 :isoCode "SE" .
+
+:SWE-2009 :isoCode "SE" .
+
+:SWE-2008 :isoCode "SE" .
+
+:SWE-2007 :isoCode "SE" .
+
+:SWE-2006 :isoCode "SE" .
+
+:SWE-2005 :isoCode "SE" .
+
+:SWE-2004 :isoCode "SE" .
+
+:SWE-2003 :isoCode "SE" .
+
+:SWE-2002 :isoCode "SE" .
+
+:SWE-2001 :isoCode "SE" .
+
+:SWE-1999 :isoCode "SE" .
+
+:SWE-1998 :isoCode "SE" .
+
+:SWE-1997 :isoCode "SE" .
+
+:SWE-1996 :isoCode "SE" .
+
+:SWE-1995 :isoCode "SE" .
+
+:SWE-1994 :isoCode "SE" .
+
+:SWE-1993 :isoCode "SE" .
+
+:SWE-1992 :isoCode "SE" .
+
+:SWE-1991 :isoCode "SE" .
+
+:SWE-1990 :isoCode "SE" .
+
+:SWE-1989 :isoCode "SE" .
+
+:SWE-1988 :isoCode "SE" .
+
+:SWE-1987 :isoCode "SE" .
+
+:SWE-1986 :isoCode "SE" .
+
+:SWE-1985 :isoCode "SE" .
+
+:SWE-1984 :isoCode "SE" .
+
+:SWE-1983 :isoCode "SE" .
+
+:SWE-1982 :isoCode "SE" .
+
+:SWE-1981 :isoCode "SE" .
+
+:SWE-1978 :isoCode "SE" .
+
+:SWE-1975 :isoCode "SE" .
+
+:SUI-2018 :isoCode "CH" .
+
+:SUI-2017 :isoCode "CH" .
+
+:SUI-2016 :isoCode "CH" .
+
+:SUI-2015 :isoCode "CH" .
+
+:SUI-2014 :isoCode "CH" .
+
+:SUI-2013 :isoCode "CH" .
+
+:SUI-2012 :isoCode "CH" .
+
+:SUI-2010 :isoCode "CH" .
+
+:SUI-2009 :isoCode "CH" .
+
+:SUI-2007 :isoCode "CH" .
+
+:SUI-2006 :isoCode "CH" .
+
+:SUI-2005 :isoCode "CH" .
+
+:SUI-2004 :isoCode "CH" .
+
+:SUI-2003 :isoCode "CH" .
+
+:SUI-2002 :isoCode "CH" .
+
+:SUI-2001 :isoCode "CH" .
+
+:SUI-2000 :isoCode "CH" .
+
+:SUI-1999 :isoCode "CH" .
+
+:SUI-1998 :isoCode "CH" .
+
+:SUI-1997 :isoCode "CH" .
+
+:SUI-1996 :isoCode "CH" .
+
+:SUI-1995 :isoCode "CH" .
+
+:SUI-1993 :isoCode "CH" .
+
+:SUI-1992 :isoCode "CH" .
+
+:SUI-1990 :isoCode "CH" .
+
+:SUI-1988 :isoCode "CH" .
+
+:SUI-1981 :isoCode "CH" .
+
+:SRB-2019 :isoCode "RS" .
+
+:SRB-2018 :isoCode "RS" .
+
+:SRB-2017 :isoCode "RS" .
+
+:SRB-2016 :isoCode "RS" .
+
+:SRB-2015 :isoCode "RS" .
+
+:SRB-2014 :isoCode "RS" .
+
+:SRB-2013 :isoCode "RS" .
+
+:SRB-2012 :isoCode "RS" .
+
+:SRB-2011 :isoCode "RS" .
+
+:SRB-2010 :isoCode "RS" .
+
+:SRB-2009 :isoCode "RS" .
+
+:SRB-2008 :isoCode "RS" .
+
+:SRB-1992 :isoCode "RS" .
+
+:SRB-1991 :isoCode "RS" .
+
+:THA-1983 :isoCode "TH" .
+
+:THA-1981 :isoCode "TH" .
+
+:THA-1976 :isoCode "TH" .
+
+:THA-1986 :isoCode "TH" .
+
+:VEN-1979 :isoCode "VE" .
+
+:VIE-1972 :isoCode "VN" .
+
+:VIE-1970 :isoCode "VN" .
+
+:ZIM-2000 :isoCode "ZW" .
+
+:ZIM-1999 :isoCode "ZW" .
+
+:ZIM-1998 :isoCode "ZW" .
+
+:RSA-1998 :isoCode "ZA" .
+
+:RSA-1997 :isoCode "ZA" .
+
+:RSA-1996 :isoCode "ZA" .
+
+:RSA-1995 :isoCode "ZA" .
+
+:AUT-2013 :isoCode "AT" .
+
+:AUT-2012 :isoCode "AT" .
+
+:AUT-2011 :isoCode "AT" .
+
+:AUT-2009 :isoCode "AT" .
+
+:AUT-2008 :isoCode "AT" .
+
+:AUT-2007 :isoCode "AT" .
+
+:AUT-2006 :isoCode "AT" .
+
+:AUT-2005 :isoCode "AT" .
+
+:AUT-2004 :isoCode "AT" .
+
+:AUT-2000 :isoCode "AT" .
+
+:AUT-1996 :isoCode "AT" .
+
+:AUT-1995 :isoCode "AT" .
+
+:AUT-1994 :isoCode "AT" .
+
+:AUT-1993 :isoCode "AT" .
+
+:AUT-1991 :isoCode "AT" .
+
+:AUT-1990 :isoCode "AT" .
+
+:AUT-1989 :isoCode "AT" .
+
+:IND-2011 :isoCode "IN" .
+
+:IND-2010 :isoCode "IN" .
+
+:IND-1998 :isoCode "IN" .
+
+:IND-1997 :isoCode "IN" .
+
+:IND-1996 :isoCode "IN" .
+
+:IND-1994 :isoCode "IN" .
+
+:IND-1993 :isoCode "IN" .
+
+:IND-1988 :isoCode "IN" .
+
+:IND-1987 :isoCode "IN" .
+
+:IND-1986 :isoCode "IN" .
+
+:IND-1985 :isoCode "IN" .
+
+:IND-1984 :isoCode "IN" .
+
+:IND-1983 :isoCode "IN" .
+
+:IND-1982 :isoCode "IN" .
+
+:IND-1979 :isoCode "IN" .
+
+:IND-1977 :isoCode "IN" .
+
+:IND-1974 :isoCode "IN" .
+
+:IND-1973 :isoCode "IN" .
+
+:IND-1972 :isoCode "IN" .
+
+:IND-1971 :isoCode "IN" .
+
+:IND-1969 :isoCode "IN" .
+
+:IND-1968 :isoCode "IN" .
+
+:IND-1981 :isoCode "IN" .
+
+:IND-1975 :isoCode "IN" .
+
+:IND-1970 :isoCode "IN" .
+
+:CZE-2017 :isoCode "CZ" .
+
+:CZE-2016 :isoCode "CZ" .
+
+:CZE-2015 :isoCode "CZ" .
+
+:CZE-2014 :isoCode "CZ" .
+
+:CZE-2013 :isoCode "CZ" .
+
+:CZE-2012 :isoCode "CZ" .
+
+:CZE-2011 :isoCode "CZ" .
+
+:CZE-2010 :isoCode "CZ" .
+
+:CZE-2009 :isoCode "CZ" .
+
+:CZE-2008 :isoCode "CZ" .
+
+:CZE-2007 :isoCode "CZ" .
+
+:CZE-2005 :isoCode "CZ" .
+
+:CZE-2004 :isoCode "CZ" .
+
+:CZE-2003 :isoCode "CZ" .
+
+:CZE-2002 :isoCode "CZ" .
+
+:CZE-2001 :isoCode "CZ" .
+
+:CZE-2000 :isoCode "CZ" .
+
+:CZE-1999 :isoCode "CZ" .
+
+:CZE-1998 :isoCode "CZ" .
+
+:CZE-1997 :isoCode "CZ" .
+
+:CZE-1996 :isoCode "CZ" .
+
+:CZE-1995 :isoCode "CZ" .
+
+:CZE-1994 :isoCode "CZ" .
+
+:CZE-1993 :isoCode "CZ" .
+
+:CZE-1992 :isoCode "CZ" .
+
+:CZE-1991 :isoCode "CZ" .
+
+:CZE-1990 :isoCode "CZ" .
+
+:CZE-1989 :isoCode "CZ" .
+
+:CZE-1988 :isoCode "CZ" .
+
+:CZE-1987 :isoCode "CZ" .
+
+:CZE-1986 :isoCode "CZ" .
+
+:CZE-1985 :isoCode "CZ" .
+
+:CZE-1984 :isoCode "CZ" .
+
+:CZE-1983 :isoCode "CZ" .
+
+:CZE-1982 :isoCode "CZ" .
+
+:CZE-1981 :isoCode "CZ" .
+
+:CZE-1980 :isoCode "CZ" .
+
+:CZE-1975 :isoCode "CZ" .
+
+:USA-2018 :isoCode "US" .
+
+:USA-2017 :isoCode "US" .
+
+:USA-2016 :isoCode "US" .
+
+:USA-2015 :isoCode "US" .
+
+:USA-2014 :isoCode "US" .
+
+:USA-2013 :isoCode "US" .
+
+:USA-2012 :isoCode "US" .
+
+:USA-2011 :isoCode "US" .
+
+:USA-2010 :isoCode "US" .
+
+:USA-2009 :isoCode "US" .
+
+:USA-2008 :isoCode "US" .
+
+:USA-2007 :isoCode "US" .
+
+:USA-2006 :isoCode "US" .
+
+:USA-2005 :isoCode "US" .
+
+:USA-2004 :isoCode "US" .
+
+:USA-2003 :isoCode "US" .
+
+:USA-2002 :isoCode "US" .
+
+:USA-2001 :isoCode "US" .
+
+:USA-2000 :isoCode "US" .
+
+:USA-1999 :isoCode "US" .
+
+:USA-1998 :isoCode "US" .
+
+:USA-1997 :isoCode "US" .
+
+:USA-1996 :isoCode "US" .
+
+:USA-1995 :isoCode "US" .
+
+:USA-1994 :isoCode "US" .
+
+:USA-1993 :isoCode "US" .
+
+:USA-1992 :isoCode "US" .
+
+:USA-1991 :isoCode "US" .
+
+:USA-1990 :isoCode "US" .
+
+:USA-1989 :isoCode "US" .
+
+:USA-1987 :isoCode "US" .
+
+:USA-1986 :isoCode "US" .
+
+:USA-1985 :isoCode "US" .
+
+:USA-1984 :isoCode "US" .
+
+:USA-1983 :isoCode "US" .
+
+:USA-1982 :isoCode "US" .
+
+:USA-1981 :isoCode "US" .
+
+:USA-1978 :isoCode "US" .
+
+:USA-1973 :isoCode "US" .
+
+:USA-1972 :isoCode "US" .
+
+:USA-1971 :isoCode "US" .
+
+:USA-1968 :isoCode "US" .
+
+:USA-1980 :isoCode "US" .
+
+:USA-1979 :isoCode "US" .
+
+:USA-1970 :isoCode "US" .
+
+:USA-1969 :isoCode "US" .
+
+:IRL-1983 :isoCode "IE" .
+
+:NED-2018 :isoCode "NL" .
+
+:NED-2014 :isoCode "NL" .
+
+:NED-2009 :isoCode "NL" .
+
+:NED-2006 :isoCode "NL" .
+
+:NED-2005 :isoCode "NL" .
+
+:NED-2004 :isoCode "NL" .
+
+:NED-2003 :isoCode "NL" .
+
+:NED-2002 :isoCode "NL" .
+
+:NED-2001 :isoCode "NL" .
+
+:NED-2000 :isoCode "NL" .
+
+:NED-1999 :isoCode "NL" .
+
+:NED-1998 :isoCode "NL" .
+
+:NED-1997 :isoCode "NL" .
+
+:NED-1996 :isoCode "NL" .
+
+:NED-1995 :isoCode "NL" .
+
+:NED-1994 :isoCode "NL" .
+
+:NED-1993 :isoCode "NL" .
+
+:NED-1992 :isoCode "NL" .
+
+:NED-1990 :isoCode "NL" .
+
+:POL-2016 :isoCode "PL" .
+
+:ROU-2011 :isoCode "RO" .
+
+:ROU-2009 :isoCode "RO" .
+
+:ROU-2008 :isoCode "RO" .
+
+:ROU-2007 :isoCode "RO" .
+
+:ROU-2006 :isoCode "RO" .
+
+:ROU-2005 :isoCode "RO" .
+
+:ROU-2004 :isoCode "RO" .
+
+:ROU-2003 :isoCode "RO" .
+
+:ROU-2001 :isoCode "RO" .
+
+:ROU-1997 :isoCode "RO" .
+
+:ROU-1984 :isoCode "RO" .
+
+:ROU-1983 :isoCode "RO" .
+
+:ROU-1982 :isoCode "RO" .
+
+:ROU-1981 :isoCode "RO" .
+
+:ROU-1973 :isoCode "RO" .
+
+:ROU-1972 :isoCode "RO" .
+
+:ROU-1971 :isoCode "RO" .
+
+:ROU-1969 :isoCode "RO" .
+
+:YUG-1992 :isoCode "YU" .
+
+:YUG-1991 :isoCode "YU" .
+
+:YUG-1990 :isoCode "YU" .
+
+:YUG-1989 :isoCode "YU" .
+
+:YUG-1988 :isoCode "YU" .
+
+:YUG-1987 :isoCode "YU" .
+
+:YUG-1986 :isoCode "YU" .
+
+:YUG-1984 :isoCode "YU" .
+
+:YUG-1985 :isoCode "YU" .
+
+:KOR-2008 :isoCode "KR" .
+
+:KOR-1987 :isoCode "KR" .
+
+:KOR-1986 :isoCode "KR" .
+
+:KOR-1985 :isoCode "KR" .
+
+:KOR-1983 :isoCode "KR" .
+
+:KOR-1981 :isoCode "KR" .
+
+:KOR-1982 :isoCode "KR" .
+
+:TPE-1983 :isoCode "TW" .
+
+:TPE-1972 :isoCode "TW" .

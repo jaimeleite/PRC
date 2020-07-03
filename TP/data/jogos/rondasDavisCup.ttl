@@ -1,0 +1,1508 @@
+@prefix : <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> .
+
+<http://www.semanticweb.org/jaime/ontologies/2020/3/tenis> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#perdedorEm
+:perdedorEm rdf:type owl:ObjectProperty ;
+            owl:inverseOf :temPerdedor ;
+            rdfs:domain :Jogador ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temFase
+:temFase rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éFaseDe ;
+         rdfs:domain :Torneio ;
+         rdfs:range :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPartida
+:temPartida rdf:type owl:ObjectProperty ;
+            owl:inverseOf :éPartidaDe ;
+            rdfs:domain :Fase ;
+            rdfs:range :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temPerdedor
+:temPerdedor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#temVencedor
+:temVencedor rdf:type owl:ObjectProperty ;
+             owl:inverseOf :vencedorEm ;
+             rdfs:domain :Partida ;
+             rdfs:range :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#vencedorEm
+:vencedorEm rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éFaseDe
+:éFaseDe rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#éPartidaDe
+:éPartidaDe rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ano
+:ano rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dataNascimento
+:dataNascimento rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#dificuldade
+:dificuldade rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#duracao
+:duracao rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#localNascimento
+:localNascimento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#melhorMão
+:melhorMão rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Jogador .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#resultado
+:resultado rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Partida .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#superfície
+:superfície rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Torneio .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger
+:Challenger rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Fase
+:Fase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final
+:Final rdf:type owl:Class ;
+       rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound
+:FirstRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ForthRound
+:ForthRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Grandslam
+:Grandslam rdf:type owl:Class ;
+           rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Jogador
+:Jogador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Partida
+:Partida rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal
+:Quarterfinal rdf:type owl:Class ;
+              rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#SecondRound
+:SecondRound rdf:type owl:Class ;
+             rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal
+:Semifinal rdf:type owl:Class ;
+           rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Small
+:Small rdf:type owl:Class ;
+       rdfs:subClassOf :World_Tour .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Teams
+:Teams rdf:type owl:Class ;
+       rdfs:subClassOf :Torneio .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#ThirdRound
+:ThirdRound rdf:type owl:Class ;
+            rdfs:subClassOf :Fase .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Torneio
+:Torneio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#World_Tour
+:World_Tour rdf:type owl:Class ;
+            rdfs:subClassOf :Torneio .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2019_DavisCup
+:Quarterfinal_2019_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2019 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2019_DavisCup
+:Final_2019_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2019 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2019_DavisCup
+:Semifinal_2019_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2019 ;
+                            :nome "Meias-finais" .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2018_DavisCup
+:FirstRound_2018_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2018 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2018_DavisCup
+:Quarterfinal_2018_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2018 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2018_DavisCup
+:Semifinal_2018_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2018 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2018_DavisCup
+:Final_2018_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2018 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2017_DavisCup
+:FirstRound_2017_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2017 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2017_DavisCup
+:Quarterfinal_2017_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2017 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2017_DavisCup
+:Semifinal_2017_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2017 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2017_DavisCup
+:Final_2017_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2017 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2016_DavisCup
+:FirstRound_2016_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2016 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2016_DavisCup
+:Quarterfinal_2016_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2016 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2016_DavisCup
+:Semifinal_2016_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2016 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2016_DavisCup
+:Final_2016_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2016 ;
+                            :nome "Final" .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2015_DavisCup
+:FirstRound_2015_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2015 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2015_DavisCup
+:Quarterfinal_2015_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2015 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2015_DavisCup
+:Semifinal_2015_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2015 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2015_DavisCup
+:Final_2015_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2015 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2014_DavisCup
+:FirstRound_2014_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2014 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2014_DavisCup
+:Quarterfinal_2014_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2014 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2014_DavisCup
+:Semifinal_2014_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2014 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2014_DavisCup
+:Final_2014_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2014 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2013_DavisCup
+:FirstRound_2013_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2013 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2013_DavisCup
+:Quarterfinal_2013_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2013 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2013_DavisCup
+:Semifinal_2013_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2013 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2013_DavisCup
+:Final_2013_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2013 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2012_DavisCup
+:FirstRound_2012_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2012 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2012_DavisCup
+:Quarterfinal_2012_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2012 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2012_DavisCup
+:Semifinal_2012_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2012 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2012_DavisCup
+:Final_2012_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2012 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2011_DavisCup
+:FirstRound_2011_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2011 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2011_DavisCup
+:Quarterfinal_2011_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2011 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2011_DavisCup
+:Semifinal_2011_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2011 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2011_DavisCup
+:Final_2011_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2011 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2010_DavisCup
+:FirstRound_2010_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2010 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2010_DavisCup
+:Quarterfinal_2010_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2010 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2010_DavisCup
+:Semifinal_2010_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2010 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2010_DavisCup
+:Final_2010_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2010 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2009_DavisCup
+:FirstRound_2009_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2009 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2009_DavisCup
+:Quarterfinal_2009_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2009 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2009_DavisCup
+:Semifinal_2009_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2009 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2009_DavisCup
+:Final_2009_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2009 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2008_DavisCup
+:FirstRound_2008_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2008 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2008_DavisCup
+:Quarterfinal_2008_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2008 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2008_DavisCup
+:Semifinal_2008_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2008 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2008_DavisCup
+:Final_2008_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2008 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2007_DavisCup
+:FirstRound_2007_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2007 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2007_DavisCup
+:Quarterfinal_2007_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2007 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2007_DavisCup
+:Semifinal_2007_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2007 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2007_DavisCup
+:Final_2007_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2007 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2006_DavisCup
+:FirstRound_2006_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2006 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2006_DavisCup
+:Quarterfinal_2006_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2006 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2006_DavisCup
+:Semifinal_2006_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2006 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2006_DavisCup
+:Final_2006_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2006 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2005_DavisCup
+:FirstRound_2005_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2005 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2005_DavisCup
+:Quarterfinal_2005_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2005 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2005_DavisCup
+:Semifinal_2005_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2005 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2005_DavisCup
+:Final_2005_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2005 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2004_DavisCup
+:FirstRound_2004_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2004 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2004_DavisCup
+:Quarterfinal_2004_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2004 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2004_DavisCup
+:Semifinal_2004_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2004 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2004_DavisCup
+:Final_2004_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2004 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2003_DavisCup
+:FirstRound_2003_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2003 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2003_DavisCup
+:Quarterfinal_2003_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2003 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2003_DavisCup
+:Semifinal_2003_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2003 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2003_DavisCup
+:Final_2003_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2003 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2002_DavisCup
+:FirstRound_2002_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2002 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2002_DavisCup
+:Quarterfinal_2002_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2002 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2002_DavisCup
+:Semifinal_2002_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2002 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2002_DavisCup
+:Final_2002_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2002 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2001_DavisCup
+:FirstRound_2001_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2001 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2001_DavisCup
+:Quarterfinal_2001_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2001 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2001_DavisCup
+:Semifinal_2001_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2001 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2001_DavisCup
+:Final_2001_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2001 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_2000_DavisCup
+:Quarterfinal_2000_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2000 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_2000_DavisCup
+:Semifinal_2000_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2000 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_2000_DavisCup
+:Final_2000_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2000 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_2000_DavisCup
+:FirstRound_2000_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 2000 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1999_DavisCup
+:FirstRound_1999_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1999 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1999_DavisCup
+:Quarterfinal_1999_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1999 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1999_DavisCup
+:Semifinal_1999_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1999 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1999_DavisCup
+:Final_1999_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1999 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1998_DavisCup
+:FirstRound_1998_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1998 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1998_DavisCup
+:Quarterfinal_1998_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1998 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1998_DavisCup
+:Semifinal_1998_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1998 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1998_DavisCup
+:Final_1998_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1998 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1997_DavisCup
+:FirstRound_1997_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1997 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1997_DavisCup
+:Quarterfinal_1997_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1997 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1997_DavisCup
+:Semifinal_1997_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1997 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1997_DavisCup
+:Final_1997_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1997 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1996_DavisCup
+:FirstRound_1996_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1996 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1996_DavisCup
+:Quarterfinal_1996_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1996 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1996_DavisCup
+:Semifinal_1996_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1996 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1996_DavisCup
+:Final_1996_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1996 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1995_DavisCup
+:FirstRound_1995_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1995 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1995_DavisCup
+:Quarterfinal_1995_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1995 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1995_DavisCup
+:Semifinal_1995_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1995 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1995_DavisCup
+:Final_1995_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1995 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1994_DavisCup
+:FirstRound_1994_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1994 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1994_DavisCup
+:Quarterfinal_1994_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1994 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1994_DavisCup
+:Semifinal_1994_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1994 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1994_DavisCup
+:Final_1994_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1994 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1993_DavisCup
+:FirstRound_1993_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1993 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1993_DavisCup
+:Quarterfinal_1993_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1993 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1993_DavisCup
+:Semifinal_1993_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1993 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1993_DavisCup
+:Final_1993_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1993 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1992_DavisCup
+:FirstRound_1992_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1992 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1992_DavisCup
+:Quarterfinal_1992_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1992 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1992_DavisCup
+:Semifinal_1992_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1992 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1992_DavisCup
+:Final_1992_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1992 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1991_DavisCup
+:FirstRound_1991_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1991 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1991_DavisCup
+:Quarterfinal_1991_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1991 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1991_DavisCup
+:Semifinal_1991_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1991 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1991_DavisCup
+:Final_1991_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1991 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1990_DavisCup
+:FirstRound_1990_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1990 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1990_DavisCup
+:Quarterfinal_1990_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1990 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1990_DavisCup
+:Semifinal_1990_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1990 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1990_DavisCup
+:Final_1990_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1990 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1989_DavisCup
+:FirstRound_1989_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1989 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1989_DavisCup
+:Quarterfinal_1989_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1989 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1989_DavisCup
+:Semifinal_1989_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1989 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1989_DavisCup
+:Final_1989_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1989 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1988_DavisCup
+:FirstRound_1988_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1988 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1988_DavisCup
+:Quarterfinal_1988_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1988 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1988_DavisCup
+:Semifinal_1988_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1988 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1988_DavisCup
+:Final_1988_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1988 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1987_DavisCup
+:FirstRound_1987_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1987 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1987_DavisCup
+:Quarterfinal_1987_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1987 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1987_DavisCup
+:Semifinal_1987_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1987 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1987_DavisCup
+:Final_1987_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1987 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1986_DavisCup
+:FirstRound_1986_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1986 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1986_DavisCup
+:Quarterfinal_1986_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1986 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1986_DavisCup
+:Semifinal_1986_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1986 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1986_DavisCup
+:Final_1986_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1986 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1985_DavisCup
+:Quarterfinal_1985_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1985 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1985_DavisCup
+:FirstRound_1985_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1985 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1985_DavisCup
+:Semifinal_1985_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1985 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1985_DavisCup
+:Final_1985_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1985 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1984_DavisCup
+:FirstRound_1984_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1984 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1984_DavisCup
+:Quarterfinal_1984_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1984 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1984_DavisCup
+:Semifinal_1984_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1984 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1984_DavisCup
+:Final_1984_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1984 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1983_DavisCup
+:Quarterfinal_1983_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1983 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1983_DavisCup
+:FirstRound_1983_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1983 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1983_DavisCup
+:Semifinal_1983_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1983 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1983_DavisCup
+:Final_1983_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1983 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1982_DavisCup
+:Quarterfinal_1982_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1982 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1982_DavisCup
+:FirstRound_1982_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1982 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1982_DavisCup
+:Semifinal_1982_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1982 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1982_DavisCup
+:Final_1982_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1982 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1981_DavisCup
+:Semifinal_1981_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1981 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#FirstRound_1981_DavisCup
+:FirstRound_1981_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :FirstRound ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1981 ;
+                            :nome "Primeira Ronda" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1981_DavisCup
+:Quarterfinal_1981_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1981 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1981_DavisCup
+:Final_1981_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1981 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1980_DavisCup
+:Semifinal_1980_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1980 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1980_DavisCup
+:Final_1980_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1980 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1979_DavisCup
+:Semifinal_1979_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1979 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1979_DavisCup
+:Final_1979_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1979 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1978_DavisCup
+:Semifinal_1978_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1978 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1978_DavisCup
+:Final_1978_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1978 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1977_DavisCup
+:Semifinal_1977_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1977 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1977_DavisCup
+:Final_1977_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1977 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1976_DavisCup
+:Semifinal_1976_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1976 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1976_DavisCup
+:Quarterfinal_1976_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1976 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1976_DavisCup
+:Final_1976_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1976 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1975_DavisCup
+:Quarterfinal_1975_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1975 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1975_DavisCup
+:Final_1975_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1975 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1974_DavisCup
+:Semifinal_1974_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1974 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1974_DavisCup
+:Final_1974_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1974 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1973_DavisCup
+:Final_1973_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1973 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1973_DavisCup
+:Semifinal_1973_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1973 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1972_DavisCup
+:Quarterfinal_1972_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1972 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1972_DavisCup
+:Semifinal_1972_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1972 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1972_DavisCup
+:Final_1972_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1972 ;
+                            :nome "Final" .
+
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1971_DavisCup
+:Semifinal_1971_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1971 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger_1971_DavisCup
+:Challenger_1971_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Challenger ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1971 ;
+                            :nome "Challenge" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1970_DavisCup
+:Semifinal_1970_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1970 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1970_DavisCup
+:Final_1970_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1970 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger_1970_DavisCup
+:Challenger_1970_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Challenger ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1970 ;
+                            :nome "Challenge" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Quarterfinal_1969_DavisCup
+:Quarterfinal_1969_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Quarterfinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1969 ;
+                            :nome "Quartos de final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1969_DavisCup
+:Semifinal_1969_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1969 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1969_DavisCup
+:Final_1969_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1969 ;
+                            :nome "Final" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger_1969_DavisCup
+:Challenger_1969_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Challenger ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1969 ;
+                            :nome "Challenge" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Challenger_1968_DavisCup
+:Challenger_1968_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Challenger ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1968 ;
+                            :nome "Challenge" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Semifinal_1968_DavisCup
+:Semifinal_1968_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Semifinal ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1968 ;
+                            :nome "Meias-finais" .
+###  http://www.semanticweb.org/jaime/ontologies/2020/3/tenis#Final_1968_DavisCup
+:Final_1968_DavisCup rdf:type owl:NamedIndividual ,
+                            :Fase ,
+                            :Final ;
+        :éFaseDe :torneio_DavisCup ;
+                            :ano 1968 ;
+                            :nome "Final" .
