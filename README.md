@@ -1,3 +1,5 @@
-PRC
+### PRC - TPC's e Projeto
 
-Repositório com os TPC's realizados da unidade curricular de PRC.
+____________
+
+Repositório com os TPC's realizados da unidade curricular de PRC, bem como com o projeto prático.
